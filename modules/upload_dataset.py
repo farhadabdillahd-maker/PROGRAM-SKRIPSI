@@ -12,9 +12,13 @@ def show():
 
     st.divider()
 
+    if "upload_key" not in st.session_state:
+        st.session_state["upload_key"] = 0
+
     uploaded_file = st.file_uploader(
         "Pilih file CSV",
-        type=["csv"]
+        type=["csv"],
+        key=f'upload_{st.session_state["upload_key"]}'
     )
 
     if uploaded_file is not None:
@@ -67,6 +71,7 @@ def show():
 
             if st.button("🔁 Repeat Upload"):
                 st.session_state.pop("dataset", None)
+                st.session_state["upload_key"] += 1
                 st.rerun()
 
 
