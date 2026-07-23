@@ -211,6 +211,39 @@ def show():
 
     st.session_state["df"] = df_dict
 
+    st.session_state["df"] = df_dict
     st.session_state["idf"] = idf_dict
 
     st.divider()
+
+    # =====================================
+    # PERHITUNGAN TF-IDF
+    # =====================================
+
+    st.subheader("Perhitungan TF-IDF")
+
+    tfidf_rows = []
+
+    for term in vocabulary:
+        row = []
+        for tf in tf_dict[term]:
+            row.append(round(tf * idf_dict[term], 4))
+        tfidf_rows.append(row)
+
+    tfidf_df = pd.DataFrame(
+        tfidf_rows,
+        index=vocabulary,
+        columns=[f"d{i+1}" for i in range(total_document)]
+    )
+
+    st.dataframe(tfidf_df, use_container_width=True)
+
+    # Matriks untuk Naive Bayes
+    tfidf_matrix = tfidf_df.T
+
+    st.session_state["tfidf_df"] = tfidf_df
+    st.session_state["tfidf_matrix"] = tfidf_matrix
+    st.session_state["vocabulary"] = vocabulary
+
+    st.success("Perhitungan TF-IDF selesai.")
+    st.success("Data siap digunakan pada menu Klasifikasi.")
