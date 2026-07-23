@@ -1,3 +1,4 @@
+import re
 import pandas as pd
 import streamlit as st
 
@@ -7,35 +8,27 @@ import streamlit as st
 # ==========================================
 
 def prediksi_kamus(text):
-
     try:
-        kamus = pd.read_csv("lexicon_kejahatan.csv")
-
-        kamus["kata_kunci"] = (
-            kamus["kata_kunci"]
-            .astype(str)
-            .str.lower()
-        )
-
+        lexicon = pd.read_csv("lexicon_kejahatan.csv")
         text = str(text).lower()
+        skor_total = 0
+        label_skor = {}
 
-        # Prioritas kata yang lebih spesifik/panjang
-        kamus = kamus.sort_values(
-            by="kata_kunci",
-            key=lambda x: x.str.len(),
-            ascending=False
-        )
+        for _, row in lexicon.iterrows():
+            istilah = str(row["istilah"]).lower().strip()
+            skor = int(row["skor"])
+            label = row["label"]
+            if re.search(r'\b'+re.escape(istilah)+r'\b', text):
+                skor_total += skor
+                label_skor[label] = label_skor.get(label,0)+skor
 
-        for _, row in kamus.iterrows():
-
-            if row["kata_kunci"] in text:
-                return row["kategori"]
+        if label_skor:
+            return max(label_skor, key=label_skor.get)
 
     except Exception:
         return None
 
     return None
-
 
 def show():
 
