@@ -393,11 +393,19 @@ kejahatan.
         # =======================================
 
         st.divider()
-        st.subheader("Hasil Prediksi Data Testing")
+        st.subheader("Hasil Prediksi Judul Berita Testing")
+
+        # Mengambil judul berita asli berdasarkan index data testing
+        judul_testing = df.loc[
+            y_test.index,
+            "Judul Media Nasional"
+        ].reset_index(drop=True)
 
         hasil_prediksi = pd.DataFrame({
 
-            "Data Asli": y_test.reset_index(drop=True),
+            "Judul Media Nasional": judul_testing,
+
+            "Label Asli": y_test.reset_index(drop=True),
 
             "Hasil Prediksi": pd.Series(y_pred),
 
