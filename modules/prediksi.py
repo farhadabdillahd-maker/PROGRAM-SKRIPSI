@@ -9,7 +9,7 @@ import streamlit as st
 def prediksi_kamus(text):
 
     try:
-        kamus = pd.read_csv("kamus_kejahatan.csv")
+        kamus = pd.read_csv("lexicon_kejahatan.csv")
 
         kamus["kata_kunci"] = (
             kamus["kata_kunci"]
