@@ -63,6 +63,12 @@ def show():
                     df["Label"].value_counts().rename_axis("Label").reset_index(name="Jumlah"),
                     use_container_width=True
                 )
+            st.divider()
+
+            if st.button("🔁 Repeat Upload"):
+                st.session_state.pop("dataset", None)
+                st.rerun()
+
 
         except Exception as e:
 
