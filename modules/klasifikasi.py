@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
@@ -145,6 +146,9 @@ def show():
         # =======================================
         # Simpan Model
         # =======================================
+
+        # Membuat folder model otomatis jika belum tersedia
+        os.makedirs("model", exist_ok=True)
 
         joblib.dump(
 
