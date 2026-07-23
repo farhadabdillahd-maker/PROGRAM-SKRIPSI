@@ -77,6 +77,36 @@ def show():
         # Final Text
         df["Final Text"] = df["Stemming"].apply(lambda x: " ".join(x))
 
+        # Auto Label berdasarkan kamus kejahatan
+        try:
+            kamus = pd.read_csv("kamus_kejahatan.csv")
+        except FileNotFoundError:
+            try:
+                kamus = pd.read_csv("assets/kamus_kejahatan.csv")
+            except FileNotFoundError:
+                kamus = None
+
+        if kamus is not None and {"kata_kunci","kategori"}.issubset(kamus.columns):
+            kamus["kata_kunci"] = kamus["kata_kunci"].astype(str).str.lower()
+            kamus = kamus.sort_values(
+                by="kata_kunci",
+                key=lambda x: x.str.len(),
+                ascending=False
+            )
+            kamus_list = list(zip(kamus["kata_kunci"], kamus["kategori"]))
+
+            def auto_label(text):
+                text = str(text).lower()
+                for kata, label in kamus_list:
+                    if kata in text:
+                        return label
+                return "Kejahatan Ringan"
+
+            df["Pelabelan"] = df["Final Text"].apply(auto_label)
+        else:
+            df["Pelabelan"] = "Kejahatan Ringan"
+
+
         progress.progress(100)
 
         # Simpan hasil preprocessing
@@ -95,6 +125,7 @@ def show():
                     "Stopword Removal",
                     "Stemming",
                     "Final Text",
+                    "Pelabelan",
                 ]
             ],
             use_container_width=True,
