@@ -1,30 +1,13 @@
-import re
-import joblib
 import pandas as pd
 import streamlit as st
-from nltk.corpus import stopwords
-from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
-
-
-factory = StemmerFactory()
-stemmer = factory.create_stemmer()
-stop_words = set(stopwords.words("indonesian"))
-
-
-def preprocessing(text):
-    text = str(text).lower()
-    text = re.sub(r"[^\w\s]", " ", text)
-    tokens = text.split()
-    tokens = [t for t in tokens if t not in stop_words]
-    tokens = [stemmer.stem(t) for t in tokens]
-    return " ".join(tokens)
 
 
 # ==========================================
-# PREDIKSI MANUAL BERDASARKAN KAMUS
+# PREDIKSI MANUAL BERDASARKAN KAMUS KEJAHATAN
 # ==========================================
 
 def prediksi_kamus(text):
+
     try:
         kamus = pd.read_csv("kamus_kejahatan.csv")
 
@@ -34,9 +17,9 @@ def prediksi_kamus(text):
             .str.lower()
         )
 
-        text = text.lower()
+        text = str(text).lower()
 
-        # Prioritas kata terpanjang agar lebih akurat
+        # Prioritas kata yang lebih spesifik/panjang
         kamus = kamus.sort_values(
             by="kata_kunci",
             key=lambda x: x.str.len(),
@@ -44,11 +27,12 @@ def prediksi_kamus(text):
         )
 
         for _, row in kamus.iterrows():
+
             if row["kata_kunci"] in text:
                 return row["kategori"]
 
     except Exception:
-        pass
+        return None
 
     return None
 
@@ -57,89 +41,83 @@ def show():
 
     st.title("🔍 Prediksi Tingkat Kejahatan")
 
-    # Load model
-    if "model" in st.session_state:
-        model = st.session_state["model"]
-    else:
-        try:
-            model = joblib.load("model/model_nb.pkl")
-        except Exception:
-            st.error("Model belum tersedia. Jalankan menu Klasifikasi terlebih dahulu.")
-            return
-
-    vectorizer = st.session_state.get("vectorizer", None)
-
-    st.write("Masukkan judul berita untuk diprediksi.")
+    st.write(
+        "Masukkan judul berita untuk menentukan tingkat kejahatan berdasarkan kamus kejahatan."
+    )
 
     judul = st.text_area(
         "Judul Berita",
         height=120,
-        placeholder="Contoh: Polisi menangkap pelaku pencurian sepeda motor..."
+        placeholder="Contoh: Polisi menangkap pelaku pembunuhan..."
     )
+
 
     if st.button("Prediksi"):
 
         if not judul.strip():
+
             st.warning("Masukkan judul berita terlebih dahulu.")
             return
 
-        hasil_pre = preprocessing(judul)
 
-        st.subheader("Hasil Preprocessing")
-        st.write(hasil_pre)
+        hasil = prediksi_kamus(judul)
 
 
-        # Cek kamus terlebih dahulu
-        hasil_kamus = prediksi_kamus(hasil_pre)
+        st.subheader("Hasil Prediksi")
 
 
-        if hasil_kamus:
+        if hasil:
 
-            prediksi = hasil_kamus
-
-            st.subheader("Hasil Prediksi")
             st.success(
-                f"Tingkat Kejahatan: {prediksi} (berdasarkan kamus)"
+                f"Tingkat Kejahatan: {hasil}"
             )
 
-            prob_df = pd.DataFrame({
-                "Kelas": [prediksi],
-                "Probabilitas": [100]
+            probabilitas = pd.DataFrame({
+
+                "Kategori": [hasil],
+
+                "Keterangan": [
+                    "Ditentukan berdasarkan kamus kejahatan"
+                ]
+
             })
+
 
         else:
 
-            if vectorizer is None:
-                st.error(
-                    "Vectorizer tidak ditemukan. "
-                    "Silakan jalankan TF-IDF terlebih dahulu."
-                )
-                return
-
-            X = vectorizer.transform([hasil_pre])
-
-            prediksi = model.predict(X)[0]
-            probabilitas = model.predict_proba(X)[0]
-
-            st.subheader("Hasil Prediksi")
-            st.success(
-                f"Tingkat Kejahatan: {prediksi} (berdasarkan Naïve Bayes)"
+            st.warning(
+                "Kata kejahatan tidak ditemukan pada kamus."
             )
 
-            prob_df = pd.DataFrame({
-                "Kelas": model.classes_,
-                "Probabilitas": probabilitas
+            probabilitas = pd.DataFrame({
+
+                "Kategori": [
+                    "Tidak ditemukan"
+                ],
+
+                "Keterangan": [
+                    "Tambahkan kata tersebut ke kamus_kejahatan.csv"
+                ]
+
             })
 
 
-        st.subheader("Probabilitas")
-        st.dataframe(prob_df, use_container_width=True)
+        st.subheader("Informasi Prediksi")
 
-        csv = prob_df.to_csv(index=False).encode("utf-8")
+        st.dataframe(
+            probabilitas,
+            use_container_width=True
+        )
+
+
+        csv = probabilitas.to_csv(
+            index=False
+        ).encode("utf-8")
+
 
         st.download_button(
-            "📥 Download Probabilitas",
+            "📥 Download Hasil Prediksi",
             csv,
-            file_name="hasil_prediksi.csv",
+            file_name="hasil_prediksi_kamus.csv",
             mime="text/csv"
         )
