@@ -1,16 +1,16 @@
 import streamlit as st
 import pandas as pd
+import math
+from collections import Counter
 
-from sklearn.feature_extraction.text import TfidfVectorizer
 
+# =====================================
+# HALAMAN TF-IDF
+# =====================================
 
 def show():
 
-    st.title("📝 TF-IDF")
-
-    # ==========================
-    # Cek preprocessing
-    # ==========================
+    st.title("📝 Perhitungan TF-IDF")
 
     if "preprocessed" not in st.session_state:
 
@@ -20,83 +20,76 @@ def show():
 
     df = st.session_state["preprocessed"]
 
-    # ==========================
-    # Tombol proses
-    # ==========================
+    # ================================
+    # Ambil hasil stemming
+    # ================================
 
-    if st.button("Proses TF-IDF"):
+    documents = df["Final Text"].tolist()
 
-        vectorizer = TfidfVectorizer()
+    # ================================
+    # Pecah menjadi token
+    # ================================
 
-        X = vectorizer.fit_transform(df["Final Text"])
+    tokenized_docs = []
 
-        feature_names = vectorizer.get_feature_names_out()
+    for doc in documents:
 
-        tfidf_df = pd.DataFrame(
-            X.toarray(),
-            columns=feature_names
-        )
+        tokenized_docs.append(doc.split())
 
-        # ==========================
-        # Simpan ke session_state
-        # ==========================
+    # ================================
+    # Jumlah Dokumen
+    # ================================
 
-        st.session_state["vectorizer"] = vectorizer
-        st.session_state["tfidf_matrix"] = X
-        st.session_state["feature_names"] = feature_names
-        st.session_state["tfidf_dataframe"] = tfidf_df
+    total_document = len(tokenized_docs)
 
-        # ==========================
-        # Informasi
-        # ==========================
+    st.success(f"Jumlah Dokumen : {total_document}")
 
-        st.success("TF-IDF berhasil dibuat.")
+    st.divider()
 
-        col1, col2 = st.columns(2)
+    # ================================
+    # Representasi Dokumen
+    # ================================
 
-        with col1:
+    st.subheader("Tahapan Representasi Dokumen")
 
-            st.metric(
-                "Jumlah Dokumen",
-                X.shape[0]
-            )
+    representasi = {}
 
-        with col2:
+    for i, tokens in enumerate(tokenized_docs):
 
-            st.metric(
-                "Jumlah Vocabulary",
-                X.shape[1]
-            )
+        representasi[f"d{i+1}"] = len(tokens)
 
-        st.divider()
+    representasi_df = pd.DataFrame(
 
-        # ==========================
-        # Vocabulary
-        # ==========================
+        [representasi]
 
-        st.subheader("Vocabulary")
+    )
 
-        vocab_df = pd.DataFrame({
+    st.dataframe(
 
-            "No": range(1, len(feature_names)+1),
-            "Kata": feature_names
+        representasi_df,
 
-        })
+        use_container_width=True
 
-        st.dataframe(
-            vocab_df,
-            use_container_width=True
-        )
+    )
 
-        st.divider()
+    st.divider()
 
-        # ==========================
-        # Matriks TF-IDF
-        # ==========================
+    # ================================
+    # Seluruh Term
+    # ================================
 
-        st.subheader("Matriks TF-IDF")
+    vocabulary = set()
 
-        st.dataframe(
-            tfidf_df,
-            use_container_width=True
-        )
+    for tokens in tokenized_docs:
+
+        vocabulary.update(tokens)
+
+    vocabulary = sorted(list(vocabulary))
+
+    st.success(
+
+        f"Jumlah Term : {len(vocabulary)}"
+
+    )
+
+    st.divider()
