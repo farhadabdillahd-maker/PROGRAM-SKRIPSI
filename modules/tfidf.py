@@ -93,3 +93,124 @@ def show():
     )
 
     st.divider()
+        # =====================================
+    # TERM FREQUENCY (TF)
+    # =====================================
+
+    st.subheader("Term Frequency (TF)")
+
+    tf_dict = {}
+
+    # Hitung TF setiap term pada setiap dokumen
+    for term in vocabulary:
+
+        tf_dict[term] = []
+
+        for tokens in tokenized_docs:
+
+            counter = Counter(tokens)
+
+            tf_dict[term].append(counter[term])
+
+    # Membuat DataFrame TF
+
+    tf_df = pd.DataFrame(tf_dict).T
+
+    tf_df.columns = [
+
+        f"d{i+1}"
+
+        for i in range(total_document)
+
+    ]
+
+    tf_df.index.name = "Term"
+
+    tf_df.reset_index(inplace=True)
+
+    tf_df.insert(0, "No", range(1, len(tf_df)+1))
+
+    st.dataframe(
+
+        tf_df,
+
+        use_container_width=True
+
+    )
+
+    # Simpan TF
+
+    st.session_state["tf"] = tf_df
+
+    st.divider()
+        # =====================================
+    # DOCUMENT FREQUENCY (DF)
+    # =====================================
+
+    df_dict = {}
+
+    for term in vocabulary:
+
+        jumlah_df = 0
+
+        for tokens in tokenized_docs:
+
+            if term in tokens:
+
+                jumlah_df += 1
+
+        df_dict[term] = jumlah_df
+
+    # =====================================
+    # INVERSE DOCUMENT FREQUENCY (IDF)
+    # =====================================
+
+    idf_dict = {}
+
+    for term in vocabulary:
+
+        df_value = df_dict[term]
+
+        if df_value == 0:
+
+            idf = 0
+
+        else:
+
+            idf = round(math.log10(total_document / df_value), 4)
+
+        idf_dict[term] = idf
+
+    # =====================================
+    # TABEL DF DAN IDF
+    # =====================================
+
+    idf_df = pd.DataFrame({
+
+        "No": range(1, len(vocabulary)+1),
+
+        "Term": vocabulary,
+
+        "DF": [df_dict[t] for t in vocabulary],
+
+        "IDF": [idf_dict[t] for t in vocabulary]
+
+    })
+
+    st.subheader("Document Frequency (DF) dan Inverse Document Frequency (IDF)")
+
+    st.dataframe(
+
+        idf_df,
+
+        use_container_width=True
+
+    )
+
+    # Simpan
+
+    st.session_state["df"] = df_dict
+
+    st.session_state["idf"] = idf_dict
+
+    st.divider()
