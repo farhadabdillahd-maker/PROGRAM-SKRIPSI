@@ -1,1 +1,10 @@
-
+streamlit
+pandas
+numpy
+scikit-learn
+nltk
+Sastrawi
+matplotlib
+plotly
+joblib
+reportlab
