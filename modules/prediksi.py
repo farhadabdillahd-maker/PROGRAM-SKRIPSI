@@ -52,6 +52,9 @@ def show():
     )
 
 
+    if "riwayat_prediksi" not in st.session_state:
+        st.session_state.riwayat_prediksi = []
+
     if st.button("Prediksi"):
 
         if not judul.strip():
@@ -72,14 +75,9 @@ def show():
                 f"Tingkat Kejahatan: {hasil}"
             )
 
-            probabilitas = pd.DataFrame({
-
-                "Kategori": [hasil],
-
-                "Keterangan": [
-                    "Ditentukan berdasarkan kamus kejahatan"
-                ]
-
+            st.session_state.riwayat_prediksi.append({
+                "Judul": judul,
+                "Kategori": hasil
             })
 
 
@@ -89,35 +87,29 @@ def show():
                 "Kata kejahatan tidak ditemukan pada kamus."
             )
 
-            probabilitas = pd.DataFrame({
-
-                "Kategori": [
-                    "Tidak ditemukan"
-                ],
-
-                "Keterangan": [
-                    "Tambahkan kata tersebut ke kamus_kejahatan.csv"
-                ]
-
+            st.session_state.riwayat_prediksi.append({
+                "Judul": judul,
+                "Kategori": "Tidak ditemukan"
             })
 
 
-        st.subheader("Informasi Prediksi")
+        st.subheader("Riwayat Prediksi")
 
-        st.dataframe(
-            probabilitas,
-            use_container_width=True
-        )
+        riwayat = pd.DataFrame(st.session_state.riwayat_prediksi)
+        st.dataframe(riwayat, use_container_width=True)
 
+        col1, col2 = st.columns(2)
 
-        csv = probabilitas.to_csv(
-            index=False
-        ).encode("utf-8")
+        with col1:
+            csv = riwayat.to_csv(index=False).encode("utf-8")
+            st.download_button(
+                "📥 Download Hasil Prediksi",
+                csv,
+                file_name="riwayat_prediksi.csv",
+                mime="text/csv"
+            )
 
-
-        st.download_button(
-            "📥 Download Hasil Prediksi",
-            csv,
-            file_name="hasil_prediksi_kamus.csv",
-            mime="text/csv"
-        )
+        with col2:
+            if st.button("🔁 Repeat"):
+                st.session_state.riwayat_prediksi = []
+                st.rerun()
