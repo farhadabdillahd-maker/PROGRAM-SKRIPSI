@@ -34,15 +34,15 @@ def show():
     # Pastikan ada label
     # ===============================
 
-    if "Label" not in df.columns:
+    if "Pelabelan" not in df.columns:
 
-        st.error("Kolom Label tidak ditemukan.")
+        st.error("Kolom Pelabelan tidak ditemukan.")
 
         return
 
     X = st.session_state["tfidf_matrix"]
 
-    y = df["Label"]
+    y = df["Pelabelan"]
 
     st.success("Dataset siap digunakan.")
 
