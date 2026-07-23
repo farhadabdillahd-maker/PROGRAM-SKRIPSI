@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import math
 from collections import Counter
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 # =====================================
@@ -25,6 +26,14 @@ def show():
     # ================================
 
     documents = df["Final Text"].tolist()
+
+    # ================================
+    # Simpan Vectorizer untuk Prediksi
+    # ================================
+    vectorizer = TfidfVectorizer()
+    vectorizer.fit(documents)
+
+    st.session_state["vectorizer"] = vectorizer
 
     # ================================
     # Pecah menjadi token
@@ -243,6 +252,7 @@ def show():
 
     st.session_state["tfidf_df"] = tfidf_df
     st.session_state["tfidf_matrix"] = tfidf_matrix
+    st.session_state["vectorizer"] = vectorizer
     st.session_state["vocabulary"] = vocabulary
 
     st.success("Perhitungan TF-IDF selesai.")
