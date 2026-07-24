@@ -67,20 +67,24 @@ def show():
         st.subheader("Hasil Prediksi")
         st.success(f"Tingkat Kejahatan: {prediksi}")
 
+        st.info("Prediksi dilakukan menggunakan model Naïve Bayes yang telah dilatih dari dataset. Judul tidak harus sama dengan data latih; model memprediksi berdasarkan pola kata yang dipelajari.")
+
         prob_df = pd.DataFrame({
             "Kelas": model.classes_,
-            "Probabilitas": probabilitas
+            "Probabilitas": [round(p*100,2) for p in probabilitas]
         })
 
-        st.subheader("Probabilitas")
-        st.dataframe(prob_df, use_container_width=True)
+        prob_df["Probabilitas (%)"]=prob_df.pop("Probabilitas")
 
-        csv = prob_df.to_csv(index=False).encode("utf-8")
+        st.subheader("Probabilitas Prediksi")
+        st.dataframe(prob_df,use_container_width=True)
 
-        st.download_button(
-            "📥 Download Probabilitas",
-            csv,
-            file_name="hasil_prediksi.csv",
-            mime="text/csv"
-        )
+        tingkat_keyakinan=max(probabilitas)
+        if tingkat_keyakinan<0.60:
+            st.warning("Keyakinan model rendah karena input memiliki pola yang kurang mirip dengan data latih.")
+        else:
+            st.success(f"Keyakinan model: {tingkat_keyakinan*100:.2f}%")
+
+        csv=prob_df.to_csv(index=False).encode("utf-8")
+        st.download_button("📥 Download Hasil Prediksi",csv,file_name="hasil_prediksi.csv",mime="text/csv")
 
