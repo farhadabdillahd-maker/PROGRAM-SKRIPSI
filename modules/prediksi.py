@@ -5,13 +5,14 @@ import streamlit as st
 from nltk.corpus import stopwords
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
+
 factory = StemmerFactory()
 stemmer = factory.create_stemmer()
 stop_words = set(stopwords.words("indonesian"))
 
 
 def preprocessing(text):
-    text = text.lower()
+    text = str(text).lower()
     text = re.sub(r"[^\w\s]", " ", text)
     tokens = text.split()
     tokens = [t for t in tokens if t not in stop_words]
@@ -19,9 +20,44 @@ def preprocessing(text):
     return " ".join(tokens)
 
 
+# ==========================================
+# PREDIKSI MANUAL BERDASARKAN KAMUS
+# ==========================================
+
+def prediksi_kamus(text):
+    try:
+        kamus = pd.read_csv("kamus_kejahatan.csv")
+
+        kamus["kata_kunci"] = (
+            kamus["kata_kunci"]
+            .astype(str)
+            .str.lower()
+        )
+
+        text = text.lower()
+
+        # Prioritas kata terpanjang agar lebih akurat
+        kamus = kamus.sort_values(
+            by="kata_kunci",
+            key=lambda x: x.str.len(),
+            ascending=False
+        )
+
+        for _, row in kamus.iterrows():
+            if row["kata_kunci"] in text:
+                return row["kategori"]
+
+    except Exception:
+        pass
+
+    return None
+
+
 def show():
+
     st.title("🔍 Prediksi Tingkat Kejahatan")
 
+    # Load model
     if "model" in st.session_state:
         model = st.session_state["model"]
     else:
@@ -42,6 +78,7 @@ def show():
     )
 
     if st.button("Prediksi"):
+
         if not judul.strip():
             st.warning("Masukkan judul berita terlebih dahulu.")
             return
@@ -51,40 +88,58 @@ def show():
         st.subheader("Hasil Preprocessing")
         st.write(hasil_pre)
 
-        if vectorizer is None:
-            st.error(
-                "Vectorizer tidak ditemukan di session. "
-                "Jika Anda memakai TF-IDF manual, sesuaikan bagian prediksi "
-                "agar membentuk vektor fitur manual yang sama seperti saat training."
+
+        # Cek kamus terlebih dahulu
+        hasil_kamus = prediksi_kamus(hasil_pre)
+
+
+        if hasil_kamus:
+
+            prediksi = hasil_kamus
+
+            st.subheader("Hasil Prediksi")
+            st.success(
+                f"Tingkat Kejahatan: {prediksi} (berdasarkan kamus)"
             )
-            return
 
-        X = vectorizer.transform([hasil_pre])
+            prob_df = pd.DataFrame({
+                "Kelas": [prediksi],
+                "Probabilitas": [100]
+            })
 
-        prediksi = model.predict(X)[0]
-        probabilitas = model.predict_proba(X)[0]
-
-        st.subheader("Hasil Prediksi")
-        st.success(f"Tingkat Kejahatan: {prediksi}")
-
-        st.info("Prediksi dilakukan menggunakan model Naïve Bayes yang telah dilatih dari dataset. Judul tidak harus sama dengan data latih; model memprediksi berdasarkan pola kata yang dipelajari.")
-
-        prob_df = pd.DataFrame({
-            "Kelas": model.classes_,
-            "Probabilitas": [round(p*100,2) for p in probabilitas]
-        })
-
-        prob_df["Probabilitas (%)"]=prob_df.pop("Probabilitas")
-
-        st.subheader("Probabilitas Prediksi")
-        st.dataframe(prob_df,use_container_width=True)
-
-        tingkat_keyakinan=max(probabilitas)
-        if tingkat_keyakinan<0.60:
-            st.warning("Keyakinan model rendah karena input memiliki pola yang kurang mirip dengan data latih.")
         else:
-            st.success(f"Keyakinan model: {tingkat_keyakinan*100:.2f}%")
 
-        csv=prob_df.to_csv(index=False).encode("utf-8")
-        st.download_button("📥 Download Hasil Prediksi",csv,file_name="hasil_prediksi.csv",mime="text/csv")
+            if vectorizer is None:
+                st.error(
+                    "Vectorizer tidak ditemukan. "
+                    "Silakan jalankan TF-IDF terlebih dahulu."
+                )
+                return
 
+            X = vectorizer.transform([hasil_pre])
+
+            prediksi = model.predict(X)[0]
+            probabilitas = model.predict_proba(X)[0]
+
+            st.subheader("Hasil Prediksi")
+            st.success(
+                f"Tingkat Kejahatan: {prediksi} (berdasarkan Naïve Bayes)"
+            )
+
+            prob_df = pd.DataFrame({
+                "Kelas": model.classes_,
+                "Probabilitas": probabilitas
+            })
+
+
+        st.subheader("Probabilitas")
+        st.dataframe(prob_df, use_container_width=True)
+
+        csv = prob_df.to_csv(index=False).encode("utf-8")
+
+        st.download_button(
+            "📥 Download Probabilitas",
+            csv,
+            file_name="hasil_prediksi.csv",
+            mime="text/csv"
+        )
