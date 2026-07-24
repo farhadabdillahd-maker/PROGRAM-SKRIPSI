@@ -495,6 +495,39 @@ kejahatan.
         # PESAN AKHIR
         # =======================================
 
+        
+# =======================================
+# DOWNLOAD LAPORAN PDF
+# =======================================
+from reportlab.platypus import SimpleDocTemplate, Paragraph
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+try:
+    pdfmetrics.registerFont(TTFont("DejaVu","/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"))
+    style=getSampleStyleSheet()["BodyText"]; style.fontName="DejaVu"
+    h=getSampleStyleSheet()["Heading1"]; h.fontName="DejaVu"
+except:
+    style=getSampleStyleSheet()["BodyText"]; h=getSampleStyleSheet()["Heading1"]
+
+def buat_pdf():
+    doc=SimpleDocTemplate("laporan_training_naive_bayes.pdf")
+    el=[Paragraph("LAPORAN TRAINING MODEL NAIVE BAYES",h)]
+    el.append(Paragraph(f"Jumlah Data : {len(df)}",style))
+    el.append(Paragraph(f"Data Training : {len(y_train)}",style))
+    el.append(Paragraph(f"Data Testing : {len(y_test)}",style))
+    el.append(Paragraph(f"Jumlah Fitur : {X.shape[1]}",style))
+    el.append(Paragraph(f"Accuracy : {accuracy*100:.2f}%",style))
+    el.append(Paragraph(f"Precision : {precision*100:.2f}%",style))
+    el.append(Paragraph(f"Recall : {recall*100:.2f}%",style))
+    el.append(Paragraph(f"F1-Score : {f1*100:.2f}%",style))
+    el.append(Paragraph("<br/><b>Kesimpulan</b>",style))
+    el.append(Paragraph(f"Model Naive Bayes berhasil dilatih menggunakan {len(y_train)} data training dan {len(y_test)} data testing. Model memperoleh Accuracy {accuracy*100:.2f}%, Precision {precision*100:.2f}%, Recall {recall*100:.2f}%, dan F1-Score {f1*100:.2f}%.",style))
+    doc.build(el)
+    with open("laporan_training_naive_bayes.pdf","rb") as f:
+        st.download_button("📄 Download Laporan PDF",f.read(),"laporan_training_naive_bayes.pdf","application/pdf")
+buat_pdf()
+
         st.success(
             "Seluruh proses klasifikasi berhasil dijalankan."
         )
