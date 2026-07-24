@@ -1,3 +1,6 @@
+
+# PDF support imports
+from reportlab.platypus import SimpleDocTemplate
 import streamlit as st
 import pandas as pd
 import joblib
@@ -500,3 +503,8 @@ kejahatan.
         )
 
         st.balloons()
+
+
+# === PETUNJUK ===
+# Tambahkan fungsi generate_pdf() dan st.download_button() sesuai contoh yang telah diberikan
+# untuk menghasilkan laporan PDF.
