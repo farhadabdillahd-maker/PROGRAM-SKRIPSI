@@ -24,7 +24,7 @@ def generate_pdf(
     """
     Menghasilkan laporan PDF hasil klasifikasi.
     Simpan logo pada:
-        asset/logo_polri.jpg
+        asset/logo_polri.png
         asset/logo_polda.png
     Jika ingin menambahkan logo dan confusion matrix sebagai gambar,
     tinggal dikembangkan pada fungsi ini.
@@ -51,8 +51,19 @@ def generate_pdf(
 
     elements = []
 
-    logo_polri = Image(os.path.join("asset","logo_polri.jpg"), width=2.8*CM, height=2.8*CM)
-    logo_polda = Image(os.path.join("asset","logo_polda.png"), width=2.8*CM, height=2.8*CM)
+    from pathlib import Path
+
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    LOGO_POLRI = BASE_DIR / "asset" / "logo_polri.jpg"
+    LOGO_POLDA = BASE_DIR / "asset" / "logo_polda.png"
+
+    logo_polri = Image(str(LOGO_POLRI))
+    logo_polri.drawWidth = 3.3 * CM
+    logo_polri.drawHeight = (logo_polri.imageHeight / logo_polri.imageWidth) * logo_polri.drawWidth
+
+    logo_polda = Image(str(LOGO_POLDA))
+    logo_polda.drawWidth = 3.0 * CM
+    logo_polda.drawHeight = (logo_polda.imageHeight / logo_polda.imageWidth) * logo_polda.drawWidth
 
     style_kop = ParagraphStyle(
         "kop",
@@ -82,7 +93,7 @@ def generate_pdf(
 
     kop = Table(
         [[logo_polri, [judul, alamat], logo_polda]],
-        colWidths=[3.2*CM, 12*CM, 3.2*CM]
+        colWidths=[3.8*CM, 10.4*CM, 3.8*CM]
     )
 
     kop.setStyle(TableStyle([
@@ -98,7 +109,7 @@ def generate_pdf(
 
     garis = Table([[""]], colWidths=[18*CM], rowHeights=[0.05*CM])
     garis.setStyle(TableStyle([("BACKGROUND",(0,0),(-1,-1),colors.black)]))
-    elements.append(Spacer(1,0.12*CM))
+    elements.append(Spacer(1,0.25*CM))
     elements.append(garis)
     elements.append(Spacer(1,0.08*CM))
     elements.append(garis)
