@@ -133,6 +133,27 @@ def generate_pdf(
     elements.append(t)
     elements.append(Spacer(1,0.5*CM))
 
+
+# ==========================
+# Narasi Evaluasi Model
+# ==========================
+elements.append(Paragraph("<b>Interpretasi Hasil Evaluasi Model</b>", styles["Heading3"]))
+
+narasi = f"""
+Berdasarkan hasil pengujian model menggunakan algoritma <b>Multinomial Naïve Bayes</b>,
+diperoleh nilai <b>Accuracy sebesar {accuracy*100:.2f}%</b>, yang menunjukkan persentase
+data yang berhasil diklasifikasikan dengan benar oleh model.
+Nilai <b>Precision sebesar {precision*100:.2f}%</b> menunjukkan kemampuan model dalam
+menghasilkan prediksi yang tepat pada setiap kelas.
+Nilai <b>Recall sebesar {recall*100:.2f}%</b> menunjukkan kemampuan model menemukan
+seluruh data yang benar pada masing-masing kelas.
+Nilai <b>F1-Score sebesar {f1*100:.2f}%</b> merupakan rata-rata harmonis antara precision
+dan recall sehingga menggambarkan performa model secara keseluruhan.
+"""
+
+elements.append(Paragraph(narasi, normal))
+elements.append(Spacer(1,0.4*CM))
+
     elements.append(Paragraph("<b>Classification Report</b>",styles["Heading3"]))
     rpt=[report_df.reset_index().columns.tolist()] + report_df.reset_index().round(4).astype(str).values.tolist()
     tr=Table(rpt)
@@ -143,6 +164,9 @@ def generate_pdf(
         ("FONTSIZE",(0,0),(-1,-1),8),
     ]))
     elements.append(tr)
+    elements.append(Paragraph(
+        "Classification Report menampilkan nilai precision, recall, F1-score, dan support untuk setiap kelas sehingga dapat digunakan untuk mengevaluasi kinerja model pada masing-masing kategori.",
+        normal))
     elements.append(Spacer(1,0.5*CM))
 
     elements.append(Paragraph("<b>Confusion Matrix</b>",styles["Heading3"]))
@@ -157,6 +181,9 @@ def generate_pdf(
         ("FONTNAME",(0,0),(-1,0),"Helvetica-Bold"),
     ]))
     elements.append(tc)
+    elements.append(Paragraph(
+        "Confusion Matrix menunjukkan jumlah prediksi yang benar maupun salah pada setiap kelas. Semakin banyak nilai pada diagonal utama, semakin baik kemampuan model dalam melakukan klasifikasi.",
+        normal))
     elements.append(Spacer(1,0.5*CM))
 
     elements.append(Paragraph("<b>Hasil Prediksi Testing</b>",styles["Heading3"]))
@@ -170,6 +197,9 @@ def generate_pdf(
         ("FONTSIZE",(0,0),(-1,-1),7),
     ]))
     elements.append(th)
+    elements.append(Paragraph(
+        "Tabel hasil prediksi testing menampilkan sebagian data uji beserta hasil klasifikasi yang dihasilkan model. Hasil ini digunakan untuk melihat kesesuaian prediksi terhadap data pengujian.",
+        normal))
 
     elements.append(Spacer(1,1*CM))
     elements.append(Paragraph(
