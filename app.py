@@ -40,8 +40,9 @@ footer{
 visibility:hidden;
 }
 
+/* Header tidak disembunyikan agar tombol expand/collapse sidebar tetap muncul */
 header{
-visibility:hidden;
+    visibility: visible;
 }
 
 [data-testid="stSidebar"]{
