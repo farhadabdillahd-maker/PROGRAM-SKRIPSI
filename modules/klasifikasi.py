@@ -508,3 +508,36 @@ kejahatan.
 # === PETUNJUK ===
 # Tambahkan fungsi generate_pdf() dan st.download_button() sesuai contoh yang telah diberikan
 # untuk menghasilkan laporan PDF.
+
+
+
+
+# ==========================================================
+# GANTI seluruh bagian hasil evaluasi menjadi expander
+# Contoh:
+#
+# with st.expander("📋 1. Classification Report", expanded=False):
+#     st.dataframe(report_df, use_container_width=True)
+#
+# with st.expander("🧩 2. Confusion Matrix", expanded=False):
+#     st.pyplot(fig)
+#     st.dataframe(cm_df, use_container_width=True)
+#
+# with st.expander("📈 3. Ringkasan Model", expanded=False):
+#     ...
+#
+# with st.expander("📝 4. Kesimpulan", expanded=False):
+#     ...
+#
+# with st.expander("🎯 5. Probabilitas Prediksi", expanded=False):
+#     st.dataframe(probability_df, use_container_width=True)
+#
+# with st.expander("📄 6. Hasil Prediksi Testing", expanded=False):
+#     st.dataframe(hasil_prediksi, use_container_width=True)
+#     st.download_button(...)
+#
+# with st.expander("⚙️ 7. Informasi Model", expanded=False):
+#     st.dataframe(info_model, use_container_width=True)
+#
+# Semua expander akan tertutup dan hanya terbuka ketika diklik.
+# ==========================================================
