@@ -39,23 +39,33 @@ def load_css():
     else:
         st.warning(f"CSS tidak ditemukan: {css_path}")
 
+
 def set_gif_background():
     gif_path = Path(__file__).parent / "asset" / "latar.gif"
     if gif_path.exists():
         gif = base64.b64encode(gif_path.read_bytes()).decode()
-        st.markdown(f'''
+        st.markdown(f"""
         <style>
-        .stApp {{
+        .stApp{
+            background: transparent !important;
+        }
+        [data-testid="stAppViewContainer"]{
             background-image:
-                linear-gradient(rgba(255,255,255,0.30), rgba(255,255,255,0.30)),
+                linear-gradient(rgba(255,255,255,0.15),rgba(255,255,255,0.15)),
                 url("data:image/gif;base64,{gif}");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }}
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+        }
+        [data-testid="stHeader"]{
+            background:transparent !important;
+        }
+        .main{
+            background:transparent !important;
+        }
         </style>
-        ''', unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
 
 load_css()
 set_gif_background()
