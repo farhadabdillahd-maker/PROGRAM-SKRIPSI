@@ -51,7 +51,7 @@ def generate_pdf(
 
     elements = []
 
-    logo_polri = Image(os.path.join("asset","logo_polri.png"), width=2.8*CM, height=2.8*CM)
+    logo_polri = Image(os.path.join("asset","logo_polri.jpg"), width=2.8*CM, height=2.8*CM)
     logo_polda = Image(os.path.join("asset","logo_polda.png"), width=2.8*CM, height=2.8*CM)
 
     style_kop = ParagraphStyle(
