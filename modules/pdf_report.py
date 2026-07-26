@@ -111,12 +111,15 @@ def generate_pdf(
         title))
     elements.append(Spacer(1,0.4*CM))
 
-    nomor = f"B/001/RESKRIM/{datetime.now():%m/%Y}"
+    waktu_download = datetime.now()
+
+    nomor = f"B/001/RESKRIM/{waktu_download:%m/%Y}"
 
     info = [
         ["Parameter","Keterangan"],
         ["Nomor Surat",nomor],
-        ["Tanggal",datetime.now().strftime("%d %B %Y")],
+        ["Tanggal Download", waktu_download.strftime("%d %B %Y")],
+        ["Jam Download", waktu_download.strftime("%H:%M:%S WIB")],
         ["Algoritma","Multinomial Naïve Bayes"],
         ["Accuracy",f"{accuracy*100:.2f}%"],
         ["Precision",f"{precision*100:.2f}%"],
@@ -224,7 +227,7 @@ def generate_pdf(
 
     doc.build(elements)
 
-    output="Laporan_Hasil_Klasifikasi.pdf"
+    output=f"Laporan_Hasil_Klasifikasi_{waktu_download:%Y%m%d_%H%M%S}.pdf"
     with open(output,"wb") as f:
         f.write(buffer.getvalue())
     buffer.close()
