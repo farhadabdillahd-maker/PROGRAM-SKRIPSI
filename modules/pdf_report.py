@@ -19,6 +19,8 @@ def generate_pdf(
     report_df,
     cm_df,
     hasil_prediksi,
+    bar_chart_path=None,
+    pie_chart_path=None,
     info_model=None,
 ):
     """
@@ -180,6 +182,23 @@ def generate_pdf(
         normal))
     elements.append(Spacer(1,0.5*CM))
 
+
+    if bar_chart_path and os.path.exists(bar_chart_path):
+        elements.append(Paragraph("<b>Distribusi Dataset (Diagram Batang)</b>", styles["Heading3"]))
+        elements.append(Image(bar_chart_path, width=16*CM, height=9*CM))
+        elements.append(Paragraph(
+            "Diagram batang menunjukkan jumlah data pada setiap kategori kelas. Grafik ini digunakan untuk melihat keseimbangan distribusi dataset yang digunakan dalam proses pelatihan model.",
+            normal))
+        elements.append(Spacer(1,0.5*CM))
+
+    if pie_chart_path and os.path.exists(pie_chart_path):
+        elements.append(Paragraph("<b>Distribusi Dataset (Diagram Lingkaran)</b>", styles["Heading3"]))
+        elements.append(Image(pie_chart_path, width=12*CM, height=12*CM))
+        elements.append(Paragraph(
+            "Diagram lingkaran memperlihatkan persentase masing-masing kelas terhadap keseluruhan dataset sehingga memudahkan analisis proporsi data pada setiap kategori.",
+            normal))
+        elements.append(Spacer(1,0.5*CM))
+
     elements.append(Paragraph("<b>Hasil Prediksi Testing</b>",styles["Heading3"]))
     hp=[hasil_prediksi.columns.tolist()]
     hp += hasil_prediksi.head(20).astype(str).values.tolist()
@@ -202,13 +221,8 @@ def generate_pdf(
     elements.append(Paragraph(
         "Demikian laporan hasil klasifikasi ini dibuat untuk dipergunakan sebagaimana mestinya.",
         normal))
-    elements.append(Spacer(1,1*CM))
-    elements.append(Paragraph(
-        f"Pasaman, {datetime.now().strftime('%d %B %Y')}",
-        normal))
-    elements.append(Paragraph("Kepala Sat Reskrim",normal))
-    elements.append(Spacer(1,2*CM))
-    elements.append(Paragraph("(..........................................)",normal))
+    elements.append(Spacer(1,0.5*CM))
+    elements.append(Paragraph("Demikian laporan hasil klasifikasi ini dibuat untuk dipergunakan sebagaimana mestinya.", normal))
 
     doc.build(elements)
 
