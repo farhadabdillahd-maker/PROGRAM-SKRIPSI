@@ -5,6 +5,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 import os
+from modules.pdf_report import generate_pdf
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
@@ -540,7 +541,40 @@ kejahatan.
                 "Seluruh proses klasifikasi berhasil dijalankan."
             )
 
+
             st.balloons()
+
+            # =======================================
+            # DOWNLOAD LAPORAN PDF
+            # =======================================
+
+            st.divider()
+            st.subheader("📄 Laporan Hasil Klasifikasi")
+
+            st.info(
+                "Klik tombol di bawah untuk mengunduh laporan lengkap hasil "
+                "klasifikasi dalam format PDF."
+            )
+
+            pdf_file = generate_pdf(
+                accuracy=accuracy,
+                precision=precision,
+                recall=recall,
+                f1=f1,
+                report_df=report_df,
+                cm_df=cm_df,
+                hasil_prediksi=hasil_prediksi,
+                info_model=info_model,
+            )
+
+            with open(pdf_file, "rb") as pdf:
+                st.download_button(
+                    label="📥 Download Laporan PDF",
+                    data=pdf,
+                    file_name="Laporan_Hasil_Klasifikasi.pdf",
+                    mime="application/pdf",
+                    use_container_width=True,
+                )
 
 
 # === PETUNJUK ===
