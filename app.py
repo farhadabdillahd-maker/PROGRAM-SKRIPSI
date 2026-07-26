@@ -31,29 +31,7 @@ from modules import (
 # CSS
 # ==============================
 
-
-def 
-def set_gif_background():
-    gif_path = Path(__file__).parent / "asset" / "latar.gif"
-    if gif_path.exists():
-        with open(gif_path, "rb") as f:
-            gif = base64.b64encode(f.read()).decode()
-        st.markdown(f"""
-        <style>
-        .stApp{
-            background-image:
-                linear-gradient(rgba(255,255,255,0.30), rgba(255,255,255,0.30)),
-                url("data:image/gif;base64,{gif}");
-            background-size:cover;
-            background-position:center;
-            background-repeat:no-repeat;
-            background-attachment:fixed;
-        }
-        </style>
-        """, unsafe_allow_html=True)
-
-load_css()
-set_gif_background():
+def load_css():
     css_path = Path(__file__).parent / "asset" / "style.css"
     if css_path.exists():
         with open(css_path, "r", encoding="utf-8") as f:
@@ -61,9 +39,26 @@ set_gif_background():
     else:
         st.warning(f"CSS tidak ditemukan: {css_path}")
 
+def set_gif_background():
+    gif_path = Path(__file__).parent / "asset" / "latar.gif"
+    if gif_path.exists():
+        gif = base64.b64encode(gif_path.read_bytes()).decode()
+        st.markdown(f'''
+        <style>
+        .stApp {{
+            background-image:
+                linear-gradient(rgba(255,255,255,0.30), rgba(255,255,255,0.30)),
+                url("data:image/gif;base64,{gif}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }}
+        </style>
+        ''', unsafe_allow_html=True)
+
 load_css()
 set_gif_background()
-
 
 # ==============================
 # SIDEBAR
@@ -77,12 +72,8 @@ def logo_base64():
 st.sidebar.markdown(f"""
 <div style="text-align:center; margin-top:10px; margin-bottom:20px;">
     <img src="data:image/png;base64,{logo_base64()}" width="90">
-    <h2 style="color:white; margin:10px 0 0 0; font-weight:800;">
-        KLASIFIKASI
-    </h2>
-    <div style="color:#B8C2D9; font-size:16px; font-weight:600;">
-        TINGKAT KEJAHATAN
-    </div>
+    <h2 style="color:white; margin:10px 0 0 0; font-weight:800;">KLASIFIKASI</h2>
+    <div style="color:#B8C2D9; font-size:16px; font-weight:600;">TINGKAT KEJAHATAN</div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -99,27 +90,17 @@ menu = st.sidebar.radio(
     ]
 )
 
-# ==============================
-# ROUTING
-# ==============================
-
 if menu == "🏠 Home":
     home.show()
-
 elif menu == "📂 Upload Dataset":
     upload_dataset.show()
-
 elif menu == "🧹 Preprocessing":
     preprocessing.show()
-
 elif menu == "📝 TF-IDF":
     tfidf.show()
-
 elif menu == "🤖 Klasifikasi":
     klasifikasi.show()
-
 elif menu == "🔍 Prediksi":
     prediksi.show()
-
 elif menu == "ℹ️ About":
     about.show()
