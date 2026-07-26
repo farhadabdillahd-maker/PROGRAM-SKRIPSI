@@ -1,3 +1,16 @@
+/* ==================================================
+   BACKGROUND DASHBOARD GIF
+================================================== */
+.stApp{
+    background:
+        linear-gradient(rgba(255,255,255,.30),rgba(255,255,255,.30)),
+        url("latar.gif");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
 /* ==========================================
    SIDEBAR HOVER EFFECT
    Tambahkan di bagian paling bawah style.css
