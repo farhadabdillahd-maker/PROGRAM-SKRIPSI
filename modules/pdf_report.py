@@ -120,8 +120,7 @@ def generate_pdf(
     info = [
         ["Parameter","Keterangan"],
         ["Nomor Surat",nomor],
-        ["Tanggal Download", waktu_download.strftime("%d %B %Y")],
-        ["Jam Download", waktu_download.strftime("%H:%M:%S WIB")],
+        ["Tanggal Laporan", waktu_download.strftime("%d %B %Y")],
         ["Algoritma","Multinomial Naïve Bayes"],
         ["Accuracy",f"{accuracy*100:.2f}%"],
         ["Precision",f"{precision*100:.2f}%"],
