@@ -510,34 +510,48 @@ kejahatan.
 # untuk menghasilkan laporan PDF.
 
 
-
-
 # ==========================================================
-# GANTI seluruh bagian hasil evaluasi menjadi expander
-# Contoh:
-#
-# with st.expander("📋 1. Classification Report", expanded=False):
-#     st.dataframe(report_df, use_container_width=True)
-#
-# with st.expander("🧩 2. Confusion Matrix", expanded=False):
-#     st.pyplot(fig)
-#     st.dataframe(cm_df, use_container_width=True)
-#
-# with st.expander("📈 3. Ringkasan Model", expanded=False):
-#     ...
-#
-# with st.expander("📝 4. Kesimpulan", expanded=False):
-#     ...
-#
-# with st.expander("🎯 5. Probabilitas Prediksi", expanded=False):
-#     st.dataframe(probability_df, use_container_width=True)
-#
-# with st.expander("📄 6. Hasil Prediksi Testing", expanded=False):
-#     st.dataframe(hasil_prediksi, use_container_width=True)
-#     st.download_button(...)
-#
-# with st.expander("⚙️ 7. Informasi Model", expanded=False):
-#     st.dataframe(info_model, use_container_width=True)
-#
-# Semua expander akan tertutup dan hanya terbuka ketika diklik.
+# CONTOH PENGGUNAAN EXPANDER
+# Tempatkan blok-blok berikut menggantikan tampilan biasa.
 # ==========================================================
+
+"""
+with st.expander("📊 1. Hasil Evaluasi Model", expanded=False):
+    col1, col2 = st.columns(2)
+    with col1:
+        st.metric("Accuracy", f"{accuracy*100:.2f}%")
+        st.metric("Precision", f"{precision*100:.2f}%")
+    with col2:
+        st.metric("Recall", f"{recall*100:.2f}%")
+        st.metric("F1-Score", f"{f1*100:.2f}%")
+
+with st.expander("📋 2. Classification Report", expanded=False):
+    st.dataframe(report_df, use_container_width=True)
+
+with st.expander("🧩 3. Confusion Matrix", expanded=False):
+    st.pyplot(fig)
+
+with st.expander("📑 4. Tabel Confusion Matrix", expanded=False):
+    st.dataframe(cm_df, use_container_width=True)
+
+with st.expander("📈 5. Ringkasan Model", expanded=False):
+    ...
+
+with st.expander("📝 6. Kesimpulan", expanded=False):
+    ...
+
+with st.expander("🎯 7. Probabilitas Prediksi", expanded=False):
+    st.dataframe(probability_df, use_container_width=True)
+
+with st.expander("📄 8. Hasil Prediksi Testing", expanded=False):
+    st.dataframe(hasil_prediksi, use_container_width=True)
+    st.download_button(
+        "📥 Download Hasil Prediksi",
+        csv,
+        "hasil_prediksi_naive_bayes.csv",
+        "text/csv"
+    )
+
+with st.expander("⚙️ 9. Informasi Model", expanded=False):
+    st.dataframe(info_model, use_container_width=True)
+"""
