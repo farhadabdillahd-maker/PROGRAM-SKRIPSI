@@ -22,6 +22,7 @@ def generate_pdf(
     bar_chart_path=None,
     pie_chart_path=None,
     info_model=None,
+    waktu_download=None,
 ):
     """
     Menghasilkan laporan PDF hasil klasifikasi.
@@ -111,7 +112,8 @@ def generate_pdf(
         title))
     elements.append(Spacer(1,0.4*CM))
 
-    waktu_download = datetime.now()
+    if waktu_download is None:
+        waktu_download = datetime.now()
 
     nomor = f"B/001/RESKRIM/{waktu_download:%m/%Y}"
 
