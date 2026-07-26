@@ -12,8 +12,37 @@ from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 
 
+
+# ===============================
+# CSS MODERN EXPANDER
+# ===============================
+def _modern_expander_css():
+    st.markdown("""
+    <style>
+    div[data-testid="stExpander"]{
+        border:2px solid #2F80ED!important;
+        border-radius:16px!important;
+        overflow:hidden;
+        margin-bottom:12px;
+        box-shadow:0 4px 12px rgba(0,0,0,.08);
+    }
+    div[data-testid="stExpander"] details summary{
+        background:linear-gradient(90deg,#1E3C72,#2A5298);
+        color:white!important;
+        font-weight:700;
+        font-size:17px;
+        border-radius:14px;
+    }
+    div[data-testid="stExpander"] details summary:hover{
+        background:linear-gradient(90deg,#2A5298,#3B82F6);
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+
 def show():
 
+    _modern_expander_css()
     st.title("🤖 Klasifikasi Naïve Bayes")
 
     # ===============================
@@ -225,133 +254,139 @@ def show():
         # =======================================
 
         st.divider()
-        st.subheader("📊 Hasil Evaluasi Model")
+        with st.expander("📊 1️⃣ Hasil Evaluasi Model", expanded=True):
+            st.subheader("📊 Hasil Evaluasi Model")
 
-        col1, col2 = st.columns(2)
+            col1, col2 = st.columns(2)
 
-        with col1:
-            st.metric(
-                label="Accuracy",
-                value=f"{accuracy * 100:.2f}%"
+            with col1:
+                st.metric(
+                    label="Accuracy",
+                    value=f"{accuracy * 100:.2f}%"
+                )
+
+                st.metric(
+                    label="Precision",
+                    value=f"{precision * 100:.2f}%"
+                )
+
+            with col2:
+                st.metric(
+                    label="Recall",
+                    value=f"{recall * 100:.2f}%"
+                )
+
+                st.metric(
+                    label="F1-Score",
+                    value=f"{f1 * 100:.2f}%"
+                )
+
+            # =======================================
+            # CLASSIFICATION REPORT
+            # =======================================
+
+            report = classification_report(
+                y_test,
+                y_pred,
+                output_dict=True,
+                zero_division=0,
             )
 
-            st.metric(
-                label="Precision",
-                value=f"{precision * 100:.2f}%"
+            report_df = pd.DataFrame(report).transpose()
+
+        with st.expander("📋 2️⃣ Classification Report", expanded=False):
+            st.subheader("Classification Report")
+
+            st.dataframe(
+                report_df,
+                use_container_width=True,
             )
 
-        with col2:
-            st.metric(
-                label="Recall",
-                value=f"{recall * 100:.2f}%"
+            st.session_state["classification_report"] = report_df
+                  # =======================================
+            # CONFUSION MATRIX
+            # =======================================
+
+            st.divider()
+        with st.expander("🧩 3️⃣ Confusion Matrix", expanded=False):
+            st.subheader("Confusion Matrix")
+
+            cm = confusion_matrix(y_test, y_pred)
+
+            st.session_state["confusion_matrix"] = cm
+
+            fig, ax = plt.subplots(figsize=(6, 5))
+
+            disp = ConfusionMatrixDisplay(
+                confusion_matrix=cm,
+                display_labels=model.classes_
             )
 
-            st.metric(
-                label="F1-Score",
-                value=f"{f1 * 100:.2f}%"
+            disp.plot(
+                cmap="Blues",
+                ax=ax,
+                colorbar=False
             )
 
-        # =======================================
-        # CLASSIFICATION REPORT
-        # =======================================
+            ax.set_title("Confusion Matrix")
+            ax.set_xlabel("Prediksi")
+            ax.set_ylabel("Aktual")
 
-        report = classification_report(
-            y_test,
-            y_pred,
-            output_dict=True,
-            zero_division=0,
-        )
+            st.pyplot(fig)
 
-        report_df = pd.DataFrame(report).transpose()
+            # =======================================
+            # TAMPILKAN MATRIX DALAM TABEL
+            # =======================================
 
-        st.subheader("Classification Report")
+        with st.expander("📑 4️⃣ Tabel Confusion Matrix", expanded=False):
+            st.subheader("Tabel Confusion Matrix")
 
-        st.dataframe(
-            report_df,
-            use_container_width=True,
-        )
+            cm_df = pd.DataFrame(
+                cm,
+                index=[f"Aktual {c}" for c in model.classes_],
+                columns=[f"Prediksi {c}" for c in model.classes_]
+            )
 
-        st.session_state["classification_report"] = report_df
-              # =======================================
-        # CONFUSION MATRIX
-        # =======================================
+            st.dataframe(
+                cm_df,
+                use_container_width=True
+            )
 
-        st.divider()
-        st.subheader("Confusion Matrix")
+            st.session_state["cm_df"] = cm_df
 
-        cm = confusion_matrix(y_test, y_pred)
+            # =======================================
+            # RINGKASAN HASIL
+            # =======================================
 
-        st.session_state["confusion_matrix"] = cm
+            st.divider()
+        with st.expander("📌 5️⃣ Ringkasan Model", expanded=False):
+            st.subheader("Ringkasan Model")
 
-        fig, ax = plt.subplots(figsize=(6, 5))
+            st.success("Model Naïve Bayes berhasil dilatih.")
 
-        disp = ConfusionMatrixDisplay(
-            confusion_matrix=cm,
-            display_labels=model.classes_
-        )
+            col1, col2 = st.columns(2)
 
-        disp.plot(
-            cmap="Blues",
-            ax=ax,
-            colorbar=False
-        )
+            with col1:
+                st.write("**Jumlah Data Training**")
+                st.info(len(y_train))
 
-        ax.set_title("Confusion Matrix")
-        ax.set_xlabel("Prediksi")
-        ax.set_ylabel("Aktual")
+                st.write("**Jumlah Data Testing**")
+                st.info(len(y_test))
 
-        st.pyplot(fig)
+            with col2:
+                st.write("**Jumlah Fitur**")
+                st.info(X.shape[1])
 
-        # =======================================
-        # TAMPILKAN MATRIX DALAM TABEL
-        # =======================================
+                st.write("**Jumlah Kelas**")
+                st.info(len(model.classes_))
 
-        st.subheader("Tabel Confusion Matrix")
+            st.divider()
 
-        cm_df = pd.DataFrame(
-            cm,
-            index=[f"Aktual {c}" for c in model.classes_],
-            columns=[f"Prediksi {c}" for c in model.classes_]
-        )
+        with st.expander("📝 6️⃣ Kesimpulan", expanded=False):
+            st.subheader("Kesimpulan")
 
-        st.dataframe(
-            cm_df,
-            use_container_width=True
-        )
-
-        st.session_state["cm_df"] = cm_df
-
-        # =======================================
-        # RINGKASAN HASIL
-        # =======================================
-
-        st.divider()
-        st.subheader("Ringkasan Model")
-
-        st.success("Model Naïve Bayes berhasil dilatih.")
-
-        col1, col2 = st.columns(2)
-
-        with col1:
-            st.write("**Jumlah Data Training**")
-            st.info(len(y_train))
-
-            st.write("**Jumlah Data Testing**")
-            st.info(len(y_test))
-
-        with col2:
-            st.write("**Jumlah Fitur**")
-            st.info(X.shape[1])
-
-            st.write("**Jumlah Kelas**")
-            st.info(len(model.classes_))
-
-        st.divider()
-
-        st.subheader("Kesimpulan")
-
-        st.write(
-            f"""
+            st.write(
+                f"""
 Model Naïve Bayes telah berhasil dilatih menggunakan
 **{len(y_train)} data training** dan diuji menggunakan
 **{len(y_test)} data testing**.
@@ -367,191 +402,147 @@ Semakin tinggi nilai Accuracy, Precision, Recall, dan F1-Score,
 maka semakin baik performa model dalam mengklasifikasikan tingkat
 kejahatan.
 """
-        )
+            )
 
-        st.balloons()
-        # =======================================
-        # PROBABILITAS PREDIKSI
-        # =======================================
+            st.balloons()
+            # =======================================
+            # PROBABILITAS PREDIKSI
+            # =======================================
 
-        st.divider()
-        st.subheader("Probabilitas Prediksi")
+            st.divider()
+        with st.expander("📈 7️⃣ Probabilitas Prediksi", expanded=False):
+            st.subheader("Probabilitas Prediksi")
 
-        probability = model.predict_proba(X_test)
+            probability = model.predict_proba(X_test)
 
-        probability_df = pd.DataFrame(
-            probability,
-            columns=model.classes_
-        )
+            probability_df = pd.DataFrame(
+                probability,
+                columns=model.classes_
+            )
 
-        st.dataframe(
-            probability_df,
-            use_container_width=True
-        )
+            st.dataframe(
+                probability_df,
+                use_container_width=True
+            )
 
-        st.session_state["probability"] = probability_df
+            st.session_state["probability"] = probability_df
 
-        # =======================================
-        # HASIL PREDIKSI
-        # =======================================
+            # =======================================
+            # HASIL PREDIKSI
+            # =======================================
 
-        st.divider()
-        st.subheader("Hasil Prediksi Judul Berita Testing")
+            st.divider()
+        with st.expander("📰 8️⃣ Hasil Prediksi Testing", expanded=True):
+            st.subheader("Hasil Prediksi Judul Berita Testing")
 
-        # Mengambil judul berita asli berdasarkan index data testing
-        judul_testing = df.loc[
-            y_test.index,
-            "Judul Media Nasional"
-        ].reset_index(drop=True)
+            # Mengambil judul berita asli berdasarkan index data testing
+            judul_testing = df.loc[
+                y_test.index,
+                "Judul Media Nasional"
+            ].reset_index(drop=True)
 
-        hasil_prediksi = pd.DataFrame({
+            hasil_prediksi = pd.DataFrame({
 
-            "Judul Media Nasional": judul_testing,
+                "Judul Media Nasional": judul_testing,
 
-            "Label Asli": y_test.reset_index(drop=True),
+                "Label Asli": y_test.reset_index(drop=True),
 
-            "Hasil Prediksi": pd.Series(y_pred),
+                "Hasil Prediksi": pd.Series(y_pred),
 
-            "Status": [
-                "Benar" if a == b else "Salah"
-                for a, b in zip(
-                    y_test.reset_index(drop=True),
-                    y_pred
-                )
-            ]
+                "Status": [
+                    "Benar" if a == b else "Salah"
+                    for a, b in zip(
+                        y_test.reset_index(drop=True),
+                        y_pred
+                    )
+                ]
 
-        })
+            })
 
-        st.dataframe(
-            hasil_prediksi,
-            use_container_width=True
-        )
+            st.dataframe(
+                hasil_prediksi,
+                use_container_width=True
+            )
 
-        st.session_state["hasil_prediksi"] = hasil_prediksi
+            st.session_state["hasil_prediksi"] = hasil_prediksi
 
-        # =======================================
-        # DOWNLOAD CSV
-        # =======================================
+            # =======================================
+            # DOWNLOAD CSV
+            # =======================================
 
-        csv = hasil_prediksi.to_csv(
-            index=False
-        ).encode("utf-8")
+            csv = hasil_prediksi.to_csv(
+                index=False
+            ).encode("utf-8")
 
-        st.download_button(
+            st.download_button(
 
-            label="📥 Download Hasil Prediksi",
+                label="📥 Download Hasil Prediksi",
 
-            data=csv,
+                data=csv,
 
-            file_name="hasil_prediksi_naive_bayes.csv",
+                file_name="hasil_prediksi_naive_bayes.csv",
 
-            mime="text/csv"
+                mime="text/csv"
 
-        )
+            )
 
-        # =======================================
-        # INFORMASI MODEL
-        # =======================================
+            # =======================================
+            # INFORMASI MODEL
+            # =======================================
 
-        st.divider()
+            st.divider()
 
-        st.subheader("Informasi Model")
+        with st.expander("ℹ️ 9️⃣ Informasi Model", expanded=False):
+            st.subheader("Informasi Model")
 
-        info_model = pd.DataFrame({
+            info_model = pd.DataFrame({
 
-            "Parameter": [
+                "Parameter": [
 
-                "Algoritma",
+                    "Algoritma",
 
-                "Jumlah Data Training",
+                    "Jumlah Data Training",
 
-                "Jumlah Data Testing",
+                    "Jumlah Data Testing",
 
-                "Jumlah Fitur",
+                    "Jumlah Fitur",
 
-                "Jumlah Kelas"
+                    "Jumlah Kelas"
 
-            ],
+                ],
 
-            "Nilai": [
+                "Nilai": [
 
-                "Multinomial Naïve Bayes",
+                    "Multinomial Naïve Bayes",
 
-                len(y_train),
+                    len(y_train),
 
-                len(y_test),
+                    len(y_test),
 
-                X.shape[1],
+                    X.shape[1],
 
-                len(model.classes_)
+                    len(model.classes_)
 
-            ]
+                ]
 
-        })
+            })
 
-        st.dataframe(
-            info_model,
-            use_container_width=True
-        )
+            st.dataframe(
+                info_model,
+                use_container_width=True
+            )
 
-        # =======================================
-        # PESAN AKHIR
-        # =======================================
+            # =======================================
+            # PESAN AKHIR
+            # =======================================
 
-        st.success(
-            "Seluruh proses klasifikasi berhasil dijalankan."
-        )
+            st.success(
+                "Seluruh proses klasifikasi berhasil dijalankan."
+            )
 
-        st.balloons()
+            st.balloons()
 
 
 # === PETUNJUK ===
 # Tambahkan fungsi generate_pdf() dan st.download_button() sesuai contoh yang telah diberikan
 # untuk menghasilkan laporan PDF.
-
-
-# ==========================================================
-# CONTOH PENGGUNAAN EXPANDER
-# Tempatkan blok-blok berikut menggantikan tampilan biasa.
-# ==========================================================
-
-"""
-with st.expander("📊 1. Hasil Evaluasi Model", expanded=False):
-    col1, col2 = st.columns(2)
-    with col1:
-        st.metric("Accuracy", f"{accuracy*100:.2f}%")
-        st.metric("Precision", f"{precision*100:.2f}%")
-    with col2:
-        st.metric("Recall", f"{recall*100:.2f}%")
-        st.metric("F1-Score", f"{f1*100:.2f}%")
-
-with st.expander("📋 2. Classification Report", expanded=False):
-    st.dataframe(report_df, use_container_width=True)
-
-with st.expander("🧩 3. Confusion Matrix", expanded=False):
-    st.pyplot(fig)
-
-with st.expander("📑 4. Tabel Confusion Matrix", expanded=False):
-    st.dataframe(cm_df, use_container_width=True)
-
-with st.expander("📈 5. Ringkasan Model", expanded=False):
-    ...
-
-with st.expander("📝 6. Kesimpulan", expanded=False):
-    ...
-
-with st.expander("🎯 7. Probabilitas Prediksi", expanded=False):
-    st.dataframe(probability_df, use_container_width=True)
-
-with st.expander("📄 8. Hasil Prediksi Testing", expanded=False):
-    st.dataframe(hasil_prediksi, use_container_width=True)
-    st.download_button(
-        "📥 Download Hasil Prediksi",
-        csv,
-        "hasil_prediksi_naive_bayes.csv",
-        "text/csv"
-    )
-
-with st.expander("⚙️ 9. Informasi Model", expanded=False):
-    st.dataframe(info_model, use_container_width=True)
-"""
