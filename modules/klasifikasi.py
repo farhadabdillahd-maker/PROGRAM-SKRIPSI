@@ -598,29 +598,30 @@ kejahatan.
 
         from datetime import datetime
 
-        if st.button("📄 Buat Laporan PDF Terbaru", use_container_width=True):
-            pdf_file = generate_pdf(
-                accuracy=accuracy,
-                precision=precision,
-                recall=recall,
-                f1=f1,
-                report_df=report_df,
-                cm_df=cm_df,
-                hasil_prediksi=hasil_prediksi,
-                bar_chart_path=bar_chart_path,
-                pie_chart_path=pie_chart_path,
-                info_model=info_model,
-                waktu_download=datetime.now(),
-            )
+        pdf_file = generate_pdf(
+            accuracy=accuracy,
+            precision=precision,
+            recall=recall,
+            f1=f1,
+            report_df=report_df,
+            cm_df=cm_df,
+            hasil_prediksi=hasil_prediksi,
+            bar_chart_path=bar_chart_path,
+            pie_chart_path=pie_chart_path,
+            info_model=info_model,
+            waktu_download=datetime.now(),
+        )
 
-            with open(pdf_file, "rb") as pdf:
-                st.download_button(
-                    label="📥 Download Laporan PDF",
-                    data=pdf.read(),
-                    file_name=pdf_file,
-                    mime="application/pdf",
-                    use_container_width=True,
-                )
+        with open(pdf_file, "rb") as pdf:
+            pdf_bytes = pdf.read()
+
+        st.download_button(
+            label="📥 Download Laporan PDF",
+            data=pdf_bytes,
+            file_name=pdf_file,
+            mime="application/pdf",
+            use_container_width=True,
+        )
 
 
 # === PETUNJUK ===
