@@ -1,5 +1,6 @@
 import streamlit as st
 from pathlib import Path
+import base64
 
 # ==============================
 # KONFIGURASI HALAMAN
@@ -46,9 +47,14 @@ load_css()
 # SIDEBAR
 # ==============================
 
-st.sidebar.markdown("""
+def logo_base64():
+    logo_path = Path(__file__).parent / "asset" / "logo_polri.png"
+    with open(logo_path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
+
+st.sidebar.markdown(f"""
 <div style="text-align:center; margin-top:10px; margin-bottom:20px;">
-    <img src="app/static/logo_polri.png" width="90">
+    <img src="data:image/png;base64,{logo_base64()}" width="90">
     <h2 style="color:white; margin:10px 0 0 0; font-weight:800;">
         KLASIFIKASI
     </h2>
