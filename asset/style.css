@@ -283,68 +283,92 @@
 
 
 /*==================================================
- POLICE FLASH HOVER BUTTON
+ POLICE STROBE HOVER (BUTTON BACKGROUND)
 ==================================================*/
 
-@keyframes policeFlash{
+@keyframes policeStrobeBackground{
     0%{
-        background:linear-gradient(90deg,#0057ff,#1cc8ff);
+        background:
+        linear-gradient(
+            90deg,
+            rgba(0,110,255,.95) 0%,
+            rgba(0,180,255,.85) 50%,
+            rgba(5,20,40,.95) 100%
+        );
         box-shadow:
-            0 0 8px rgba(0,170,255,.5),
-            0 0 20px rgba(0,170,255,.75);
+            0 0 12px rgba(0,170,255,.9),
+            inset 0 0 25px rgba(0,170,255,.55);
     }
+
     25%{
-        background:linear-gradient(90deg,#0057ff,#00d5ff);
-        box-shadow:
-            0 0 18px rgba(0,170,255,.95),
-            0 0 35px rgba(0,170,255,.95);
+        background:
+        linear-gradient(
+            90deg,
+            rgba(5,20,40,.95) 0%,
+            rgba(0,110,255,.98) 50%,
+            rgba(0,180,255,.90) 100%
+        );
     }
+
     50%{
-        background:linear-gradient(90deg,#ff1538,#ff6b6b);
+        background:
+        linear-gradient(
+            90deg,
+            rgba(255,25,55,.95) 0%,
+            rgba(255,90,90,.85) 50%,
+            rgba(5,20,40,.95) 100%
+        );
         box-shadow:
-            0 0 18px rgba(255,40,70,.95),
-            0 0 35px rgba(255,40,70,.95);
+            0 0 12px rgba(255,40,70,.95),
+            inset 0 0 25px rgba(255,40,70,.55);
     }
+
     75%{
-        background:linear-gradient(90deg,#ff1538,#ff7a7a);
-        box-shadow:
-            0 0 18px rgba(255,40,70,.95),
-            0 0 35px rgba(255,40,70,.95);
+        background:
+        linear-gradient(
+            90deg,
+            rgba(5,20,40,.95) 0%,
+            rgba(255,25,55,.98) 50%,
+            rgba(255,90,90,.90) 100%
+        );
     }
+
     100%{
-        background:linear-gradient(90deg,#0057ff,#1cc8ff);
-        box-shadow:
-            0 0 8px rgba(0,170,255,.5),
-            0 0 20px rgba(0,170,255,.75);
+        background:
+        linear-gradient(
+            90deg,
+            rgba(0,110,255,.95) 0%,
+            rgba(0,180,255,.85) 50%,
+            rgba(5,20,40,.95) 100%
+        );
     }
 }
 
 /* st.radio */
+[data-testid="stSidebar"] [role="radiogroup"] label{
+    overflow:hidden;
+    position:relative;
+}
+
 [data-testid="stSidebar"] [role="radiogroup"] label:hover{
-    animation:policeFlash .45s linear infinite !important;
-    transform:translateX(10px) scale(1.02);
-    border:1px solid rgba(255,255,255,.15);
-}
-
-[data-testid="stSidebar"] [role="radiogroup"] label:hover p{
+    animation:policeStrobeBackground .55s steps(1) infinite !important;
     color:#fff!important;
-    text-shadow:
-        0 0 6px #ffffff,
-        0 0 12px #7ecbff;
+    border:1px solid rgba(255,255,255,.18);
 }
 
-/* streamlit-option-menu */
+/* option_menu */
+.nav-link{
+    overflow:hidden;
+    position:relative;
+}
+
 .nav-link:hover{
-    animation:policeFlash .45s linear infinite !important;
-    transform:translateX(10px) scale(1.02)!important;
+    animation:policeStrobeBackground .55s steps(1) infinite !important;
     color:#fff!important;
-    text-shadow:
-        0 0 6px #ffffff,
-        0 0 12px #7ecbff;
 }
 
-/* selected */
+/* selected menu always glowing */
 .nav-link-selected,
 [data-testid="stSidebar"] [role="radiogroup"] input:checked + div{
-    animation:policeFlash .9s linear infinite !important;
+    animation:policeStrobeBackground 1s steps(1) infinite !important;
 }
