@@ -280,3 +280,71 @@
     filter:drop-shadow(0 0 8px rgba(0,180,255,.45))
            drop-shadow(0 0 10px rgba(255,0,60,.30));
 }
+
+
+/*==================================================
+ POLICE FLASH HOVER BUTTON
+==================================================*/
+
+@keyframes policeFlash{
+    0%{
+        background:linear-gradient(90deg,#0057ff,#1cc8ff);
+        box-shadow:
+            0 0 8px rgba(0,170,255,.5),
+            0 0 20px rgba(0,170,255,.75);
+    }
+    25%{
+        background:linear-gradient(90deg,#0057ff,#00d5ff);
+        box-shadow:
+            0 0 18px rgba(0,170,255,.95),
+            0 0 35px rgba(0,170,255,.95);
+    }
+    50%{
+        background:linear-gradient(90deg,#ff1538,#ff6b6b);
+        box-shadow:
+            0 0 18px rgba(255,40,70,.95),
+            0 0 35px rgba(255,40,70,.95);
+    }
+    75%{
+        background:linear-gradient(90deg,#ff1538,#ff7a7a);
+        box-shadow:
+            0 0 18px rgba(255,40,70,.95),
+            0 0 35px rgba(255,40,70,.95);
+    }
+    100%{
+        background:linear-gradient(90deg,#0057ff,#1cc8ff);
+        box-shadow:
+            0 0 8px rgba(0,170,255,.5),
+            0 0 20px rgba(0,170,255,.75);
+    }
+}
+
+/* st.radio */
+[data-testid="stSidebar"] [role="radiogroup"] label:hover{
+    animation:policeFlash .45s linear infinite !important;
+    transform:translateX(10px) scale(1.02);
+    border:1px solid rgba(255,255,255,.15);
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] label:hover p{
+    color:#fff!important;
+    text-shadow:
+        0 0 6px #ffffff,
+        0 0 12px #7ecbff;
+}
+
+/* streamlit-option-menu */
+.nav-link:hover{
+    animation:policeFlash .45s linear infinite !important;
+    transform:translateX(10px) scale(1.02)!important;
+    color:#fff!important;
+    text-shadow:
+        0 0 6px #ffffff,
+        0 0 12px #7ecbff;
+}
+
+/* selected */
+.nav-link-selected,
+[data-testid="stSidebar"] [role="radiogroup"] input:checked + div{
+    animation:policeFlash .9s linear infinite !important;
+}
