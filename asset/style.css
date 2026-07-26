@@ -372,3 +372,52 @@
 [data-testid="stSidebar"] [role="radiogroup"] input:checked + div{
     animation:policeStrobeBackground 1s steps(1) infinite !important;
 }
+
+
+/* ==========================================
+   POLICE FLASH HOVER EFFECT (ENHANCED)
+   ========================================== */
+
+@keyframes policeFlashHover{
+    0%{
+        box-shadow:
+            0 0 6px rgba(0,170,255,.9),
+            0 0 18px rgba(0,170,255,.75);
+        background:linear-gradient(90deg,#004cff,#0bbcff);
+    }
+    25%{
+        box-shadow:
+            0 0 10px rgba(255,40,40,.95),
+            0 0 24px rgba(255,40,40,.8);
+        background:linear-gradient(90deg,#ff1b3d,#ff6a6a);
+    }
+    50%{
+        box-shadow:
+            0 0 8px rgba(0,170,255,.95),
+            0 0 26px rgba(0,170,255,.8);
+        background:linear-gradient(90deg,#005eff,#31d6ff);
+    }
+    75%{
+        box-shadow:
+            0 0 10px rgba(255,40,40,.95),
+            0 0 24px rgba(255,40,40,.8);
+        background:linear-gradient(90deg,#ff2d55,#ff8b8b);
+    }
+    100%{
+        box-shadow:
+            0 0 6px rgba(0,170,255,.9),
+            0 0 18px rgba(0,170,255,.75);
+        background:linear-gradient(90deg,#004cff,#0bbcff);
+    }
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] label:hover,
+.nav-link:hover{
+    animation: policeFlashHover .35s linear infinite !important;
+    transition:none !important;
+}
+
+[data-testid="stSidebar"] [role="radiogroup"] input:checked + div,
+.nav-link-selected{
+    animation: policeFlashHover .8s linear infinite !important;
+}
