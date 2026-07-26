@@ -221,8 +221,6 @@ def generate_pdf(
     elements.append(Paragraph(
         "Demikian laporan hasil klasifikasi ini dibuat untuk dipergunakan sebagaimana mestinya.",
         normal))
-    elements.append(Spacer(1,0.5*CM))
-    elements.append(Paragraph("Demikian laporan hasil klasifikasi ini dibuat untuk dipergunakan sebagaimana mestinya.", normal))
 
     doc.build(elements)
 
