@@ -47,7 +47,7 @@ load_css()
 # ==============================
 
 st.sidebar.image(
-    "asset/logo_polri.jpg",
+    "asset/logo_polri.png",
     width=80
 )
 st.sidebar.header("KLASIFIKASI")
