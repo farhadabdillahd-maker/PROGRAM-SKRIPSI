@@ -46,12 +46,17 @@ load_css()
 # SIDEBAR
 # ==============================
 
-st.sidebar.image(
-    "asset/logo_polri.png",
-    width=80
-)
-st.sidebar.header("KLASIFIKASI")
-st.sidebar.caption("TINGKAT KEJAHATAN")
+st.sidebar.markdown("""
+<div style="text-align:center; margin-top:10px; margin-bottom:20px;">
+    <img src="app/static/logo_polri.png" width="90">
+    <h2 style="color:white; margin:10px 0 0 0; font-weight:800;">
+        KLASIFIKASI
+    </h2>
+    <div style="color:#B8C2D9; font-size:16px; font-weight:600;">
+        TINGKAT KEJAHATAN
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 menu = st.sidebar.radio(
     "Menu",
