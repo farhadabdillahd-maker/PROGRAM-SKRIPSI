@@ -102,7 +102,7 @@ def generate_pdf(
     elements.append(garis)
     elements.append(Spacer(1,0.08*CM))
     elements.append(garis)
-    elements.append(Spacer(1,0.4*CM))
+        elements.append(Spacer(1,0.4*CM))
 
     elements.append(Paragraph(
         "<b>LAPORAN HASIL KLASIFIKASI</b>",
@@ -134,12 +134,12 @@ def generate_pdf(
     elements.append(Spacer(1,0.5*CM))
 
 
+    # ==========================
+    # Narasi Evaluasi Model
 # ==========================
-# Narasi Evaluasi Model
-# ==========================
-elements.append(Paragraph("<b>Interpretasi Hasil Evaluasi Model</b>", styles["Heading3"]))
+    elements.append(Paragraph("<b>Interpretasi Hasil Evaluasi Model</b>", styles["Heading3"]))
 
-narasi = f"""
+    narasi = f"""
 Berdasarkan hasil pengujian model menggunakan algoritma <b>Multinomial Naïve Bayes</b>,
 diperoleh nilai <b>Accuracy sebesar {accuracy*100:.2f}%</b>, yang menunjukkan persentase
 data yang berhasil diklasifikasikan dengan benar oleh model.
@@ -151,7 +151,7 @@ Nilai <b>F1-Score sebesar {f1*100:.2f}%</b> merupakan rata-rata harmonis antara 
 dan recall sehingga menggambarkan performa model secara keseluruhan.
 """
 
-elements.append(Paragraph(narasi, normal))
+    elements.append(Paragraph(narasi, normal))
 elements.append(Spacer(1,0.4*CM))
 
     elements.append(Paragraph("<b>Classification Report</b>",styles["Heading3"]))
