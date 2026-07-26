@@ -6,8 +6,10 @@ from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import cm as CM
 from reportlab.platypus import (
     SimpleDocTemplate, Paragraph, Spacer,
-    Table, TableStyle
+    Table, TableStyle, Image
 )
+from reportlab.lib.styles import ParagraphStyle
+import os
 
 def generate_pdf(
     accuracy,
@@ -49,15 +51,57 @@ def generate_pdf(
 
     elements = []
 
-    elements.append(Paragraph(
-        "<b>KEPOLISIAN NEGARA REPUBLIK INDONESIA</b>", heading))
-    elements.append(Paragraph(
-        "<b>DAERAH SUMATERA BARAT</b>", heading))
-    elements.append(Paragraph(
-        "<b>RESOR PASAMAN</b>", heading))
-    elements.append(Paragraph(
-        "Jl. Jend. Sudirman No.1 Lubuk Sikaping 26311",
-        normal))
+    logo_polri = Image(os.path.join("asset","logo_polri.png"), width=2.8*CM, height=2.8*CM)
+    logo_polda = Image(os.path.join("asset","logo_polda.png"), width=2.8*CM, height=2.8*CM)
+
+    style_kop = ParagraphStyle(
+        "kop",
+        parent=styles["Heading1"],
+        alignment=TA_CENTER,
+        fontName="Helvetica-Bold",
+        fontSize=13,
+        leading=18,
+    )
+
+    style_alamat = ParagraphStyle(
+        "alamat",
+        parent=styles["BodyText"],
+        alignment=TA_CENTER,
+        fontSize=10,
+    )
+
+    judul = Paragraph(
+        "<b>KEPOLISIAN NEGARA REPUBLIK INDONESIA</b><br/><b>DAERAH SUMATERA BARAT</b><br/><b>RESOR PASAMAN</b>",
+        style_kop
+    )
+
+    alamat = Paragraph(
+        "Jln. Jend. Sudirman No. 1 Lubuk Sikaping 26311",
+        style_alamat
+    )
+
+    kop = Table(
+        [[logo_polri, [judul, alamat], logo_polda]],
+        colWidths=[3.2*CM, 12*CM, 3.2*CM]
+    )
+
+    kop.setStyle(TableStyle([
+        ("VALIGN",(0,0),(-1,-1),"MIDDLE"),
+        ("ALIGN",(0,0),(-1,-1),"CENTER"),
+        ("LEFTPADDING",(0,0),(-1,-1),0),
+        ("RIGHTPADDING",(0,0),(-1,-1),0),
+        ("TOPPADDING",(0,0),(-1,-1),0),
+        ("BOTTOMPADDING",(0,0),(-1,-1),0),
+    ]))
+
+    elements.append(kop)
+
+    garis = Table([[""]], colWidths=[18*CM], rowHeights=[0.05*CM])
+    garis.setStyle(TableStyle([("BACKGROUND",(0,0),(-1,-1),colors.black)]))
+    elements.append(Spacer(1,0.12*CM))
+    elements.append(garis)
+    elements.append(Spacer(1,0.08*CM))
+    elements.append(garis)
     elements.append(Spacer(1,0.4*CM))
 
     elements.append(Paragraph(
