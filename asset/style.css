@@ -1,0 +1,97 @@
+/* ==========================================
+   STREAMLIT STYLE.CSS
+   ========================================== */
+
+/* Hide menu & footer only */
+#MainMenu{
+    visibility:hidden;
+}
+
+footer{
+    visibility:hidden;
+}
+
+/* Keep header visible so sidebar toggle remains */
+header{
+    visibility:visible;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"]{
+    background:#0B1F3A;
+}
+
+[data-testid="stSidebar"] *{
+    color:white;
+}
+
+/* Main container */
+.block-container{
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
+
+/* ==========================
+   Gravity Hover Button
+   ========================== */
+
+.stButton > button{
+
+    width:100%;
+    height:55px;
+
+    border:none;
+    border-radius:16px;
+
+    color:white;
+    font-size:17px;
+    font-weight:700;
+
+    background:linear-gradient(135deg,#0066FF,#00BFFF);
+
+    cursor:pointer;
+
+    transition:
+        transform .30s cubic-bezier(.34,1.56,.64,1),
+        box-shadow .30s ease,
+        background .30s ease;
+
+    box-shadow:
+        0 14px 25px rgba(0,102,255,.35);
+}
+
+.stButton > button:hover{
+
+    transform:
+        translateY(8px)
+        scale(.98);
+
+    background:
+        linear-gradient(135deg,#1E88E5,#42A5F5);
+
+    box-shadow:
+        0 5px 12px rgba(0,102,255,.35),
+        0 0 25px rgba(0,191,255,.45);
+}
+
+.stButton > button:active{
+
+    transform:
+        translateY(12px)
+        scale(.95);
+
+    box-shadow:none;
+
+    transition:.08s;
+}
+
+/* Inputs */
+.stTextInput input,
+.stTextArea textarea{
+    border-radius:12px;
+}
+
+/* Dataframe */
+[data-testid="stDataFrame"]{
+    border-radius:12px;
+}
