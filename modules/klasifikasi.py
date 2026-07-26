@@ -544,6 +544,8 @@ kejahatan.
 
             st.balloons()
 
+        # end informasi model
+
         # =======================================
         # DOWNLOAD LAPORAN PDF
         # =======================================
