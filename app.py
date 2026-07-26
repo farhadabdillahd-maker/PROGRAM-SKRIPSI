@@ -32,7 +32,28 @@ from modules import (
 # ==============================
 
 
-def load_css():
+def 
+def set_gif_background():
+    gif_path = Path(__file__).parent / "asset" / "latar.gif"
+    if gif_path.exists():
+        with open(gif_path, "rb") as f:
+            gif = base64.b64encode(f.read()).decode()
+        st.markdown(f"""
+        <style>
+        .stApp{
+            background-image:
+                linear-gradient(rgba(255,255,255,0.30), rgba(255,255,255,0.30)),
+                url("data:image/gif;base64,{gif}");
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
+load_css()
+set_gif_background():
     css_path = Path(__file__).parent / "asset" / "style.css"
     if css_path.exists():
         with open(css_path, "r", encoding="utf-8") as f:
@@ -41,6 +62,7 @@ def load_css():
         st.warning(f"CSS tidak ditemukan: {css_path}")
 
 load_css()
+set_gif_background()
 
 
 # ==============================
