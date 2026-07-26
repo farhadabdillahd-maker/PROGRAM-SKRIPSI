@@ -7,6 +7,7 @@ import joblib
 import os
 from modules.pdf_report import generate_pdf
 import matplotlib.pyplot as plt
+import numpy as np
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
 from sklearn.model_selection import train_test_split
@@ -277,10 +278,37 @@ def show():
                     value=f"{recall * 100:.2f}%"
                 )
 
+
                 st.metric(
                     label="F1-Score",
                     value=f"{f1 * 100:.2f}%"
                 )
+
+            st.markdown("### 📊 Distribusi Data")
+
+            distribusi = y.value_counts().sort_index()
+
+            col_chart1, col_chart2 = st.columns(2)
+
+            with col_chart1:
+                fig_bar, ax_bar = plt.subplots(figsize=(5,4))
+                ax_bar.bar(distribusi.index.astype(str), distribusi.values)
+                ax_bar.set_title("Distribusi Data")
+                ax_bar.set_xlabel("Kelas")
+                ax_bar.set_ylabel("Jumlah")
+                st.pyplot(fig_bar)
+
+            with col_chart2:
+                fig_pie, ax_pie = plt.subplots(figsize=(5,4))
+                ax_pie.pie(
+                    distribusi.values,
+                    labels=distribusi.index.astype(str),
+                    autopct="%1.1f%%",
+                    startangle=90
+                )
+                ax_pie.set_title("Persentase Distribusi Data")
+                ax_pie.axis("equal")
+                st.pyplot(fig_pie)
 
             # =======================================
             # CLASSIFICATION REPORT
