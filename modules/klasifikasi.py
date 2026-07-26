@@ -296,6 +296,11 @@ def show():
                 ax_bar.set_title("Distribusi Data")
                 ax_bar.set_xlabel("Kelas")
                 ax_bar.set_ylabel("Jumlah")
+
+                # Simpan diagram batang untuk laporan PDF
+                bar_chart_path = "bar_chart.png"
+                fig_bar.savefig(bar_chart_path, dpi=300, bbox_inches="tight")
+
                 st.pyplot(fig_bar)
 
             with col_chart2:
@@ -308,6 +313,11 @@ def show():
                 )
                 ax_pie.set_title("Persentase Distribusi Data")
                 ax_pie.axis("equal")
+
+                # Simpan diagram lingkaran untuk laporan PDF
+                pie_chart_path = "pie_chart.png"
+                fig_pie.savefig(pie_chart_path, dpi=300, bbox_inches="tight")
+
                 st.pyplot(fig_pie)
 
             # =======================================
@@ -594,6 +604,8 @@ kejahatan.
             report_df=report_df,
             cm_df=cm_df,
             hasil_prediksi=hasil_prediksi,
+            bar_chart_path=bar_chart_path,
+            pie_chart_path=pie_chart_path,
             info_model=info_model,
         )
 
