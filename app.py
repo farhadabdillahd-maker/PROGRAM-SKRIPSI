@@ -46,7 +46,10 @@ load_css()
 # SIDEBAR
 # ==============================
 
-st.sidebar.title("🛡️")
+st.sidebar.image(
+    "asset/logo_polri.jpg",
+    width=80
+)
 st.sidebar.header("KLASIFIKASI")
 st.sidebar.caption("TINGKAT KEJAHATAN")
 
