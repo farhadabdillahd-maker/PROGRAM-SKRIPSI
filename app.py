@@ -1,4 +1,5 @@
 import streamlit as st
+from pathlib import Path
 
 # ==============================
 # KONFIGURASI HALAMAN
@@ -29,43 +30,17 @@ from modules import (
 # CSS
 # ==============================
 
-st.markdown("""
-<style>
 
-#MainMenu{
-visibility:hidden;
-}
+def load_css():
+    css_path = Path(__file__).parent / "asset" / "style.css"
+    if css_path.exists():
+        with open(css_path, "r", encoding="utf-8") as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    else:
+        st.warning(f"CSS tidak ditemukan: {css_path}")
 
-footer{
-visibility:hidden;
-}
+load_css()
 
-/* Header tidak disembunyikan agar tombol expand/collapse sidebar tetap muncul */
-header{
-    visibility: visible;
-}
-
-[data-testid="stSidebar"]{
-background:#0B1F3A;
-}
-
-[data-testid="stSidebar"] *{
-color:white;
-}
-
-.block-container{
-padding-top:1rem;
-padding-bottom:1rem;
-}
-
-.stButton>button{
-width:100%;
-border-radius:10px;
-font-weight:bold;
-}
-
-</style>
-""", unsafe_allow_html=True)
 
 # ==============================
 # SIDEBAR
