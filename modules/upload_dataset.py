@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 
@@ -5,11 +6,7 @@ import pandas as pd
 def show():
 
     st.title("📂 Upload Dataset")
-
-    st.write(
-        "Upload dataset berformat CSV yang berisi data berita kejahatan."
-    )
-
+    st.write("Upload dataset berformat CSV yang berisi data berita kejahatan.")
     st.divider()
 
     if "upload_key" not in st.session_state:
@@ -24,20 +21,34 @@ def show():
     if uploaded_file is not None:
 
         try:
-
             df = pd.read_csv(uploaded_file)
 
-            # Simpan ke session_state
+            # ==============================
+            # VALIDASI KOLOM WAJIB
+            # ==============================
+            kolom_wajib = [
+                "Judul Media Nasional",
+                "Jenis Perkara"
+            ]
+
+            kolom_tidak_ada = [
+                k for k in kolom_wajib
+                if k not in df.columns
+            ]
+
+            if kolom_tidak_ada:
+                st.error(
+                    "Dataset tidak valid. Kolom berikut tidak ditemukan:\n\n- "
+                    + "\n- ".join(kolom_tidak_ada)
+                )
+                st.stop()
+
             st.session_state["dataset"] = df
 
             st.success("✅ Dataset berhasil diupload.")
 
             st.subheader("Preview Dataset")
-
-            st.dataframe(
-                df,
-                use_container_width=True
-            )
+            st.dataframe(df, use_container_width=True)
 
             st.divider()
 
@@ -46,27 +57,25 @@ def show():
             col1, col2 = st.columns(2)
 
             with col1:
-
                 st.info(f"Jumlah Data : {len(df)}")
-
                 st.info(f"Jumlah Kolom : {len(df.columns)}")
 
             with col2:
-
                 st.info(f"Nama Kolom : {', '.join(df.columns)}")
-
                 st.info(f"Missing Value : {df.isnull().sum().sum()}")
 
             st.divider()
 
             if "Label" in df.columns:
-
                 st.subheader("Distribusi Label")
 
                 st.dataframe(
-                    df["Label"].value_counts().rename_axis("Label").reset_index(name="Jumlah"),
+                    df["Label"].value_counts()
+                    .rename_axis("Label")
+                    .reset_index(name="Jumlah"),
                     use_container_width=True
                 )
+
             st.divider()
 
             if st.button("🔁 Repeat Upload"):
@@ -74,11 +83,8 @@ def show():
                 st.session_state["upload_key"] += 1
                 st.rerun()
 
-
         except Exception as e:
-
             st.error(f"Gagal membaca file : {e}")
 
     else:
-
         st.warning("Silakan upload dataset terlebih dahulu.")
