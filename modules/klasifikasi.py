@@ -261,6 +261,19 @@ def show():
             )
 
         st.success("Model berhasil disimpan.")
+
+        # ===============================
+        # DEBUG PENYIMPANAN MODEL
+        # ===============================
+        st.subheader("Debug Model")
+        st.write("model_nb.pkl :", os.path.exists("model/model_nb.pkl"))
+        st.write("tfidf.pkl :", os.path.exists("model/tfidf.pkl"))
+
+        if "vectorizer" in st.session_state:
+            st.write("Jumlah fitur vectorizer :", len(st.session_state["vectorizer"].get_feature_names_out()))
+
+        st.write("Jumlah fitur model :", model.n_features_in_)
+
               # =======================================
         # PREDIKSI DATA TESTING
         # =======================================
