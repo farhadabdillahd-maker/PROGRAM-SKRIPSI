@@ -69,9 +69,9 @@ def show():
     # =======================================
     # MEMBACA KAMUS KEJAHATAN DAN PELABELAN
     # =======================================
-    if os.path.exists("kamus_kejahatan.csv"):
+    if os.path.exists("kamus_klasifikasi_kejahatan.csv"):
 
-        kamus = pd.read_csv("kamus_kejahatan.csv")
+        kamus = pd.read_csv("kamus_klasifikasi_kejahatan.csv")
 
         if (
             "Jenis Perkara" in df.columns
