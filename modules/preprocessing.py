@@ -114,6 +114,24 @@ def show():
 
         st.success("✅ Preprocessing berhasil.")
 
+        # ==============================
+        # HASIL PELABELAN
+        # ==============================
+        st.subheader("Hasil Pelabelan")
+
+        st.dataframe(
+            df[
+                [
+                    "Judul Media Nasional",
+                    "Pelabelan",
+                ]
+            ],
+            use_container_width=True,
+        )
+
+        # ==============================
+        # HASIL PREPROCESSING
+        # ==============================
         st.subheader("Hasil Preprocessing")
 
         st.dataframe(
@@ -125,7 +143,6 @@ def show():
                     "Stopword Removal",
                     "Stemming",
                     "Final Text",
-                    "Pelabelan",
                 ]
             ],
             use_container_width=True,
