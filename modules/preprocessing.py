@@ -79,10 +79,10 @@ def show():
 
         # Auto Label berdasarkan kamus kejahatan
         try:
-            kamus = pd.read_csv("kamus_kejahatan.csv")
+            kamus = pd.read_csv("kamus_klasifikasi_kejahatan.csv")
         except FileNotFoundError:
             try:
-                kamus = pd.read_csv("assets/kamus_kejahatan.csv")
+                kamus = pd.read_csv("assets/kamus_klasifikasi_kejahatan.csv")
             except FileNotFoundError:
                 kamus = None
 
