@@ -562,7 +562,8 @@ kejahatan.
 
             })
 
-            hasil_prediksi = pd.concat([hasil_prediksi.reset_index(drop=True), probability_df.reset_index(drop=True)], axis=1)
+            # Menampilkan hanya kolom hasil prediksi tanpa probabilitas
+            hasil_prediksi = hasil_prediksi.reset_index(drop=True)
 
             st.dataframe(
                 hasil_prediksi,
