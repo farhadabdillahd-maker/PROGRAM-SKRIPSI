@@ -118,6 +118,25 @@ def show():
 
     st.success("Dataset siap digunakan.")
 
+    # ===============================
+    # VALIDASI LABEL DATASET
+    # ===============================
+    st.subheader("📋 Validasi Dataset")
+
+    distribusi_label = (
+        y.value_counts(dropna=False)
+        .rename_axis("Label")
+        .reset_index(name="Jumlah")
+    )
+
+    st.dataframe(distribusi_label, use_container_width=True)
+
+    if y.isna().sum() > 0:
+        st.warning(f"Terdapat {y.isna().sum()} data yang belum memiliki label.")
+        data_nan = df[df["Pelabelan"].isna()]
+        kolom = [c for c in ["Judul Media Nasional","Jenis Perkara","Pelabelan"] if c in data_nan.columns]
+        st.dataframe(data_nan[kolom], use_container_width=True)
+
     st.write("Jumlah Data :", len(df))
 
     st.write("Jumlah Fitur :", X.shape[1])
