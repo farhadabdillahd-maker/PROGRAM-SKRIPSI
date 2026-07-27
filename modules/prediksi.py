@@ -1,27 +1,38 @@
 import pandas as pd
 import streamlit as st
-import joblib
 import re
-from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
-
-factory = StemmerFactory()
-stemmer = factory.create_stemmer()
 
 def preprocessing(teks):
     teks = str(teks).lower()
     teks = re.sub(r"[^a-zA-Z0-9\s]", " ", teks)
-    teks = " ".join(stemmer.stem(k) for k in teks.split())
     return teks
 
-def show():
-    st.title("🔍 Prediksi Tingkat Kejahatan (Naïve Bayes)")
-
+def prediksi_kamus(teks):
     try:
-        model = joblib.load("model/model_nb.pkl")
-        vectorizer = joblib.load("model/tfidf.pkl")
+        kamus = pd.read_csv("kamus_klasifikasi_kejahatan.csv")
     except Exception:
-        st.error("Model atau TF-IDF belum tersedia. Jalankan menu Klasifikasi terlebih dahulu.")
-        return
+        return None
+
+    teks = preprocessing(teks)
+
+    kamus["jenis_perkara"] = kamus["jenis_perkara"].astype(str).str.lower().str.strip()
+    kamus["klasifikasi"] = kamus["klasifikasi"].astype(str).str.strip()
+
+    # cocokkan kata terpanjang terlebih dahulu
+    kamus = kamus.sort_values(
+        by="jenis_perkara",
+        key=lambda s: s.str.len(),
+        ascending=False
+    )
+
+    for _, row in kamus.iterrows():
+        if row["jenis_perkara"] in teks:
+            return row["klasifikasi"]
+
+    return None
+
+def show():
+    st.title("🔍 Prediksi Tingkat Kejahatan (Manual)")
 
     judul = st.text_area(
         "Judul Berita",
@@ -37,25 +48,18 @@ def show():
             st.warning("Masukkan judul berita terlebih dahulu.")
             return
 
-        teks = preprocessing(judul)
-        X = vectorizer.transform([teks])
-
-        hasil = model.predict(X)[0]
-        probabilitas = model.predict_proba(X)[0]
+        hasil = prediksi_kamus(judul)
 
         st.subheader("Hasil Prediksi")
-        st.success(f"Tingkat Kejahatan: {hasil}")
 
-        prob_df = pd.DataFrame({
-            "Kelas": model.classes_,
-            "Probabilitas": probabilitas
-        })
-        st.dataframe(prob_df, use_container_width=True)
-
-        st.session_state["riwayat_prediksi"].append({
-            "Judul": judul,
-            "Kategori": hasil
-        })
+        if hasil is None:
+            st.error("Jenis perkara tidak ditemukan pada kamus klasifikasi.")
+        else:
+            st.success(f"Tingkat Kejahatan: {hasil}")
+            st.session_state["riwayat_prediksi"].append({
+                "Judul": judul,
+                "Kategori": hasil
+            })
 
     if st.session_state["riwayat_prediksi"]:
         st.subheader("Riwayat Prediksi")
