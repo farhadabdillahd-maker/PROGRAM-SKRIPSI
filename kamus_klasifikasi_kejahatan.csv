@@ -1,0 +1,46 @@
+﻿no,jenis_perkara,kode_prefix,ada_di_excel,deskripsi,dasar_hukum,ancaman_penjara_maksimal,kategori_denda_maksimal,klasifikasi,memenuhi_pasal_258,keterangan
+1,Curat,CUR,Ya,Pencurian dengan pemberatan,Pasal 363 KUHP (Ps. 476-477 UU 1/2023),7 tahun,-,Berat,Tidak,Ancaman penjara jauh di atas 6 bulan
+2,Curas,CUR,Ya,Pencurian dengan kekerasan,Pasal 365 KUHP (Ps. 479 UU 1/2023),9-12 tahun,-,Berat,Tidak,Kekerasan; ancaman berat
+3,Curanmor,CUR,Ya,Pencurian kendaraan bermotor,Pasal 362/363 KUHP (Ps. 476 UU 1/2023),5-7 tahun,-,Berat,Tidak,Umumnya dikualifikasi pencurian dgn pemberatan
+4,Pencabulan Anak,PEN,Ya,Perbuatan cabul terhadap anak,Pasal 82 UU 35/2014 jo. UU 17/2016,15 tahun,Kategori tinggi,Berat,Tidak,Tindak pidana terhadap anak; sangat berat
+5,Persetubuhan Anak,PER,Ya,Persetubuhan terhadap anak,Pasal 81 UU 35/2014 jo. UU 17/2016,15 tahun,Kategori tinggi,Berat,Tidak,Tindak pidana terhadap anak; sangat berat
+6,Penipuan,PEN,Ya,Penipuan (perbuatan curang),Pasal 378 KUHP (Ps. 492 UU 1/2023),4 tahun,-,Berat,Tidak,Bila nilai kecil lihat penipuan ringan Ps. 379
+7,Penggelapan,PEN,Ya,Penggelapan,Pasal 372 KUHP (Ps. 486 UU 1/2023),4 tahun,-,Berat,Tidak,Bila nilai kecil lihat penggelapan ringan Ps. 373
+8,Penganiayaan,PEN,Ya,Penganiayaan (biasa),Pasal 351 KUHP (Ps. 466 UU 1/2023),2 tahun 8 bulan,-,Berat,Tidak,Penganiayaan ringan (Ps. 352) tergolong ringan
+9,Perjudian,PER,Ya,Perjudian,Pasal 303/303 bis KUHP (Ps. 426-427 UU 1/2023),4-10 tahun,-,Berat,Tidak,Ancaman di atas 6 bulan
+10,Pengancaman,PEN,Ya,Pengancaman / perbuatan tidak menyenangkan,Pasal 335/369 KUHP (Ps. 448 UU 1/2023),1-4 tahun,-,Berat,Tidak,Ancaman di atas 6 bulan
+11,KDRT,KDR,Ya,Kekerasan Dalam Rumah Tangga,Pasal 44 UU 23/2004 (PKDRT),5-15 tahun,-,Berat,Tidak,KDRT fisik ayat (4) ringan bisa maks 4 bulan
+12,Perusakan,PER,Ya,Perusakan barang,Pasal 406 KUHP (Ps. 521 UU 1/2023),2 tahun 8 bulan,-,Berat,Tidak,Perusakan ringan (Ps. 407) tergolong ringan
+13,Pemerasan,PEM,Ya,Pemerasan,Pasal 368 KUHP (Ps. 482 UU 1/2023),9 tahun,-,Berat,Tidak,Ancaman berat
+14,Lainnya,LAI,Ya,Jenis perkara tidak dispesifikkan pada data,-,-,-,Perlu Telaah Manual,Perlu Telaah,Klasifikasi bergantung pasal yang didakwakan
+15,Tindak Pidana Umum,TIN,Ya,Kategori umum tidak dispesifikkan,-,-,-,Perlu Telaah Manual,Perlu Telaah,Klasifikasi bergantung pasal yang didakwakan
+16,Pembunuhan,-,Tidak,Pembunuhan biasa,Pasal 338 KUHP (Ps. 458 UU 1/2023),15 tahun,-,Berat,Tidak,Ancaman sangat berat; jauh di atas ambang Ps. 258
+17,Pembunuhan Berencana,-,Tidak,Pembunuhan dengan rencana terlebih dahulu,Pasal 340 KUHP (Ps. 459 UU 1/2023),Mati / seumur hidup / 20 tahun,-,Berat,Tidak,Ancaman terberat
+18,Pemalsuan Surat/Sertifikat,-,Tidak,Membuat/memalsukan surat atau sertifikat palsu,Pasal 263-264 KUHP (Ps. 391-392 UU 1/2023),6-8 tahun,-,Berat,Tidak,Surat autentik/sertifikat (Ps. 264) diancam s.d. 8 tahun
+19,Narkotika - Penyalahguna/Pemakai,-,Tidak,Penyalah guna narkotika bagi diri sendiri,Pasal 127 UU 35/2009,1-4 tahun (Gol III/II/I),-,Ringan,Tidak,Paling ringan; dapat direhabilitasi (Ps. 54/103). Tetap >6 bln shg bukan tipiring Ps.258
+20,Narkotika - Kepemilikan/Penguasaan,-,Tidak,Memiliki/menyimpan/menguasai narkotika (bukan pengedar),Pasal 111-112 UU 35/2009,4-12 tahun,-,Sedang,Tidak,Ancaman minimal 4 tahun
+21,Narkotika - Pengedar/Penjual,-,Tidak,Menawarkan/menjual/membeli/menjadi perantara,Pasal 114/119 UU 35/2009,5 tahun - mati/seumur hidup,-,Berat,Tidak,Peredaran gelap; ancaman berat
+22,Narkotika - Bandar/Produsen/Impor-Ekspor,-,Tidak,Memproduksi/mengimpor/mengekspor/bandar terorganisir,Pasal 113/118/132 UU 35/2009,20 tahun / seumur hidup / mati,-,Sangat Berat,Tidak,Ancaman terberat
+23,Pencurian Biasa,-,Tidak,Pencurian tanpa pemberatan,Pasal 362 KUHP (Ps. 476 UU 1/2023),5 tahun,-,Berat,Tidak,Bila nilai kecil lihat Pencurian Ringan Ps. 364
+24,Penadahan,-,Tidak,Menerima/membeli barang hasil kejahatan,Pasal 480 KUHP (Ps. 592 UU 1/2023),4 tahun,-,Berat,Tidak,Penadahan ringan diatur Ps. 482
+25,Pengeroyokan,-,Tidak,Kekerasan oleh banyak orang terhadap orang/barang,Pasal 170 KUHP (Ps. 262 UU 1/2023),5 tahun 6 bulan - 12 tahun,-,Berat,Tidak,Lebih berat bila menimbulkan luka/mati
+26,Penculikan,-,Tidak,Membawa pergi seseorang secara melawan hukum,Pasal 328 KUHP (Ps. 445 UU 1/2023),12 tahun,-,Berat,Tidak,Ancaman berat
+27,Pembakaran,-,Tidak,Sengaja menimbulkan kebakaran/ledakan,Pasal 187 KUHP (Ps. 279 UU 1/2023),12 tahun - seumur hidup,-,Sangat Berat,Tidak,Terberat bila menimbulkan korban jiwa
+28,Perkosaan,-,Tidak,Persetubuhan dengan kekerasan/paksaan,Pasal 285 KUHP (Ps. 473 UU 1/2023),12 tahun,-,Berat,Tidak,Ancaman berat
+29,Kekerasan/Pelecehan Seksual (UU TPKS),-,Tidak,Pelecehan/eksploitasi seksual,UU 12/2022 (TPKS),9 bulan - 15 tahun,-,Berat,Tidak,Bervariasi: pelecehan non-fisik s.d. eksploitasi seksual
+30,Penipuan Online,-,Tidak,Penipuan melalui sistem elektronik,Pasal 28 (1)/45A UU ITE (UU 1/2024),6 tahun,-,Berat,Tidak,Ancaman s.d. 6 tahun / denda besar
+31,Berita Bohong/Hoaks,-,Tidak,Menyebarkan berita bohong yang merugikan,Pasal 28/45A UU ITE (UU 1/2024),6 tahun,-,Berat,Tidak,Tergantung dampak/keonaran
+32,Ujaran Kebencian (SARA),-,Tidak,Menyebarkan kebencian berdasar SARA,Pasal 28 (2)/45A (2) UU ITE,6 tahun,-,Berat,Tidak,Ancaman s.d. 6 tahun
+33,Pencemaran Nama Baik (ITE),-,Tidak,Penghinaan/pencemaran via elektronik,Pasal 27A/45 (4) UU ITE (UU 1/2024),2 tahun,-,Sedang,Tidak,Delik aduan; ancaman diturunkan pada UU 1/2024
+34,Korupsi,-,Tidak,Merugikan keuangan negara/suap/gratifikasi,Pasal 2-3 UU 31/1999 jo. UU 20/2001,4 tahun - seumur hidup/mati,-,Sangat Berat,Tidak,Pidana mati utk keadaan tertentu (Ps. 2 ayat 2)
+35,Pencucian Uang (TPPU),-,Tidak,Menyamarkan hasil tindak pidana,Pasal 3-5 UU 8/2010,20 tahun,-,Sangat Berat,Tidak,Denda s.d. Rp10 miliar
+36,Terorisme,-,Tidak,Perbuatan teror menimbulkan ketakutan meluas,UU 5/2018 jo. UU 15/2003,3 tahun - mati/seumur hidup,-,Sangat Berat,Tidak,Ancaman terberat
+37,Perdagangan Orang (TPPO),-,Tidak,Eksploitasi melalui perdagangan manusia,Pasal 2 UU 21/2007,3-15 tahun,-,Berat,Tidak,Lebih berat bila korban anak/menimbulkan mati
+38,Kepemilikan Senjata Api Ilegal,-,Tidak,Memiliki/menguasai senjata api tanpa izin,Pasal 1 UU Darurat 12/1951,20 tahun / seumur hidup / mati,-,Sangat Berat,Tidak,Ancaman terberat
+39,Pencurian Ringan,CUR,Tidak,Pencurian nilai barang kecil,Pasal 364 KUHP (Ps. 478 UU 1/2023),3 bulan,Kategori II,Ringan,Ya,Memenuhi ambang Pasal 258 ayat (2)
+40,Penggelapan Ringan,PEN,Tidak,Penggelapan nilai kecil,Pasal 373 KUHP (Ps. 487 UU 1/2023),3 bulan,Kategori II,Ringan,Ya,Memenuhi ambang Pasal 258 ayat (2)
+41,Penipuan Ringan,PEN,Tidak,Penipuan nilai kecil,Pasal 379 KUHP (Ps. 493 UU 1/2023),3 bulan,Kategori II,Ringan,Ya,Memenuhi ambang Pasal 258 ayat (2)
+42,Penganiayaan Ringan,PEN,Tidak,Penganiayaan ringan (tanpa luka/halangan kerja),Pasal 352 KUHP (Ps. 467 UU 1/2023),3 bulan,Kategori II,Ringan,Ya,Memenuhi ambang Pasal 258 ayat (2)
+43,Perusakan Ringan,PER,Tidak,Perusakan barang nilai kecil,Pasal 407 KUHP (Ps. 522 UU 1/2023),3 bulan,Kategori II,Ringan,Ya,Memenuhi ambang Pasal 258 ayat (2)
+44,Penghinaan Ringan,-,Tidak,Penghinaan ringan (bukan tulisan/gambar),Pasal 315 KUHP (Ps. 436 UU 1/2023),4 bulan 2 minggu,Kategori II,Ringan,Ya,Memenuhi ambang Pasal 258 ayat (2)
+45,Penadahan Ringan,-,Tidak,Penadahan barang bernilai kecil,Pasal 482 KUHP (Ps. 594 UU 1/2023),3 bulan,Kategori II,Ringan,Ya,Memenuhi ambang Pasal 258 ayat (2)
