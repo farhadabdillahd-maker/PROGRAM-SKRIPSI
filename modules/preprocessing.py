@@ -119,14 +119,22 @@ def show():
         # ==============================
         st.subheader("Hasil Pelabelan")
 
+        # Tampilkan hasil pelabelan terlebih dahulu
+        kolom_label = []
+
+        if "No" in df.columns:
+            kolom_label.append("No")
+        if "Jenis Perkara" in df.columns:
+            kolom_label.append("Jenis Perkara")
+
+        kolom_label.extend([
+            "Judul Media Nasional",
+            "Pelabelan"
+        ])
+
         st.dataframe(
-            df[
-                [
-                    "Judul Media Nasional",
-                    "Pelabelan",
-                ]
-            ],
-            use_container_width=True,
+            df[kolom_label],
+            use_container_width=True
         )
 
         # ==============================
