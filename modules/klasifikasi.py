@@ -142,7 +142,13 @@ def show():
 
     )
 
-    if st.button("Training Naïve Bayes"):
+    
+# Validasi minimal data tiap kelas
+if y.value_counts().min() < 2:
+    st.error("Minimal setiap kelas harus memiliki 2 data agar stratified split dapat dilakukan.")
+    return
+
+if st.button("Training Naïve Bayes"):
 
         X_train, X_test, y_train, y_test = train_test_split(
 
@@ -408,6 +414,8 @@ def show():
             ax.set_xlabel("Prediksi")
             ax.set_ylabel("Aktual")
 
+            cm_image_path = "confusion_matrix.png"
+            fig.savefig(cm_image_path, dpi=300, bbox_inches="tight")
             st.pyplot(fig)
 
             # =======================================
@@ -534,6 +542,8 @@ kejahatan.
                 ]
 
             })
+
+            hasil_prediksi = pd.concat([hasil_prediksi.reset_index(drop=True), probability_df.reset_index(drop=True)], axis=1)
 
             st.dataframe(
                 hasil_prediksi,
