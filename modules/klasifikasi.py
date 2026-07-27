@@ -63,7 +63,44 @@ def show():
 
         return
 
+    
     df = st.session_state["preprocessed"]
+
+    # =======================================
+    # MEMBACA KAMUS KEJAHATAN DAN PELABELAN
+    # =======================================
+    if os.path.exists("kamus_kejahatan.csv"):
+
+        kamus = pd.read_csv("kamus_kejahatan.csv")
+
+        if (
+            "Jenis Perkara" in df.columns
+            and "jenis_perkara" in kamus.columns
+            and "klasifikasi" in kamus.columns
+        ):
+
+            mapping = dict(
+                zip(
+                    kamus["jenis_perkara"].astype(str).str.strip().str.lower(),
+                    kamus["klasifikasi"].astype(str).str.strip()
+                )
+            )
+
+            df["Pelabelan"] = (
+                df["Jenis Perkara"]
+                .astype(str)
+                .str.strip()
+                .str.lower()
+                .map(mapping)
+            )
+
+            if df["Pelabelan"].isna().sum() > 0:
+                st.warning(
+                    f"{df['Pelabelan'].isna().sum()} data tidak ditemukan pada kamus kejahatan."
+                )
+
+            st.session_state["preprocessed"] = df
+
 
     # ===============================
     # Pastikan ada label
