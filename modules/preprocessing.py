@@ -77,35 +77,50 @@ def show():
         # Final Text
         df["Final Text"] = df["Stemming"].apply(lambda x: " ".join(x))
 
-        # Auto Label berdasarkan kamus kejahatan
+        # Auto Label berdasarkan Jenis Perkara
         try:
-            kamus = pd.read_csv("kamus_klasifikasi_kejahatan.csv")
+            kamus = pd.read_csv("kamus_kejahatan.csv")
         except FileNotFoundError:
             try:
-                kamus = pd.read_csv("assets/kamus_klasifikasi_kejahatan.csv")
+                kamus = pd.read_csv("kamus_klasifikasi_kejahatan.csv")
             except FileNotFoundError:
                 kamus = None
 
-        if kamus is not None and {"kata_kunci","kategori"}.issubset(kamus.columns):
-            kamus["kata_kunci"] = kamus["kata_kunci"].astype(str).str.lower()
-            kamus = kamus.sort_values(
-                by="kata_kunci",
-                key=lambda x: x.str.len(),
-                ascending=False
-            )
-            kamus_list = list(zip(kamus["kata_kunci"], kamus["kategori"]))
+        if kamus is not None:
+            # Sesuaikan nama kolom kamus
+            kolom_jenis = None
+            for c in ["Jenis Perkara","jenis_perkara","jenis perkara","kata_kunci"]:
+                if c in kamus.columns:
+                    kolom_jenis = c
+                    break
 
-            def auto_label(text):
-                text = str(text).lower()
-                for kata, label in kamus_list:
-                    if kata in text:
-                        return label
-                return "Kejahatan Ringan"
+            kolom_label = None
+            for c in ["Pelabelan","Label","label","kategori"]:
+                if c in kamus.columns:
+                    kolom_label = c
+                    break
 
-            df["Pelabelan"] = df["Final Text"].apply(auto_label)
+            if kolom_jenis and kolom_label and "Jenis Perkara" in df.columns:
+                kamus[kolom_jenis] = kamus[kolom_jenis].astype(str).str.strip().str.lower()
+                kamus[kolom_label] = kamus[kolom_label].astype(str).str.strip()
+
+                kamus_dict = dict(zip(kamus[kolom_jenis], kamus[kolom_label]))
+
+                df["Pelabelan"] = (
+                    df["Jenis Perkara"]
+                    .astype(str)
+                    .str.strip()
+                    .str.lower()
+                    .map(kamus_dict)
+                )
+
+                df["Pelabelan"] = df["Pelabelan"].fillna("Belum Ada Label")
+            else:
+                st.error("Kolom kamus tidak sesuai.")
+                df["Pelabelan"] = "Belum Ada Label"
         else:
-            df["Pelabelan"] = "Kejahatan Ringan"
-
+            st.error("File kamus tidak ditemukan.")
+            df["Pelabelan"] = "Belum Ada Label"
 
         progress.progress(100)
 
