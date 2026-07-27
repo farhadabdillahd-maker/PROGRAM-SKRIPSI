@@ -79,7 +79,7 @@ def show():
 
         # Auto Label berdasarkan Jenis Perkara
         try:
-            kamus = pd.read_csv("kamus_kejahatan.csv")
+            kamus = pd.read_csv("kamus_klasifikasi_kejahatan.csv")
         except FileNotFoundError:
             try:
                 kamus = pd.read_csv("kamus_klasifikasi_kejahatan.csv")
