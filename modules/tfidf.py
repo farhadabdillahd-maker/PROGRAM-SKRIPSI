@@ -123,12 +123,14 @@ def show():
 
     st.dataframe(tfidf_df, use_container_width=True)
 
-    tfidf_matrix = tfidf_df.T.reset_index(drop=True)
+    # =====================================
+    # MATRIX TF-IDF UNTUK MACHINE LEARNING
+    # Menggunakan TfidfVectorizer agar konsisten
+    # dengan model Naive Bayes dan prediksi.
+    # =====================================
+    tfidf_matrix = vectorizer.fit_transform(documents)
 
-    # Tambahkan label bila tersedia
-    if "Label" in df.columns:
-        tfidf_matrix["Label"] = df["Label"].values
-
+    st.session_state["vectorizer"] = vectorizer
     st.session_state["tf"] = tf_df
     st.session_state["tfidf_df"] = tfidf_df
     st.session_state["tfidf_matrix"] = tfidf_matrix
