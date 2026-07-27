@@ -143,12 +143,12 @@ def show():
     )
 
     
-# Validasi minimal data tiap kelas
-if y.value_counts().min() < 2:
-    st.error("Minimal setiap kelas harus memiliki 2 data agar stratified split dapat dilakukan.")
-    return
+    # Validasi minimal data tiap kelas
+    if y.value_counts().min() < 2:
+        st.error("Minimal setiap kelas harus memiliki 2 data agar stratified split dapat dilakukan.")
+        return
 
-if st.button("Training Naïve Bayes"):
+    if st.button("Training Naïve Bayes"):
 
         X_train, X_test, y_train, y_test = train_test_split(
 
