@@ -15,19 +15,19 @@ def prediksi_kamus(teks):
 
     teks = preprocessing(teks)
 
-    kamus["jenis_perkara"] = kamus["jenis_perkara"].astype(str).str.lower().str.strip()
-    kamus["klasifikasi"] = kamus["klasifikasi"].astype(str).str.strip()
+    kamus["kata_kunci"] = kamus["kata_kunci"].astype(str).str.lower().str.strip()
+    kamus["label"] = kamus["label"].astype(str).str.strip()
 
-    # cocokkan kata terpanjang terlebih dahulu
+    # cocokkan kata kunci terpanjang terlebih dahulu
     kamus = kamus.sort_values(
-        by="jenis_perkara",
+        by="kata_kunci",
         key=lambda s: s.str.len(),
         ascending=False
     )
 
     for _, row in kamus.iterrows():
-        if row["jenis_perkara"] in teks:
-            return row["klasifikasi"]
+        if row["kata_kunci"] in teks:
+            return row["label"]
 
     return None
 
