@@ -223,7 +223,30 @@ def show():
 
         )
 
+
         st.success("Training Model Berhasil.")
+
+        # =======================================
+        # PRIOR PROBABILITY
+        # =======================================
+        with st.expander("📊 Prior Probability", expanded=False):
+            st.subheader("Prior Probability")
+
+            prior_df = pd.DataFrame({
+                "Kelas": model.classes_,
+                "Prior Probability": np.round(model.class_prior_, 6)
+            })
+
+            st.dataframe(prior_df, use_container_width=True)
+
+            st.info(
+                "Prior Probability merupakan peluang awal masing-masing kelas "
+                "yang dihitung otomatis oleh algoritma Multinomial Naïve Bayes "
+                "berdasarkan distribusi data training."
+            )
+
+            st.session_state["prior_probability"] = prior_df
+
 
         # =======================================
         # Simpan Session
