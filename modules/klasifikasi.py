@@ -359,27 +359,30 @@ def show():
                     value=f"{f1 * 100:.2f}%"
                 )
 
-            st.markdown("### 📊 Distribusi Data")
+        with st.expander("📈 2️⃣ Distribusi Data", expanded=False):
+            st.subheader("Distribusi Data")
 
             distribusi = y.value_counts().sort_index()
+            tabel_distribusi = (
+                distribusi.rename_axis("Kelas")
+                .reset_index(name="Jumlah Data")
+            )
+            st.dataframe(tabel_distribusi, use_container_width=True)
 
             col_chart1, col_chart2 = st.columns(2)
 
             with col_chart1:
-                fig_bar, ax_bar = plt.subplots(figsize=(5,4))
+                fig_bar, ax_bar = plt.subplots(figsize=(4,3))
                 ax_bar.bar(distribusi.index.astype(str), distribusi.values)
                 ax_bar.set_title("Distribusi Data")
                 ax_bar.set_xlabel("Kelas")
                 ax_bar.set_ylabel("Jumlah")
-
-                # Simpan diagram batang untuk laporan PDF
                 bar_chart_path = "bar_chart.png"
                 fig_bar.savefig(bar_chart_path, dpi=300, bbox_inches="tight")
-
                 st.pyplot(fig_bar)
 
             with col_chart2:
-                fig_pie, ax_pie = plt.subplots(figsize=(5,4))
+                fig_pie, ax_pie = plt.subplots(figsize=(4,3))
                 ax_pie.pie(
                     distribusi.values,
                     labels=distribusi.index.astype(str),
@@ -388,12 +391,10 @@ def show():
                 )
                 ax_pie.set_title("Persentase Distribusi Data")
                 ax_pie.axis("equal")
-
-                # Simpan diagram lingkaran untuk laporan PDF
                 pie_chart_path = "pie_chart.png"
                 fig_pie.savefig(pie_chart_path, dpi=300, bbox_inches="tight")
-
                 st.pyplot(fig_pie)
+
 
             # =======================================
             # CLASSIFICATION REPORT
@@ -408,7 +409,7 @@ def show():
 
             report_df = pd.DataFrame(report).transpose()
 
-        with st.expander("📋 2️⃣ Classification Report", expanded=False):
+        with st.expander("📋 3️⃣ Classification Report", expanded=False):
             st.subheader("Classification Report")
 
             st.dataframe(
@@ -422,14 +423,14 @@ def show():
             # =======================================
 
             st.divider()
-        with st.expander("🧩 3️⃣ Confusion Matrix", expanded=False):
+        with st.expander("🧩 4️⃣ Confusion Matrix", expanded=False):
             st.subheader("Confusion Matrix")
 
             cm = confusion_matrix(y_test, y_pred)
 
             st.session_state["confusion_matrix"] = cm
 
-            fig, ax = plt.subplots(figsize=(6, 5))
+            fig, ax = plt.subplots(figsize=(4.2, 3.6))
 
             disp = ConfusionMatrixDisplay(
                 confusion_matrix=cm,
@@ -454,7 +455,7 @@ def show():
             # TAMPILKAN MATRIX DALAM TABEL
             # =======================================
 
-        with st.expander("📑 4️⃣ Tabel Confusion Matrix", expanded=False):
+        with st.expander("📑 5️⃣ Tabel Confusion Matrix", expanded=False):
             st.subheader("Tabel Confusion Matrix")
 
             cm_df = pd.DataFrame(
@@ -475,7 +476,7 @@ def show():
             # =======================================
 
             st.divider()
-        with st.expander("📌 5️⃣ Ringkasan Model", expanded=False):
+        with st.expander("📌 6️⃣ Ringkasan Model", expanded=False):
             st.subheader("Ringkasan Model")
 
             st.success("Model Naïve Bayes berhasil dilatih.")
@@ -498,7 +499,7 @@ def show():
 
             st.divider()
 
-        with st.expander("📝 6️⃣ Kesimpulan", expanded=False):
+        with st.expander("📝 7️⃣ Kesimpulan", expanded=False):
             st.subheader("Kesimpulan")
 
             st.write(
@@ -526,7 +527,7 @@ kejahatan.
             # =======================================
 
             st.divider()
-        with st.expander("📈 7️⃣ Probabilitas Prediksi", expanded=False):
+        with st.expander("📈 8️⃣ Probabilitas Prediksi", expanded=False):
             st.subheader("Probabilitas Prediksi")
 
             probability = model.predict_proba(X_test)
@@ -548,7 +549,7 @@ kejahatan.
             # =======================================
 
             st.divider()
-        with st.expander("📰 8️⃣ Hasil Prediksi Testing", expanded=True):
+        with st.expander("📰 9️⃣ Hasil Prediksi Testing", expanded=True):
             st.subheader("Hasil Prediksi Judul Berita Testing")
 
             # Mengambil judul berita asli berdasarkan index data testing
@@ -611,7 +612,7 @@ kejahatan.
 
             st.divider()
 
-        with st.expander("ℹ️ 9️⃣ Informasi Model", expanded=False):
+        with st.expander("ℹ️ 🔟 Informasi Model", expanded=False):
             st.subheader("Informasi Model")
 
             info_model = pd.DataFrame({
