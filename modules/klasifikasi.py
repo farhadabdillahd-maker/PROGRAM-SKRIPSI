@@ -430,7 +430,7 @@ def show():
 
             st.session_state["confusion_matrix"] = cm
 
-            fig, ax = plt.subplots(figsize=(4.2, 3.6))
+            fig, ax = plt.subplots(figsize=(3.0, 2.8))
 
             disp = ConfusionMatrixDisplay(
                 confusion_matrix=cm,
@@ -440,10 +440,12 @@ def show():
             disp.plot(
                 cmap="Blues",
                 ax=ax,
-                colorbar=False
+                colorbar=False,
+                values_format='d'
             )
 
-            ax.set_title("Confusion Matrix")
+            ax.set_title("Confusion Matrix", fontsize=10)
+            ax.tick_params(axis="both", labelsize=8)
             ax.set_xlabel("Prediksi")
             ax.set_ylabel("Aktual")
 
