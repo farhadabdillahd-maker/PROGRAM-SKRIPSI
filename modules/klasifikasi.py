@@ -430,7 +430,7 @@ def show():
 
             st.session_state["confusion_matrix"] = cm
 
-            fig, ax = plt.subplots(figsize=(3.0, 2.8))
+            fig, ax = plt.subplots(figsize=(2.4, 2.2))
 
             disp = ConfusionMatrixDisplay(
                 confusion_matrix=cm,
@@ -447,11 +447,17 @@ def show():
             ax.set_title("Confusion Matrix", fontsize=10)
             ax.tick_params(axis="both", labelsize=8)
             ax.set_xlabel("Prediksi")
-            ax.set_ylabel("Aktual")
+            ax.set_ylabel("Aktual", fontsize=8)
+            ax.set_xlabel("Prediksi", fontsize=8)
+            ax.set_title("Confusion Matrix", fontsize=9)
+            ax.tick_params(axis="both", labelsize=7)
+            plt.tight_layout()
 
             cm_image_path = "confusion_matrix.png"
             fig.savefig(cm_image_path, dpi=300, bbox_inches="tight")
-            st.pyplot(fig)
+            _, c, _ = st.columns([1,2,1])
+            with c:
+                st.pyplot(fig, use_container_width=False)
 
             # =======================================
             # TAMPILKAN MATRIX DALAM TABEL
