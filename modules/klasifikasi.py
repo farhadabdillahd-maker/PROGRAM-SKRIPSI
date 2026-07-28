@@ -277,10 +277,13 @@ def show():
         st.write("")
         st.subheader("📊 1️⃣ Prior Probability")
 
-        prior_df = pd.DataFrame({
-            "Kelas": model.classes_,
-            "Prior Probability": np.round(model.class_prior_, 6)
-        })
+        prior_df = (
+            y_train.value_counts(normalize=True)
+            .sort_index()
+            .reset_index()
+        )
+        prior_df.columns = ["Kelas", "Prior Probability"]
+        prior_df["Prior Probability"] = prior_df["Prior Probability"].round(6)
 
         st.dataframe(prior_df, use_container_width=True)
         st.divider()
