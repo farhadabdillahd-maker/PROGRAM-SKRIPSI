@@ -288,6 +288,31 @@ def show():
         st.dataframe(prior_df, use_container_width=True)
         st.divider()
 
+        st.divider()
+        st.subheader("📊 2️⃣ Conditional Probability (Likelihood)")
+
+        if "vectorizer" in st.session_state:
+            feature_names = st.session_state["vectorizer"].get_feature_names_out()
+
+            likelihood_df = pd.DataFrame(
+                np.exp(model.feature_log_prob_).T,
+                index=feature_names,
+                columns=model.classes_
+            ).reset_index()
+
+            likelihood_df.rename(columns={"index": "Kata"}, inplace=True)
+
+            st.write("Menampilkan 20 kata pertama beserta probabilitas kemunculannya pada setiap kelas.")
+
+            st.dataframe(
+                likelihood_df.head(20),
+                use_container_width=True
+            )
+
+            st.session_state["likelihood"] = likelihood_df
+        else:
+            st.warning("Vectorizer tidak ditemukan sehingga Conditional Probability tidak dapat ditampilkan.")
+
 
               # =======================================
         # PREDIKSI DATA TESTING
