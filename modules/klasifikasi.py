@@ -227,28 +227,6 @@ def show():
         st.success("Training Model Berhasil.")
 
         # =======================================
-        # PRIOR PROBABILITY
-        # =======================================
-        with st.expander("📊 Prior Probability", expanded=False):
-            st.subheader("Prior Probability")
-
-            prior_df = pd.DataFrame({
-                "Kelas": model.classes_,
-                "Prior Probability": np.round(model.class_prior_, 6)
-            })
-
-            st.dataframe(prior_df, use_container_width=True)
-
-            st.info(
-                "Prior Probability merupakan peluang awal masing-masing kelas "
-                "yang dihitung otomatis oleh algoritma Multinomial Naïve Bayes "
-                "berdasarkan distribusi data training."
-            )
-
-            st.session_state["prior_probability"] = prior_df
-
-
-        # =======================================
         # Simpan Session
         # =======================================
 
@@ -296,6 +274,17 @@ def show():
             st.write("Jumlah fitur vectorizer :", len(st.session_state["vectorizer"].get_feature_names_out()))
 
         st.write("Jumlah fitur model :", model.n_features_in_)
+        st.write("")
+        st.subheader("📊 1️⃣ Prior Probability")
+
+        prior_df = pd.DataFrame({
+            "Kelas": model.classes_,
+            "Prior Probability": np.round(model.class_prior_, 6)
+        })
+
+        st.dataframe(prior_df, use_container_width=True)
+        st.divider()
+
 
               # =======================================
         # PREDIKSI DATA TESTING
@@ -354,7 +343,7 @@ def show():
         # =======================================
 
         st.divider()
-        with st.expander("📊 1️⃣ Hasil Evaluasi Model", expanded=True):
+        with st.expander("📊 2️⃣ Hasil Evaluasi Model", expanded=True):
             st.subheader("📊 Hasil Evaluasi Model")
 
             col1, col2 = st.columns(2)
@@ -382,7 +371,7 @@ def show():
                     value=f"{f1 * 100:.2f}%"
                 )
 
-        with st.expander("📈 2️⃣ Distribusi Data", expanded=False):
+        with st.expander("📈 3️⃣ Distribusi Data", expanded=False):
             st.subheader("Distribusi Data")
 
             distribusi = y.value_counts().sort_index()
@@ -432,7 +421,7 @@ def show():
 
             report_df = pd.DataFrame(report).transpose()
 
-        with st.expander("📋 3️⃣ Classification Report", expanded=False):
+        with st.expander("📋 4️⃣ Classification Report", expanded=False):
             st.subheader("Classification Report")
 
             st.dataframe(
@@ -446,7 +435,7 @@ def show():
             # =======================================
 
             st.divider()
-        with st.expander("🧩 4️⃣ Confusion Matrix", expanded=False):
+        with st.expander("🧩 5️⃣ Confusion Matrix", expanded=False):
             st.subheader("Confusion Matrix")
 
             cm = confusion_matrix(y_test, y_pred)
@@ -486,7 +475,7 @@ def show():
             # TAMPILKAN MATRIX DALAM TABEL
             # =======================================
 
-        with st.expander("📑 5️⃣ Tabel Confusion Matrix", expanded=False):
+        with st.expander("📑 6️⃣ Tabel Confusion Matrix", expanded=False):
             st.subheader("Tabel Confusion Matrix")
 
             cm_df = pd.DataFrame(
@@ -507,7 +496,7 @@ def show():
             # =======================================
 
             st.divider()
-        with st.expander("📌 6️⃣ Ringkasan Model", expanded=False):
+        with st.expander("📌 7️⃣ Ringkasan Model", expanded=False):
             st.subheader("Ringkasan Model")
 
             st.success("Model Naïve Bayes berhasil dilatih.")
@@ -530,7 +519,7 @@ def show():
 
             st.divider()
 
-        with st.expander("📝 7️⃣ Kesimpulan", expanded=False):
+        with st.expander("📝 8️⃣ Kesimpulan", expanded=False):
             st.subheader("Kesimpulan")
 
             st.write(
@@ -558,7 +547,7 @@ kejahatan.
             # =======================================
 
             st.divider()
-        with st.expander("📈 8️⃣ Probabilitas Prediksi", expanded=False):
+        with st.expander("📈 9️⃣ Probabilitas Prediksi", expanded=False):
             st.subheader("Probabilitas Prediksi")
 
             probability = model.predict_proba(X_test)
@@ -580,7 +569,7 @@ kejahatan.
             # =======================================
 
             st.divider()
-        with st.expander("📰 9️⃣ Hasil Prediksi Testing", expanded=True):
+        with st.expander("📰 🔟 Hasil Prediksi Testing", expanded=True):
             st.subheader("Hasil Prediksi Judul Berita Testing")
 
             # Mengambil judul berita asli berdasarkan index data testing
@@ -643,7 +632,7 @@ kejahatan.
 
             st.divider()
 
-        with st.expander("ℹ️ 🔟 Informasi Model", expanded=False):
+        with st.expander("ℹ️ 1️⃣1️⃣ Informasi Model", expanded=False):
             st.subheader("Informasi Model")
 
             info_model = pd.DataFrame({
