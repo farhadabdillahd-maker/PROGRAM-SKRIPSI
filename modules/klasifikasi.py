@@ -302,10 +302,20 @@ def show():
 
             likelihood_df.rename(columns={"index": "Kata"}, inplace=True)
 
-            st.write("Menampilkan 20 kata pertama beserta probabilitas kemunculannya pada setiap kelas.")
+            st.write(f"Menampilkan seluruh {len(likelihood_df)} fitur beserta probabilitas kemunculannya pada setiap kelas.")
 
             st.dataframe(
-                likelihood_df.head(20),
+                likelihood_df,
+                use_container_width=True,
+                height=600
+            )
+
+            csv_likelihood = likelihood_df.to_csv(index=False).encode("utf-8")
+            st.download_button(
+                label="📥 Download Conditional Probability",
+                data=csv_likelihood,
+                file_name="conditional_probability_likelihood.csv",
+                mime="text/csv",
                 use_container_width=True
             )
 
