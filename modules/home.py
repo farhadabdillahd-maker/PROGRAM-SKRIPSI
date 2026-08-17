@@ -336,7 +336,7 @@ def show():
     # =========================================================
     # HERO
     # =========================================================
-    st.markdown(textwrap.dedent("""
+    st.html(textwrap.dedent("""
     <div class="home-wrap">
         <div class="hero">
             <div class="hero-badge">🛡️ SISTEM KLASIFIKASI KEJAHATAN</div>
@@ -349,19 +349,19 @@ def show():
             <div class="hero-tag">📍 Studi Kasus: Polres Pasaman</div>
         </div>
     </div>
-    """), unsafe_allow_html=True)
+    """))
 
     # =========================================================
     # QUICK OVERVIEW
     # =========================================================
-    st.markdown(textwrap.dedent("""
+    st.html(textwrap.dedent("""
     <div class="home-wrap">
         <div class="section-title">📊 Ringkasan Sistem</div>
         <div class="section-subtitle">
             Gambaran singkat komponen utama yang digunakan dalam aplikasi.
         </div>
     </div>
-    """), unsafe_allow_html=True)
+    """))
 
     c1, c2, c3, c4 = st.columns(4, gap="medium")
 
@@ -374,19 +374,19 @@ def show():
 
     for col, (icon, label, value, note) in zip((c1, c2, c3, c4), stats):
         with col:
-            st.markdown(textwrap.dedent(f"""
+            st.html(textwrap.dedent(f"""
             <div class="stat-card">
                 <div class="stat-icon">{icon}</div>
                 <div class="stat-label">{label}</div>
                 <div class="stat-value">{value}</div>
                 <div class="stat-note">{note}</div>
             </div>
-            """), unsafe_allow_html=True)
+            """))
 
     # =========================================================
     # DESKRIPSI
     # =========================================================
-    st.markdown(textwrap.dedent("""
+    st.html(textwrap.dedent("""
     <div class="home-wrap">
         <div class="section-title">📖 Tentang Aplikasi</div>
         <div class="section-subtitle">
@@ -410,12 +410,12 @@ def show():
             </div>
         </div>
     </div>
-    """), unsafe_allow_html=True)
+    """))
 
     # =========================================================
     # ALUR SISTEM
     # =========================================================
-    st.markdown(textwrap.dedent("""
+    st.html(textwrap.dedent("""
     <div class="home-wrap">
         <div class="section-title">⚙️ Alur Sistem</div>
         <div class="section-subtitle">
@@ -455,19 +455,19 @@ def show():
             </div>
         </div>
     </div>
-    """), unsafe_allow_html=True)
+    """))
 
     # =========================================================
     # FITUR
     # =========================================================
-    st.markdown(textwrap.dedent("""
+    st.html(textwrap.dedent("""
     <div class="home-wrap">
         <div class="section-title">✨ Fitur Utama</div>
         <div class="section-subtitle">
             Menu yang tersedia untuk mendukung proses penelitian.
         </div>
     </div>
-    """), unsafe_allow_html=True)
+    """))
 
     f1, f2, f3 = st.columns(3, gap="medium")
 
@@ -494,18 +494,18 @@ def show():
 
     for col, icon, title, text in features:
         with col:
-            st.markdown(textwrap.dedent(f"""
+            st.html(textwrap.dedent(f"""
             <div class="feature-card">
                 <div class="feature-icon">{icon}</div>
                 <div class="feature-title">{title}</div>
                 <div class="feature-text">{text}</div>
             </div>
-            """), unsafe_allow_html=True)
+            """))
 
     # =========================================================
     # FOOTER
     # =========================================================
-    st.markdown(textwrap.dedent("""
+    st.html(textwrap.dedent("""
     <div class="home-wrap">
         <div class="home-footer">
             <strong>🛡️ KLASIFIKASI TINGKAT KEJAHATAN</strong><br>
@@ -514,4 +514,4 @@ def show():
             <span>Teknik Informatika • Studi Kasus Polres Pasaman • 2026</span>
         </div>
     </div>
-    """), unsafe_allow_html=True)
+    """))
