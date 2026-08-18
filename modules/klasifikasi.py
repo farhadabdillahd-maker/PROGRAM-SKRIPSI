@@ -175,7 +175,7 @@ def show():
 
             y,
 
-            test_size=test_size / 100,
+            test_size=0.2,
 
             random_state=42,
 
