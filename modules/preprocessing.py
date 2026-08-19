@@ -36,6 +36,43 @@ def stopword_removal(tokens):
 def stemming(tokens):
     return [stemmer.stem(word) for word in tokens]
 
+# ==============================
+# KAMUS NORMALISASI
+# ==============================
+
+normalization_dict = {
+    "yg": "yang",
+    "dgn": "dengan",
+    "tdk": "tidak",
+    "gak": "tidak",
+    "ga": "tidak",
+    "nggak": "tidak",
+    "ngga": "tidak",
+    "krn": "karena",
+    "karna": "karena",
+    "utk": "untuk",
+    "dr": "dari",
+    "dri": "dari",
+    "org": "orang",
+    "sbg": "sebagai",
+    "dlm": "dalam",
+    "thd": "terhadap",
+    "pd": "pada",
+    "tsb": "tersebut",
+    "dll": "dan lain-lain",
+    "dsb": "dan sebagainya",
+    "bbrp": "beberapa",
+    "blm": "belum",
+    "sdh": "sudah",
+    "udh": "sudah",
+    "adlh": "adalah",
+    "krg": "kurang",
+    "lebih": "lebih",
+}
+
+def normalisasi(tokens):
+    return [normalization_dict.get(word, word) for word in tokens]
+
 
 # ==============================
 # HALAMAN PREPROCESSING
@@ -61,21 +98,26 @@ def show():
 
         # Case Folding
         df["Case Folding"] = df["Judul Media Nasional"].apply(case_folding)
-        progress.progress(25)
+        progress.progress(20)
 
         # Tokenizing
         df["Tokenizing"] = df["Case Folding"].apply(tokenizing)
-        progress.progress(50)
+        progress.progress(40)
 
         # Stopword Removal
         df["Stopword Removal"] = df["Tokenizing"].apply(stopword_removal)
-        progress.progress(75)
+        progress.progress(60)
 
         # Stemming
         df["Stemming"] = df["Stopword Removal"].apply(stemming)
+        progress.progress(80)
+
+        # Normalisasi (tahap terakhir)
+        df["Normalisasi"] = df["Stemming"].apply(normalisasi)
+        progress.progress(100)
 
         # Final Text
-        df["Final Text"] = df["Stemming"].apply(lambda x: " ".join(x))
+        df["Final Text"] = df["Normalisasi"].apply(lambda x: " ".join(x))
 
         # Auto Label berdasarkan Jenis Perkara
         try:
@@ -165,6 +207,7 @@ def show():
                     "Tokenizing",
                     "Stopword Removal",
                     "Stemming",
+                    "Normalisasi",
                     "Final Text",
                 ]
             ],
