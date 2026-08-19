@@ -157,11 +157,16 @@ def show():
 
         50,
 
-        20
+        30
 
     )
 
     
+    # Pembagian default: 70% training dan 30% testing
+    st.caption(
+        f"Pembagian data: {100 - test_size}% training dan {test_size}% testing."
+    )
+
     # Validasi minimal data tiap kelas
     if y.value_counts().min() < 2:
         st.error("Minimal setiap kelas harus memiliki 2 data agar stratified split dapat dilakukan.")
@@ -175,7 +180,7 @@ def show():
 
             y,
 
-            test_size=0.2,
+            test_size=test_size / 100,
 
             random_state=42,
 
