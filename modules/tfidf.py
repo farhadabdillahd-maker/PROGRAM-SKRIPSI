@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import math
+import matplotlib.pyplot as plt
 from collections import Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
 
@@ -60,6 +61,88 @@ def show():
     })
     st.subheader("Vocabulary")
     st.dataframe(vocab_df, use_container_width=True)
+
+    # =====================================
+    # WORD CLOUD / KATA PALING BANYAK MUNCUL
+    # =====================================
+    st.divider()
+    st.subheader("☁️ Kata Paling Banyak Muncul")
+
+    # Menghitung frekuensi setiap kata dari Final Text
+    word_counter = Counter(
+        word
+        for tokens in tokenized_docs
+        for word in tokens
+        if word.strip()
+    )
+
+    if word_counter:
+        jumlah_kata = st.slider(
+            "Jumlah kata yang ditampilkan",
+            min_value=5,
+            max_value=min(30, len(word_counter)),
+            value=min(15, len(word_counter))
+        )
+
+        top_words = word_counter.most_common(jumlah_kata)
+
+        word_freq_df = pd.DataFrame(
+            top_words,
+            columns=["Kata", "Frekuensi"]
+        )
+        word_freq_df.insert(0, "No", range(1, len(word_freq_df) + 1))
+
+        st.dataframe(
+            word_freq_df,
+            use_container_width=True,
+            hide_index=True
+        )
+
+        # Grafik frekuensi kata
+        fig_words, ax_words = plt.subplots(figsize=(10, 5))
+
+        words = [item[0] for item in top_words]
+        frequencies = [item[1] for item in top_words]
+
+        # Dibalik agar kata dengan frekuensi tertinggi berada di atas
+        ax_words.barh(words[::-1], frequencies[::-1])
+        ax_words.set_title("Kata yang Paling Banyak Muncul")
+        ax_words.set_xlabel("Frekuensi")
+        ax_words.set_ylabel("Kata")
+
+        for i, value in enumerate(frequencies[::-1]):
+            ax_words.text(value, i, f" {value}", va="center")
+
+        plt.tight_layout()
+        st.pyplot(fig_words)
+
+        # Word cloud visual jika library tersedia
+        try:
+            from wordcloud import WordCloud
+
+            wordcloud = WordCloud(
+                width=1200,
+                height=500,
+                background_color="white",
+                colormap="Blues",
+                max_words=jumlah_kata,
+                collocations=False
+            ).generate_from_frequencies(dict(top_words))
+
+            fig_wc, ax_wc = plt.subplots(figsize=(12, 5))
+            ax_wc.imshow(wordcloud, interpolation="bilinear")
+            ax_wc.axis("off")
+            ax_wc.set_title("Word Cloud Kata yang Paling Banyak Muncul")
+            plt.tight_layout()
+            st.pyplot(fig_wc)
+
+        except ImportError:
+            st.info(
+                "Word Cloud tidak dapat ditampilkan karena library "
+                "'wordcloud' belum terpasang. Grafik frekuensi kata tetap tersedia."
+            )
+    else:
+        st.warning("Tidak terdapat kata untuk ditampilkan.")
 
     st.divider()
 
