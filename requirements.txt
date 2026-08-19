@@ -8,3 +8,4 @@ matplotlib
 plotly
 joblib
 reportlab
+wordcloud
