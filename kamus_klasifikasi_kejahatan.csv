@@ -1,0 +1,1501 @@
+﻿kata_kunci,jenis_perkara,label
+pembunuhan,Pembunuhan,Sangat Berat
+membunuh,Pembunuhan,Sangat Berat
+bunuh,Pembunuhan,Sangat Berat
+terbunuh,Pembunuhan,Sangat Berat
+pembunuh,Pembunuhan,Sangat Berat
+eksekusi,Pembunuhan,Sangat Berat
+menghabisi,Pembunuhan,Sangat Berat
+menghilangkan,Pembunuhan,Sangat Berat
+menggorok,Pembunuhan,Sangat Berat
+menusuk,Pembunuhan,Sangat Berat
+menembak,Pembunuhan,Sangat Berat
+meracun,Pembunuhan,Sangat Berat
+cekik,Pembunuhan,Sangat Berat
+mencekik,Pembunuhan,Sangat Berat
+gantung,Pembunuhan,Sangat Berat
+membantai,Pembunuhan,Sangat Berat
+jagal,Pembunuhan,Sangat Berat
+pembantaian,Pembunuhan,Sangat Berat
+pembunuhanberencana,Pembunuhan Berencana,Sangat Berat
+berencana,Pembunuhan Berencana,Sangat Berat
+pembantaianmassal,Pembunuhan Massal,Sangat Berat
+genosida,Genosida,Sangat Berat
+penganiayaan,Penganiayaan,Berat
+aniaya,Penganiayaan,Berat
+menganiaya,Penganiayaan,Berat
+memukul,Penganiayaan,Berat
+pukul,Penganiayaan,Berat
+tampar,Penganiayaan,Ringan
+menampar,Penganiayaan,Ringan
+tendang,Penganiayaan,Berat
+menendang,Penganiayaan,Berat
+menonjok,Penganiayaan,Berat
+tonjok,Penganiayaan,Berat
+hajar,Penganiayaan,Berat
+menghajar,Penganiayaan,Berat
+luka,Penganiayaan,Berat
+melukai,Penganiayaan,Berat
+bacok,Penganiayaan,Sangat Berat
+membacok,Penganiayaan,Sangat Berat
+sayat,Penganiayaan,Berat
+menyayat,Penganiayaan,Berat
+kekerasan,Penganiayaan,Berat
+pencurian,Pencurian,Ringan
+curi,Pencurian,Ringan
+mencuri,Pencurian,Ringan
+pencuri,Pencurian,Ringan
+maling,Pencurian,Ringan
+copet,Pencurian,Ringan
+mencopet,Pencurian,Ringan
+jambret,Pencurian,Berat
+menjambret,Pencurian,Berat
+bobol,Pencurian,Berat
+membobol,Pencurian,Berat
+gasak,Pencurian,Berat
+menggasak,Pencurian,Berat
+mengutil,Pencurian,Ringan
+util,Pencurian,Ringan
+raib,Pencurian,Ringan
+curanmor,Pencurian Kendaraan,Berat
+curat,Pencurian dengan Pemberatan,Berat
+curas,Pencurian dengan Kekerasan,Sangat Berat
+ternak,Pencurian Ternak,Berat
+ayam,Pencurian Ternak,Ringan
+sapi,Pencurian Ternak,Berat
+kambing,Pencurian Ternak,Berat
+emas,Pencurian Emas,Berat
+uang,Pencurian Uang,Ringan
+sepeda,Pencurian Sepeda,Ringan
+motor,Pencurian Kendaraan,Berat
+mobil,Pencurian Kendaraan,Berat
+sawit,Pencurian Hasil Kebun,Ringan
+karet,Pencurian Hasil Kebun,Ringan
+rumah,Pencurian Rumah,Berat
+brankas,Pencurian Brankas,Berat
+perampokan,Perampokan,Sangat Berat
+rampok,Perampokan,Sangat Berat
+merampok,Perampokan,Sangat Berat
+perampok,Perampokan,Sangat Berat
+begal,Perampokan,Sangat Berat
+membegal,Perampokan,Sangat Berat
+pembegalan,Perampokan,Sangat Berat
+todong,Perampokan,Sangat Berat
+menodong,Perampokan,Sangat Berat
+rampas,Perampokan,Sangat Berat
+merampas,Perampokan,Sangat Berat
+pemerasan,Pemerasan,Berat
+memeras,Pemerasan,Berat
+peras,Pemerasan,Berat
+pemeras,Pemerasan,Berat
+pengancaman,Pengancaman,Berat
+ancam,Pengancaman,Berat
+mengancam,Pengancaman,Berat
+teror,Pengancaman,Berat
+intimidasi,Pengancaman,Berat
+sandera,Penyanderaan,Sangat Berat
+menyandera,Penyanderaan,Sangat Berat
+penyanderaan,Penyanderaan,Sangat Berat
+senjata,Perampokan Bersenjata,Sangat Berat
+bersenjata,Perampokan Bersenjata,Sangat Berat
+pisau,Perampokan Bersenjata,Sangat Berat
+parang,Perampokan Bersenjata,Sangat Berat
+pistol,Perampokan Bersenjata,Sangat Berat
+revolver,Perampokan Bersenjata,Sangat Berat
+penipuan,Penipuan,Berat
+tipu,Penipuan,Berat
+menipu,Penipuan,Berat
+penipu,Penipuan,Berat
+modus,Penipuan,Berat
+bodong,Penipuan,Berat
+investasi,Penipuan Investasi,Berat
+investasibodong,Penipuan Investasi,Berat
+arisan,Penipuan Arisan,Berat
+arisanbodong,Penipuan Arisan,Berat
+online,Penipuan Online,Berat
+transfer,Penipuan Online,Berat
+rekening,Penipuan Online,Berat
+phishing,Penipuan Siber,Berat
+scam,Penipuan Siber,Berat
+penggelapan,Penggelapan,Berat
+gelap,Penggelapan,Berat
+menggelapkan,Penggelapan,Berat
+penggelap,Penggelapan,Berat
+mobil,Penggelapan Kendaraan,Berat
+motor,Penggelapan Kendaraan,Berat
+kendaraan,Penggelapan Kendaraan,Berat
+uang,Penggelapan Uang,Berat
+dana,Penggelapan Uang,Berat
+kas,Penggelapan Keuangan,Berat
+aset,Penggelapan Aset,Berat
+cek,Penggelapan Dokumen,Berat
+sertifikat,Penggelapan Dokumen,Berat
+amanah,Penggelapan,Berat
+titipan,Penggelapan,Berat
+narkotika,Narkotika,Sangat Berat
+narkoba,Narkotika,Sangat Berat
+sabu,Narkotika,Sangat Berat
+sabu-sabu,Narkotika,Sangat Berat
+ganja,Narkotika,Sangat Berat
+ekstasi,Narkotika,Sangat Berat
+putau,Narkotika,Sangat Berat
+kokain,Narkotika,Sangat Berat
+heroin,Narkotika,Sangat Berat
+morfin,Narkotika,Sangat Berat
+psikotropika,Psikotropika,Berat
+obatterlarang,Obat Terlarang,Berat
+pilkoplo,Obat Terlarang,Berat
+tramadol,Obat Terlarang,Berat
+trihexyphenidyl,Obat Terlarang,Berat
+edar,Peredaran Narkotika,Sangat Berat
+pengedar,Peredaran Narkotika,Sangat Berat
+mengedar,Peredaran Narkotika,Sangat Berat
+kurir,Peredaran Narkotika,Sangat Berat
+bandar,Peredaran Narkotika,Sangat Berat
+menanam,Budidaya Narkotika,Sangat Berat
+menyimpan,Kepemilikan Narkotika,Sangat Berat
+memiliki,Kepemilikan Narkotika,Sangat Berat
+menguasai,Kepemilikan Narkotika,Sangat Berat
+mengonsumsi,Penyalahgunaan Narkotika,Berat
+pemakai,Penyalahgunaan Narkotika,Berat
+miras,Minuman Keras,Ringan
+minumankeras,Minuman Keras,Ringan
+alkohol,Minuman Keras,Ringan
+oplosan,Minuman Keras Oplosan,Berat
+pemerkosaan,Pemerkosaan,Sangat Berat
+perkosa,Pemerkosaan,Sangat Berat
+memperkosa,Pemerkosaan,Sangat Berat
+pemerkosa,Pemerkosaan,Sangat Berat
+pencabulan,Pencabulan,Sangat Berat
+cabul,Pencabulan,Sangat Berat
+mencabuli,Pencabulan,Sangat Berat
+pelecehan,Pelecehan Seksual,Berat
+melecehkan,Pelecehan Seksual,Berat
+seksual,Pelecehan Seksual,Berat
+eksploitasi,Eksploitasi Seksual,Sangat Berat
+prostitusi,Prostitusi,Berat
+mucikari,Perdagangan Orang,Sangat Berat
+psk,Prostitusi,Berat
+pornografi,Pornografi,Berat
+pornoaksi,Pornografi,Berat
+asusila,Tindak Pidana Kesusilaan,Berat
+inses,Inses,Sangat Berat
+persetubuhan,Persetubuhan Terlarang,Sangat Berat
+anak,Kejahatan Seksual terhadap Anak,Sangat Berat
+dibawahumur,Kejahatan Seksual terhadap Anak,Sangat Berat
+pedofilia,Pedofilia,Sangat Berat
+pedofil,Pedofilia,Sangat Berat
+humantrafficking,Perdagangan Orang,Sangat Berat
+trafiking,Perdagangan Orang,Sangat Berat
+perdaganganorang,Perdagangan Orang,Sangat Berat
+korbanseksual,Kejahatan Seksual,Sangat Berat
+obscenity,Pornografi,Berat
+amoral,Kesusilaan,Berat
+mesum,Perbuatan Asusila,Ringan
+korupsi,Korupsi,Sangat Berat
+koruptor,Korupsi,Sangat Berat
+mengkorupsi,Korupsi,Sangat Berat
+suap,Suap,Sangat Berat
+menyuap,Suap,Sangat Berat
+penyuapan,Suap,Sangat Berat
+gratifikasi,Gratifikasi,Sangat Berat
+komisi,Gratifikasi,Berat
+fee,Gratifikasi,Berat
+mark up,Korupsi Pengadaan,Sangat Berat
+markup,Korupsi Pengadaan,Sangat Berat
+pengadaan,Korupsi Pengadaan,Berat
+anggaran,Penyalahgunaan Anggaran,Berat
+apbd,Penyalahgunaan Anggaran,Berat
+apbn,Penyalahgunaan Anggaran,Berat
+penggelapanjabatan,Penyalahgunaan Jabatan,Sangat Berat
+jabatan,Penyalahgunaan Jabatan,Berat
+wewenang,Penyalahgunaan Wewenang,Berat
+menyalahgunakan,Penyalahgunaan Wewenang,Berat
+nepotisme,Nepotisme,Berat
+kolusi,Kolusi,Berat
+kkn,Korupsi Kolusi Nepotisme,Sangat Berat
+pungli,Pungutan Liar,Berat
+pungutanliar,Pungutan Liar,Berat
+uangpelicin,Suap,Sangat Berat
+kickback,Suap,Sangat Berat
+proyekfiktif,Korupsi Proyek,Sangat Berat
+fiktif,Korupsi Proyek,Berat
+audit,Tindak Pidana Jabatan,Ringan
+bpk,Tindak Pidana Jabatan,Ringan
+terorisme,Terorisme,Sangat Berat
+teroris,Terorisme,Sangat Berat
+radikal,Radikalisme,Berat
+radikalisme,Radikalisme,Berat
+bom,Pengeboman,Sangat Berat
+bomrakitan,Pengeboman,Sangat Berat
+peledak,Bahan Peledak,Sangat Berat
+dinamit,Bahan Peledak,Sangat Berat
+granat,Bahan Peledak,Sangat Berat
+detonator,Bahan Peledak,Sangat Berat
+ledakan,Pengeboman,Sangat Berat
+meledakkan,Pengeboman,Sangat Berat
+senjataapi,Kepemilikan Senjata Api Ilegal,Sangat Berat
+senpi,Kepemilikan Senjata Api Ilegal,Sangat Berat
+pistol,Kepemilikan Senjata Api Ilegal,Sangat Berat
+revolver,Kepemilikan Senjata Api Ilegal,Sangat Berat
+senapan,Kepemilikan Senjata Api Ilegal,Sangat Berat
+amunisi,Amunisi Ilegal,Sangat Berat
+peluru,Amunisi Ilegal,Sangat Berat
+laras,Senjata Api,Berat
+makar,Makar,Sangat Berat
+spionase,Spionase,Sangat Berat
+intelijen,Kejahatan Keamanan Negara,Berat
+sabotase,Sabotase,Sangat Berat
+penyelundupansenjata,Penyelundupan Senjata,Sangat Berat
+penyelundupanamunisi,Penyelundupan Amunisi,Sangat Berat
+jaringanteroris,Terorisme,Sangat Berat
+pendanaanterorisme,Pendanaan Terorisme,Sangat Berat
+isis,Terorisme,Sangat Berat
+jihadbersenjata,Terorisme,Sangat Berat
+pemalsuan,Pemalsuan Dokumen,Berat
+palsu,Pemalsuan Dokumen,Berat
+memalsukan,Pemalsuan Dokumen,Berat
+dokumenpalsu,Pemalsuan Dokumen,Berat
+suratpalsu,Pemalsuan Surat,Berat
+ijazahpalsu,Pemalsuan Ijazah,Berat
+sertifikatpalsu,Pemalsuan Sertifikat,Berat
+ktppalsu,Pemalsuan Identitas,Berat
+simpalsu,Pemalsuan Identitas,Berat
+pasporpalsu,Pemalsuan Identitas,Sangat Berat
+identitaspalsu,Pemalsuan Identitas,Berat
+uangpalsu,Pemalsuan Mata Uang,Sangat Berat
+rupiahpalsu,Pemalsuan Mata Uang,Sangat Berat
+meteraipalsu,Pemalsuan Meterai,Berat
+cekpalsu,Pemalsuan Dokumen Keuangan,Berat
+ttdpalsu,Pemalsuan Tanda Tangan,Berat
+tandatanganpalsu,Pemalsuan Tanda Tangan,Berat
+peretasan,Kejahatan Siber,Berat
+hack,Kejahatan Siber,Berat
+hacker,Kejahatan Siber,Berat
+meretas,Kejahatan Siber,Berat
+malware,Kejahatan Siber,Berat
+virus,Kejahatan Siber,Berat
+ransomware,Kejahatan Siber,Sangat Berat
+ddos,Serangan Siber,Berat
+carding,Kejahatan Siber,Berat
+skimming,Kejahatan Siber,Berat
+phising,Kejahatan Siber,Berat
+cybercrime,Kejahatan Siber,Berat
+databocor,Kebocoran Data,Berat
+perjudian,Perjudian,Berat
+judi,Perjudian,Berat
+berjudi,Perjudian,Berat
+judionline,Perjudian Online,Berat
+slot,Perjudian Online,Berat
+togel,Perjudian,Berat
+sabungayam,Perjudian,Berat
+kasino,Perjudian,Berat
+bandarjudi,Perjudian,Berat
+pelacuran,Prostitusi,Berat
+mucikari,Mucikari,Sangat Berat
+gigolo,Prostitusi,Berat
+eksploitasikorban,Perdagangan Orang,Sangat Berat
+mirasilegal,Pelanggaran Minuman Keras,Ringan
+mirasoplosan,Minuman Keras Oplosan,Berat
+keributan,Ketertiban Umum,Ringan
+tawuran,Tawuran,Berat
+anarkis,Perusakan Ketertiban Umum,Berat
+vandalisme,Vandalisme,Berat
+merusakfasilitumum,Perusakan Fasilitas Umum,Berat
+balapliar,Balap Liar,Ringan
+konvoiliar,Gangguan Ketertiban Umum,Ringan
+resah,Gangguan Ketertiban Umum,Ringan
+ketertibanumum,Ketertiban Umum,Ringan
+illegallogging,Illegal Logging,Berat
+pembalakanliar,Illegal Logging,Berat
+menebangliar,Illegal Logging,Berat
+kayuillegal,Illegal Logging,Berat
+hutanlindung,Perusakan Hutan,Berat
+perambahhutan,Perambahan Hutan,Berat
+perambahan,Perambahan Hutan,Berat
+kebakaranhutan,Pembakaran Hutan,Sangat Berat
+membakarhutan,Pembakaran Hutan,Sangat Berat
+lahanterbakar,Pembakaran Lahan,Berat
+limbah,Pencemaran Lingkungan,Berat
+limbahb3,Pencemaran Lingkungan,Sangat Berat
+pencemaran,Pencemaran Lingkungan,Berat
+cemarsungai,Pencemaran Air,Berat
+pencemaranair,Pencemaran Air,Berat
+pencemaranudara,Pencemaran Udara,Berat
+tambangilegal,Pertambangan Ilegal,Sangat Berat
+galianilegal,Pertambangan Ilegal,Berat
+emasilegal,Pertambangan Emas Ilegal,Sangat Berat
+merkuri,Pencemaran Merkuri,Sangat Berat
+bomikan,Penangkapan Ikan Ilegal,Sangat Berat
+racunikan,Penangkapan Ikan Ilegal,Sangat Berat
+trawl,Penangkapan Ikan Ilegal,Berat
+satwadilindungi,Perdagangan Satwa Dilindungi,Sangat Berat
+harimau,Perdagangan Satwa Dilindungi,Sangat Berat
+gajah,Perdagangan Satwa Dilindungi,Sangat Berat
+trenggiling,Perdagangan Satwa Dilindungi,Sangat Berat
+kukang,Perdagangan Satwa Dilindungi,Sangat Berat
+perburuanliar,Perburuan Liar,Berat
+memburusatwa,Perburuan Liar,Berat
+lakalantas,Kecelakaan Lalu Lintas,Ringan
+kecelakaan,Kecelakaan Lalu Lintas,Ringan
+tabrakan,Kecelakaan Lalu Lintas,Ringan
+tabraklari,Tabrak Lari,Berat
+tabrak,Kecelakaan Lalu Lintas,Ringan
+ugalugalan,Mengemudi Berbahaya,Berat
+melawanarus,Pelanggaran Lalu Lintas,Ringan
+mabuk,Mengemudi dalam Pengaruh Alkohol,Berat
+mengemudimabuk,Mengemudi dalam Pengaruh Alkohol,Berat
+simpalsu,Pemalsuan SIM,Berat
+tanpasim,Mengemudi Tanpa SIM,Ringan
+tanpastnk,Pelanggaran Administrasi Kendaraan,Ringan
+kendaraanbodong,Kendaraan Ilegal,Berat
+curanmor,Pencurian Kendaraan Bermotor,Berat
+nomorrangkadipalsukan,Pemalsuan Identitas Kendaraan,Berat
+platpalsu,Pemalsuan Plat Nomor,Berat
+knalpotbrong,Pelanggaran Lalu Lintas,Ringan
+muatanberlebih,Pelanggaran Angkutan,Berat
+overload,Pelanggaran Angkutan,Berat
+odol,Pelanggaran Angkutan,Berat
+angkutanilegal,Angkutan Ilegal,Berat
+trayekilegal,Angkutan Ilegal,Berat
+parkirliar,Pelanggaran Ketertiban Lalu Lintas,Ringan
+liar,Pelanggaran Ketertiban Lalu Lintas,Ringan
+kendaraanmodifikasi,Pelanggaran Kendaraan,Ringan
+konvoi,Gangguan Ketertiban Lalu Lintas,Ringan
+strobo,Penyalahgunaan Perlengkapan Kendaraan,Ringan
+sirine,Penyalahgunaan Perlengkapan Kendaraan,Ringan
+helm,Pelanggaran Keselamatan Berkendara,Ringan
+pengrusakan,Pengrusakan,Berat
+merusak,Pengrusakan,Berat
+perusakan,Pengrusakan,Berat
+membakar,Pembakaran,Berat
+pembakaran,Pembakaran,Berat
+bakarrumah,Pembakaran Rumah,Sangat Berat
+bakarkendaraan,Pembakaran Kendaraan,Berat
+ledakkan,Perusakan dengan Peledak,Sangat Berat
+hancurkan,Perusakan,Berat
+rusakberat,Perusakan Berat,Berat
+fasilitasumum,Perusakan Fasilitas Umum,Berat
+gedungpemerintah,Perusakan Aset Negara,Sangat Berat
+jembatan,Perusakan Infrastruktur,Berat
+jalan,Perusakan Infrastruktur,Ringan
+relkereta,Perusakan Infrastruktur,Sangat Berat
+gardulistrik,Perusakan Infrastruktur,Sangat Berat
+amukmassa,Perusakan oleh Massa,Berat
+penjarahan,Penjarahan,Sangat Berat
+jarah,Penjarahan,Sangat Berat
+menjarah,Penjarahan,Sangat Berat
+coretan,Vandalisme,Ringan
+graffiti,Vandalisme,Ringan
+pecahkaca,Perusakan Properti,Berat
+rusakrumah,Perusakan Properti,Berat
+rusakkendaraan,Perusakan Kendaraan,Berat
+bommolotov,Pembakaran,Sangat Berat
+pembongkaranliar,Perusakan Bangunan,Berat
+penyelundupan,Penyelundupan,Berat
+selundup,Penyelundupan,Berat
+menyelundupkan,Penyelundupan,Berat
+imporilegal,Pelanggaran Kepabeanan,Berat
+eksporilegal,Pelanggaran Kepabeanan,Berat
+barangsitaan,Pelanggaran Kepabeanan,Ringan
+rokokilegal,Perdagangan Barang Ilegal,Berat
+minyakilegal,Perdagangan Barang Ilegal,Berat
+bbmilegal,Perdagangan BBM Ilegal,Sangat Berat
+elpijiilegal,Perdagangan Barang Ilegal,Berat
+pupukilegal,Perdagangan Barang Ilegal,Berat
+obatilegal,Peredaran Obat Ilegal,Sangat Berat
+kosmetikilegal,Peredaran Kosmetik Ilegal,Berat
+makananilegal,Pelanggaran Perlindungan Konsumen,Berat
+kedaluwarsa,Pelanggaran Perlindungan Konsumen,Berat
+barangpalsu,Perdagangan Barang Palsu,Berat
+merekpalsu,Pelanggaran Hak Merek,Berat
+hakcipta,Pelanggaran Hak Cipta,Berat
+pembajakan,Pembajakan,Berat
+bajak,Pembajakan,Berat
+uanggelap,Pencucian Uang,Sangat Berat
+pencucianuang,Pencucian Uang,Sangat Berat
+tppu,Tindak Pidana Pencucian Uang,Sangat Berat
+devisa,Pelanggaran Devisa,Berat
+valutaasing,Pelanggaran Devisa,Berat
+manipulasipasar,Kejahatan Ekonomi,Berat
+kartel,Persaingan Usaha Tidak Sehat,Berat
+monopoli,Persaingan Usaha Tidak Sehat,Berat
+penimbunan,Penimbunan Barang,Berat
+spekulan,Kejahatan Ekonomi,Berat
+penelantaran,Penelantaran,Ringan
+telantar,Penelantaran,Ringan
+menelantarkan,Penelantaran,Berat
+kdrt,Kekerasan Dalam Rumah Tangga,Berat
+kekerasanrumahtangga,Kekerasan Dalam Rumah Tangga,Berat
+suami,KDRT,Ringan
+istri,KDRT,Ringan
+anakterlantar,Penelantaran Anak,Berat
+eksploitasianak,Eksploitasi Anak,Sangat Berat
+pekerjaanak,Eksploitasi Anak,Berat
+pengemisanak,Eksploitasi Anak,Berat
+penganiayaananak,Penganiayaan Anak,Sangat Berat
+bullying,Perundungan,Ringan
+perundungan,Perundungan,Ringan
+intimidasi,Perundungan,Ringan
+diskriminasi,Diskriminasi,Ringan
+ujarankebencian,Ujaran Kebencian,Berat
+hatecrime,Ujaran Kebencian,Berat
+rasisme,Diskriminasi Ras,Berat
+sara,Ujaran Kebencian SARA,Berat
+fitnah,Fitnah,Ringan
+pencemarannamabaik,Pencemaran Nama Baik,Ringan
+hoaks,Penyebaran Berita Bohong,Berat
+beritabohong,Penyebaran Berita Bohong,Berat
+provokasi,Provokasi,Berat
+hasutan,Penghasutan,Berat
+penghinaan,Penghinaan,Ringan
+pengancamandigital,Ancaman Melalui Media Elektronik,Berat
+doxing,Pelanggaran Privasi,Berat
+cyberbullying,Perundungan Siber,Berat
+penghinaanpresiden,Penghinaan terhadap Presiden,Berat
+penghinaanpemerintah,Penghinaan terhadap Pemerintah,Berat
+menghalangipenyidikan,Menghalangi Proses Hukum,Berat
+obstruction,Menghalangi Proses Hukum,Berat
+melarikantahanan,Membantu Pelarian Tahanan,Sangat Berat
+pelariantahanan,Pelarian Tahanan,Berat
+kaburtahanan,Pelarian Tahanan,Berat
+sumpahpalsu,Sumpah Palsu,Berat
+keterangandusta,Keterangan Palsu,Berat
+kesaksianpalsu,Kesaksian Palsu,Berat
+menghinaagama,Penodaan Agama,Sangat Berat
+penodaanagama,Penodaan Agama,Sangat Berat
+penistaanagama,Penodaan Agama,Sangat Berat
+menghasut,Penghasutan,Berat
+menghalangipetugas,Melawan Petugas,Berat
+melawanpetugas,Melawan Petugas,Berat
+kabur,Melarikan Diri,Ringan
+buronan,Buronan,Berat
+dpo,Daftar Pencarian Orang,Berat
+residivis,Residivis,Berat
+pengulangan,Pengulangan Tindak Pidana,Berat
+penadah,Penadahan,Berat
+penadahan,Penadahan,Berat
+barangcurian,Penadahan,Berat
+penyalahgunaanjabatan,Penyalahgunaan Jabatan,Sangat Berat
+menguasaiaset,Penguasaan Aset Secara Ilegal,Berat
+perintahpalsu,Penyalahgunaan Wewenang,Berat
+pemufakatanjahat,Pemufakatan Jahat,Sangat Berat
+permufakatan,Pemufakatan Jahat,Sangat Berat
+percobaankejahatan,Percobaan Tindak Pidana,Berat
+curanmor,Curanmor,Berat
+pencurian motor,Curanmor,Berat
+curi motor,Curanmor,Berat
+motor dicuri,Curanmor,Berat
+kendaraan bermotor,Curanmor,Berat
+curas,Curas,Sangat Berat
+pencurian dengan kekerasan,Curas,Sangat Berat
+perampasan,Curas,Sangat Berat
+rampas,Curas,Sangat Berat
+begal,Curas,Sangat Berat
+curat,Curat,Berat
+pencurian dengan pemberatan,Curat,Berat
+bobol rumah,Curat,Berat
+bongkar rumah,Curat,Berat
+pencurian rumah,Curat,Berat
+pencabulan anak,Pencabulan Anak,Sangat Berat
+cabul anak,Pencabulan Anak,Sangat Berat
+pelecehan anak,Pencabulan Anak,Sangat Berat
+kekerasan seksual anak,Pencabulan Anak,Sangat Berat
+persetubuhan anak,Persetubuhan Anak,Sangat Berat
+setubuhi anak,Persetubuhan Anak,Sangat Berat
+hubungan seksual anak,Persetubuhan Anak,Sangat Berat
+pemerkosaan anak,Persetubuhan Anak,Sangat Berat
+tindak pidana umum,Tindak Pidana Umum,Berat
+pidum,Tindak Pidana Umum,Berat
+pelanggaran ketertiban umum,Pelanggaran Ketertiban Umum,Ringan
+keributanwarga,Ketertiban Umum,Ringan
+keributanmasyarakat,Ketertiban Umum,Ringan
+gangguanketertiban,Gangguan Ketertiban Umum,Ringan
+gangguanketertibanumum,Gangguan Ketertiban Umum,Ringan
+gangguanwarga,Gangguan Ketertiban Umum,Ringan
+menggangguketertiban,Gangguan Ketertiban Umum,Ringan
+cekcok,Ketertiban Umum,Ringan
+cekcokwarga,Ketertiban Umum,Ringan
+perselisihanwarga,Ketertiban Umum,Ringan
+pertengkaranwarga,Ketertiban Umum,Ringan
+balapanliar,Balap Liar,Ringan
+balapmotorliar,Balap Liar,Ringan
+balapliarmotor,Balap Liar,Ringan
+konvoikendaraan,Gangguan Ketertiban Umum,Ringan
+konvoimotor,Gangguan Ketertiban Umum,Ringan
+meresahkanwarga,Gangguan Ketertiban Umum,Ringan
+meresahkanmasyarakat,Gangguan Ketertiban Umum,Ringan
+gangguanmasyarakat,Gangguan Ketertiban Umum,Ringan
+kecelakaanlalulintas,Kecelakaan Lalu Lintas,Ringan
+kecelakaanmotor,Kecelakaan Lalu Lintas,Ringan
+kecelakaanmobil,Kecelakaan Lalu Lintas,Ringan
+kecelakaankendaraan,Kecelakaan Lalu Lintas,Ringan
+tabrakankendaraan,Kecelakaan Lalu Lintas,Ringan
+tabrakanmotor,Kecelakaan Lalu Lintas,Ringan
+tabrakanmobil,Kecelakaan Lalu Lintas,Ringan
+pelanggaranlalulintas,Pelanggaran Lalu Lintas,Ringan
+pelanggaranrambu,Pelanggaran Lalu Lintas,Ringan
+melanggarambu,Pelanggaran Lalu Lintas,Ringan
+tidakpakaihelm,Pelanggaran Keselamatan Berkendara,Ringan
+tanpahelm,Pelanggaran Keselamatan Berkendara,Ringan
+tidakmenggunakanhelm,Pelanggaran Keselamatan Berkendara,Ringan
+knalpotbising,Pelanggaran Lalu Lintas,Ringan
+knalpotracing,Pelanggaran Lalu Lintas,Ringan
+parkirtidakberaturan,Pelanggaran Ketertiban Lalu Lintas,Ringan
+parkirsembangan,Pelanggaran Ketertiban Lalu Lintas,Ringan
+parkirsembarangan,Pelanggaran Ketertiban Lalu Lintas,Ringan
+modifikasikendaraan,Pelanggaran Kendaraan,Ringan
+tidakpakaihelm,Pelanggaran Keselamatan Berkendara,Ringan
+coratcoret,Vandalisme,Ringan
+grafiti,Vandalisme,Ringan
+coretandinding,Vandalisme,Ringan
+vandalisme,Vandalisme,Ringan
+jalanrusak,Perusakan Infrastruktur,Ringan
+kerusakanjalan,Perusakan Infrastruktur,Ringan
+gangguanjalan,Ketertiban Umum,Ringan
+ditelantarkan,Penelantaran,Ringan
+ejekan,Perundungan,Ringan
+olokoolok,Perundungan,Ringan
+menghina,Penghinaan,Ringan
+pencemarannama,Pencemaran Nama Baik,Ringan
+melarikandiri,Melarikan Diri,Ringan
+suara keras,Ketertiban Umum,Ringan
+suarakeras,Ketertiban Umum,Ringan
+musikkeras,Ketertiban Umum,Ringan
+musikkeras,Ketertiban Umum,Ringan
+kebisingan,Ketertiban Umum,Ringan
+berisik,Ketertiban Umum,Ringan
+menggangguwarga,Ketertiban Umum,Ringan
+mengganggumasyarakat,Ketertiban Umum,Ringan
+pelanggaranzebra,Pelanggaran Marka Jalan,Ringan
+markajalan,Pelanggaran Marka Jalan,Ringan
+melanggar marka,Pelanggaran Marka Jalan,Ringan
+parkirdibahu,Pelanggaran Parkir,Ringan
+parkirdijalur,Pelanggaran Parkir,Ringan
+parkirdi trotoar,Pelanggaran Parkir,Ringan
+trotoar,Pelanggaran Fasilitas Pejalan Kaki,Ringan
+gangguantrotoar,Pelanggaran Fasilitas Pejalan Kaki,Ringan
+penyeberangansembarangan,Pelanggaran Ketertiban Jalan,Ringan
+menyeberangsembarangan,Pelanggaran Ketertiban Jalan,Ringan
+balapliarmobil,Balap Kendaraan Liar,Ringan
+balapliarmotor,Balap Kendaraan Liar,Ringan
+kebisingankendaraan,Gangguan Kebisingan Kendaraan,Ringan
+knalpotbising,Gangguan Kebisingan Kendaraan,Ringan
+musikkeras,Gangguan Kebisingan,Ringan
+suaramusikkeras,Gangguan Kebisingan,Ringan
+berisik,Gangguan Kebisingan,Ringan
+keramaian,Gangguan Ketertiban Lingkungan,Ringan
+keramaianwarga,Gangguan Ketertiban Lingkungan,Ringan
+gangguanlingkungan,Gangguan Ketertiban Lingkungan,Ringan
+buangsampah,Pelanggaran Kebersihan Lingkungan,Ringan
+buangsampahsembarangan,Pelanggaran Kebersihan Lingkungan,Ringan
+sampahsembarangan,Pelanggaran Kebersihan Lingkungan,Ringan
+bakarsampah,Pembakaran Sampah,Ringan
+pembakaransampah,Pembakaran Sampah,Ringan
+hewanberkeliaran,Gangguan Hewan Ternak,Ringan
+ternakberkeliaran,Gangguan Hewan Ternak,Ringan
+anjingberkeliaran,Gangguan Hewan Peliharaan,Ringan
+hewanpeliharaan,Gangguan Hewan Peliharaan,Ringan
+coretkanpapan,Vandalisme Ringan,Ringan
+coretafasilitas,Vandalisme Ringan,Ringan
+rusakpapan,Perusakan Fasilitas Ringan,Ringan
+rusakrambu,Perusakan Rambu Lalu Lintas,Ringan
+ramburusak,Perusakan Rambu Lalu Lintas,Ringan
+rambulalulintas,Perusakan Rambu Lalu Lintas,Ringan
+pelanggaranrambu,Pelanggaran Rambu Lalu Lintas,Ringan
+lampumerah,Pelanggaran Lampu Lalu Lintas,Ringan
+teroboslampumerah,Pelanggaran Lampu Lalu Lintas,Ringan
+meneroboslampumerah,Pelanggaran Lampu Lalu Lintas,Ringan
+boncengantigaa,Pelanggaran Kapasitas Kendaraan,Ringan
+boncengantiga,Pelanggaran Kapasitas Kendaraan,Ringan
+tidakpakaisabuk,Pelanggaran Keselamatan Kendaraan,Ringan
+tanpasabukpengaman,Pelanggaran Keselamatan Kendaraan,Ringan
+sabukpengaman,Pelanggaran Keselamatan Kendaraan,Ringan
+suratkendaraan,Pelanggaran Administrasi Kendaraan,Ringan
+pajakkendaraan,Pelanggaran Administrasi Kendaraan,Ringan
+pajakkendaraanmati,Pelanggaran Administrasi Kendaraan,Ringan
+kendaraanbelumpajak,Pelanggaran Administrasi Kendaraan,Ringan
+platnomortidakada,Pelanggaran Administrasi Kendaraan,Ringan
+platnomor,Pelanggaran Administrasi Kendaraan,Ringan
+lampukendaraan,Pelanggaran Perlengkapan Kendaraan,Ringan
+lampumati,Pelanggaran Perlengkapan Kendaraan,Ringan
+spion,Pelanggaran Perlengkapan Kendaraan,Ringan
+tanpaspion,Pelanggaran Perlengkapan Kendaraan,Ringan
+klaksonbising,Pelanggaran Perlengkapan Kendaraan,Ringan
+klakson,Pelanggaran Perlengkapan Kendaraan,Ringan
+helmstandar,Pelanggaran Keselamatan Berkendara,Ringan
+helm tidak standar,Pelanggaran Keselamatan Berkendara,Ringan
+penumpangtanpahelm,Pelanggaran Keselamatan Berkendara,Ringan
+pengemuditanpahelm,Pelanggaran Keselamatan Berkendara,Ringan
+mengemudicepat,Pelanggaran Kecepatan,Ringan
+ngebut,Pelanggaran Kecepatan,Ringan
+kecepatantinggi,Pelanggaran Kecepatan,Ringan
+ugalugalan,Pelanggaran Kecepatan,Ringan
+berkendaraugal,Pelanggaran Kecepatan,Ringan
+melawanarah,Pelanggaran Arah Lalu Lintas,Ringan
+putarbaliksembarangan,Pelanggaran Arah Lalu Lintas,Ringan
+putarbalik,Pelanggaran Arah Lalu Lintas,Ringan
+berhentisembarangan,Pelanggaran Berhenti dan Parkir,Ringan
+berhentidijalur,Pelanggaran Berhenti dan Parkir,Ringan
+parkirdilarang,Pelanggaran Berhenti dan Parkir,Ringan
+gangguanarus,Gangguan Arus Lalu Lintas,Ringan
+hambatarus,Gangguan Arus Lalu Lintas,Ringan
+menghalangijalan,Gangguan Arus Lalu Lintas,Ringan
+jualanbadanjalan,Gangguan Ketertiban Jalan,Ringan
+pedagangbadanjalan,Gangguan Ketertiban Jalan,Ringan
+lapaksembarangan,Gangguan Ketertiban Jalan,Ringan
+spanduksembarangan,Pemasangan Spanduk Ilegal,Ringan
+pasangspanduk,Pemasangan Spanduk Ilegal,Ringan
+postersembarangan,Pemasangan Poster Ilegal,Ringan
+tempelposter,Pemasangan Poster Ilegal,Ringan
+reklamesembarangan,Pelanggaran Reklame,Ringan
+reklameliar,Pelanggaran Reklame,Ringan
+penggunaanlahanumum,Pelanggaran Penggunaan Fasilitas Umum,Ringan
+mengganggufasilitasumum,Pelanggaran Penggunaan Fasilitas Umum,Ringan
+gangguantempatumum,Gangguan Ketertiban Tempat Umum,Ringan
+ributditempatumum,Gangguan Ketertiban Tempat Umum,Ringan
+cekcokditempatumum,Gangguan Ketertiban Tempat Umum,Ringan
+pertengkaranringan,Perselisihan Ringan,Ringan
+perselisihanwarga,Perselisihan Ringan,Ringan
+cekcokwarga,Perselisihan Ringan,Ringan
+aduanwarga,Perselisihan Ringan,Ringan
+sengketaringan,Sengketa Ringan,Ringan
+perselisihankecil,Sengketa Ringan,Ringan
+ganggautangga,Gangguan Ketertiban Bertetangga,Ringan
+cekcoktetangga,Gangguan Ketertiban Bertetangga,Ringan
+ributtetangga,Gangguan Ketertiban Bertetangga,Ringan
+gangguantetangga,Gangguan Ketertiban Bertetangga,Ringan
+ancamanringan,Ancaman Ringan,Ringan
+mengancamringan,Ancaman Ringan,Ringan
+ancamanlisan,Ancaman Ringan,Ringan
+ejekan,Penghinaan Ringan,Ringan
+olokolok,Penghinaan Ringan,Ringan
+cemoohan,Penghinaan Ringan,Ringan
+ucapanmenghina,Penghinaan Ringan,Ringan
+fitnahringan,Fitnah Ringan,Ringan
+tuduhanpalsu,Fitnah Ringan,Ringan
+gosip,Pencemaran Nama Baik Ringan,Ringan
+gosipwarga,Pencemaran Nama Baik Ringan,Ringan
+perundunganringan,Perundungan Ringan,Ringan
+ejekanpelajar,Perundungan Ringan,Ringan
+olokpelajar,Perundungan Ringan,Ringan
+bullyingringan,Perundungan Ringan,Ringan
+perselisihanpelajar,Perselisihan Pelajar,Ringan
+keributanpelajar,Keributan Pelajar,Ringan
+tawuranringan,Keributan Pelajar,Ringan
+bolossekolah,Pelanggaran Ketertiban Pelajar,Ringan
+gangguansekolah,Pelanggaran Ketertiban Pelajar,Ringan
+coretansekolah,Vandalisme Fasilitas Pendidikan,Ringan
+coretanfasilitas,Vandalisme Fasilitas Pendidikan,Ringan
+merusakfasilitassekolah,Vandalisme Fasilitas Pendidikan,Ringan
+gangguanpasar,Gangguan Ketertiban Pasar,Ringan
+keributanpasar,Gangguan Ketertiban Pasar,Ringan
+parkirpasar,Pelanggaran Parkir Pasar,Ringan
+gangguanterminal,Gangguan Ketertiban Terminal,Ringan
+keributanterminal,Gangguan Ketertiban Terminal,Ringan
+parkirterminal,Pelanggaran Parkir Terminal,Ringan
+gangguanhalte,Gangguan Ketertiban Fasilitas Transportasi,Ringan
+parkirhalte,Pelanggaran Parkir Fasilitas Transportasi,Ringan
+gangguanstasiun,Gangguan Ketertiban Fasilitas Transportasi,Ringan
+keributanstasiun,Gangguan Ketertiban Fasilitas Transportasi,Ringan
+gangguanrumahsakit,Gangguan Ketertiban Fasilitas Umum,Ringan
+keributanrumahsakit,Gangguan Ketertiban Fasilitas Umum,Ringan
+gangguankantor,Gangguan Ketertiban Tempat Kerja,Ringan
+keributankantor,Gangguan Ketertiban Tempat Kerja,Ringan
+gangguanacara,Gangguan Ketertiban Acara,Ringan
+keributanacara,Gangguan Ketertiban Acara,Ringan
+keributanpesta,Gangguan Ketertiban Acara,Ringan
+pestaberisik,Gangguan Ketertiban Acara,Ringan
+mirasilegal,Pelanggaran Minuman Beralkohol Ringan,Ringan
+minumankerasilegal,Pelanggaran Minuman Beralkohol Ringan,Ringan
+minumanditempatumum,Pelanggaran Minuman Beralkohol Ringan,Ringan
+minumankerasumum,Pelanggaran Minuman Beralkohol Ringan,Ringan
+merokokdilarang,Pelanggaran Kawasan Tanpa Rokok,Ringan
+merokoktempatumum,Pelanggaran Kawasan Tanpa Rokok,Ringan
+merokoksembarangan,Pelanggaran Kawasan Tanpa Rokok,Ringan
+hewanmengganggu,Gangguan Hewan,Ringan
+hewannakal,Gangguan Hewan,Ringan
+anjingmengganggu,Gangguan Hewan,Ringan
+kucingmengganggu,Gangguan Hewan,Ringan
+pembakaranlahankecil,Pembakaran Lahan Ringan,Ringan
+bakarsemak,Pembakaran Lahan Ringan,Ringan
+bakarsembarangan,Pembakaran Lahan Ringan,Ringan
+asapgangguwarga,Gangguan Asap Lingkungan,Ringan
+asapkebakaran,Gangguan Asap Lingkungan,Ringan
+limbahdomestik,Pelanggaran Limbah Domestik,Ringan
+buanglimbahsembarangan,Pelanggaran Limbah Domestik,Ringan
+limbahrumah,Pelanggaran Limbah Domestik,Ringan
+airkotor,Gangguan Kualitas Lingkungan,Ringan
+baubusuk,Gangguan Kualitas Lingkungan,Ringan
+bauganggu,Gangguan Kualitas Lingkungan,Ringan
+pencemaranringan,Pencemaran Lingkungan Ringan,Ringan
+pencemaranlingkungankecil,Pencemaran Lingkungan Ringan,Ringan
+penebanganpohonsembarangan,Pelanggaran Penebangan Pohon,Ringan
+tebangpohon,Pelanggaran Penebangan Pohon,Ringan
+pohonditebang,Pelanggaran Penebangan Pohon,Ringan
+ambilkayutanpaizin,Pelanggaran Pemanfaatan Kayu,Ringan
+kayuilegalringan,Pelanggaran Pemanfaatan Kayu,Ringan
+ambilpasir,Pelanggaran Pengambilan Material,Ringan
+ambilbatusembarangan,Pelanggaran Pengambilan Material,Ringan
+galianringan,Pelanggaran Pengambilan Material,Ringan
+galiansembunyi,Pelanggaran Pengambilan Material,Ringan
+membuangbangkai,Pelanggaran Kebersihan Lingkungan,Ringan
+buangkotoran,Pelanggaran Kebersihan Lingkungan,Ringan
+buanglimbah,Pelanggaran Kebersihan Lingkungan,Ringan
+buangairkotor,Pelanggaran Kebersihan Lingkungan,Ringan
+penyalahgunaanfasilitas,Pelanggaran Fasilitas Umum,Ringan
+fasilitasumumdikuasai,Pelanggaran Fasilitas Umum,Ringan
+dudukdijalan,Gangguan Ketertiban Jalan,Ringan
+nongkrongdijalan,Gangguan Ketertiban Jalan,Ringan
+nongkrongsembarangan,Gangguan Ketertiban Jalan,Ringan
+nongkrongberisik,Gangguan Ketertiban Lingkungan,Ringan
+berkumpulberisik,Gangguan Ketertiban Lingkungan,Ringan
+kerumunanberisik,Gangguan Ketertiban Lingkungan,Ringan
+menghalangipejalan,Gangguan Fasilitas Pejalan Kaki,Ringan
+menghalangitrotoar,Gangguan Fasilitas Pejalan Kaki,Ringan
+jualanditrotoar,Gangguan Fasilitas Pejalan Kaki,Ringan
+parkirdidepanrumah,Pelanggaran Parkir Lingkungan,Ringan
+parkirgangguakses,Pelanggaran Parkir Lingkungan,Ringan
+halangiaksesrumah,Gangguan Akses Lingkungan,Ringan
+menghalangiakses,Gangguan Akses Lingkungan,Ringan
+gangguanakesehatan,Gangguan Ketertiban Lingkungan,Ringan
+gangguankeamanan,Gangguan Ketertiban Lingkungan,Ringan
+gangguankenyamanan,Gangguan Ketertiban Lingkungan,Ringan
+keluhanwarga,Gangguan Ketertiban Lingkungan,Ringan
+aduanmasyarakat,Gangguan Ketertiban Lingkungan,Ringan
+persoalanwarga,Perselisihan Warga,Ringan
+sengketatetangga,Perselisihan Warga,Ringan
+cekcokkeluarga,Perselisihan Keluarga,Ringan
+pertengkarankeluarga,Perselisihan Keluarga,Ringan
+perselisihankeluarga,Perselisihan Keluarga,Ringan
+cekcoksuamiistri,Perselisihan Keluarga,Ringan
+pertengkaransuamiistri,Perselisihan Keluarga,Ringan
+aduanrumahtangga,Perselisihan Keluarga,Ringan
+konfliktetangga,Perselisihan Warga,Ringan
+konflikwarga,Perselisihan Warga,Ringan
+sengketalahanringan,Sengketa Lahan Ringan,Ringan
+perselisihanbatas,Sengketa Lahan Ringan,Ringan
+bataslahan,Sengketa Lahan Ringan,Ringan
+perselisihantanah,Sengketa Lahan Ringan,Ringan
+gangguankebun,Gangguan Lahan Pertanian,Ringan
+ganggulahankebun,Gangguan Lahan Pertanian,Ringan
+ternakmasuk,Gangguan Lahan Pertanian,Ringan
+ternakmasukkebun,Gangguan Lahan Pertanian,Ringan
+tanamanrusakternak,Gangguan Lahan Pertanian,Ringan
+pencurianhasilkebun,Pelanggaran Hasil Pertanian,Berat
+ambilhasilkebun,Pelanggaran Hasil Pertanian,Berat
+ambilbuah,Pelanggaran Hasil Pertanian,Berat
+ambilhasilpertanian,Pelanggaran Hasil Pertanian,Berat
+pencurianringan,Pencurian Ringan,Ringan
+curiringan,Pencurian Ringan,Ringan
+ambilbarangringan,Pencurian Ringan,Ringan
+baranghilangringan,Pencurian Ringan,Ringan
+pencurianbarangkecil,Pencurian Ringan,Ringan
+ambilbarangtanpaizin,Pengambilan Barang Tanpa Izin,Ringan
+mengambilbarangtanpaizin,Pengambilan Barang Tanpa Izin,Ringan
+barangtanpaizin,Pengambilan Barang Tanpa Izin,Ringan
+kerugianringan,Kerugian Materi Ringan,Ringan
+kerugian kecil,Kerugian Materi Ringan,Ringan
+barangrusakringan,Perusakan Barang Ringan,Ringan
+kerusakanringan,Perusakan Barang Ringan,Ringan
+merusakbarangringan,Perusakan Barang Ringan,Ringan
+pelanggaranmarkajalan,Pelanggaran Marka Jalan,Ringan
+pelanggaranpelanggaranmarkajalan,Pelanggaran Marka Jalan,Ringan
+kasuspelanggaranmarkajalan,Pelanggaran Marka Jalan,Ringan
+tindakpelanggaranmarkajalan,Pelanggaran Marka Jalan,Ringan
+pelanggaranlampulalulintas,Pelanggaran Lampu Lalu Lintas,Ringan
+pelanggaranpelanggaranlampulalulintas,Pelanggaran Lampu Lalu Lintas,Ringan
+kasuspelanggaranlampulalulintas,Pelanggaran Lampu Lalu Lintas,Ringan
+tindakpelanggaranlampulalulintas,Pelanggaran Lampu Lalu Lintas,Ringan
+pelanggaranjalursatuarah,Pelanggaran Jalur Satu Arah,Ringan
+pelanggaranpelanggaranjalursatuarah,Pelanggaran Jalur Satu Arah,Ringan
+kasuspelanggaranjalursatuarah,Pelanggaran Jalur Satu Arah,Ringan
+tindakpelanggaranjalursatuarah,Pelanggaran Jalur Satu Arah,Ringan
+pelanggaranputarbalik,Pelanggaran Putar Balik,Ringan
+pelanggaranpelanggaranputarbalik,Pelanggaran Putar Balik,Ringan
+kasuspelanggaranputarbalik,Pelanggaran Putar Balik,Ringan
+tindakpelanggaranputarbalik,Pelanggaran Putar Balik,Ringan
+pelanggaranmenyalip,Pelanggaran Menyalip,Ringan
+pelanggaranpelanggaranmenyalip,Pelanggaran Menyalip,Ringan
+kasuspelanggaranmenyalip,Pelanggaran Menyalip,Ringan
+tindakpelanggaranmenyalip,Pelanggaran Menyalip,Ringan
+pelanggaranpenggunaanponselberkendara,Pelanggaran Penggunaan Ponsel Berkendara,Ringan
+pelanggaranpelanggaranpenggunaanponselberkendara,Pelanggaran Penggunaan Ponsel Berkendara,Ringan
+kasuspelanggaranpenggunaanponselberkendara,Pelanggaran Penggunaan Ponsel Berkendara,Ringan
+tindakpelanggaranpenggunaanponselberkendara,Pelanggaran Penggunaan Ponsel Berkendara,Ringan
+pelanggaransabukpengaman,Pelanggaran Sabuk Pengaman,Ringan
+pelanggaranpelanggaransabukpengaman,Pelanggaran Sabuk Pengaman,Ringan
+kasuspelanggaransabukpengaman,Pelanggaran Sabuk Pengaman,Ringan
+tindakpelanggaransabukpengaman,Pelanggaran Sabuk Pengaman,Ringan
+pelanggaranpenumpangkendaraan,Pelanggaran Penumpang Kendaraan,Ringan
+pelanggaranpelanggaranpenumpangkendaraan,Pelanggaran Penumpang Kendaraan,Ringan
+kasuspelanggaranpenumpangkendaraan,Pelanggaran Penumpang Kendaraan,Ringan
+tindakpelanggaranpenumpangkendaraan,Pelanggaran Penumpang Kendaraan,Ringan
+pelanggaranjalursepeda,Pelanggaran Jalur Sepeda,Ringan
+pelanggaranpelanggaranjalursepeda,Pelanggaran Jalur Sepeda,Ringan
+kasuspelanggaranjalursepeda,Pelanggaran Jalur Sepeda,Ringan
+tindakpelanggaranjalursepeda,Pelanggaran Jalur Sepeda,Ringan
+pelanggaranareapejalankaki,Pelanggaran Area Pejalan Kaki,Ringan
+pelanggaranpelanggaranareapejalankaki,Pelanggaran Area Pejalan Kaki,Ringan
+kasuspelanggaranareapejalankaki,Pelanggaran Area Pejalan Kaki,Ringan
+tindakpelanggaranareapejalankaki,Pelanggaran Area Pejalan Kaki,Ringan
+pelanggaranparkirrumahsakit,Pelanggaran Parkir Rumah Sakit,Ringan
+pelanggaranpelanggaranparkirrumahsakit,Pelanggaran Parkir Rumah Sakit,Ringan
+kasuspelanggaranparkirrumahsakit,Pelanggaran Parkir Rumah Sakit,Ringan
+tindakpelanggaranparkirrumahsakit,Pelanggaran Parkir Rumah Sakit,Ringan
+pelanggaranparkirsekolah,Pelanggaran Parkir Sekolah,Ringan
+pelanggaranpelanggaranparkirsekolah,Pelanggaran Parkir Sekolah,Ringan
+kasuspelanggaranparkirsekolah,Pelanggaran Parkir Sekolah,Ringan
+tindakpelanggaranparkirsekolah,Pelanggaran Parkir Sekolah,Ringan
+pelanggaranparkirpasar,Pelanggaran Parkir Pasar,Ringan
+pelanggaranpelanggaranparkirpasar,Pelanggaran Parkir Pasar,Ringan
+kasuspelanggaranparkirpasar,Pelanggaran Parkir Pasar,Ringan
+tindakpelanggaranparkirpasar,Pelanggaran Parkir Pasar,Ringan
+pelanggaranparkirtempatibadah,Pelanggaran Parkir Tempat Ibadah,Ringan
+pelanggaranpelanggaranparkirtempatibadah,Pelanggaran Parkir Tempat Ibadah,Ringan
+kasuspelanggaranparkirtempatibadah,Pelanggaran Parkir Tempat Ibadah,Ringan
+tindakpelanggaranparkirtempatibadah,Pelanggaran Parkir Tempat Ibadah,Ringan
+pelanggaranperlengkapanmotor,Pelanggaran Perlengkapan Motor,Ringan
+pelanggaranpelanggaranperlengkapanmotor,Pelanggaran Perlengkapan Motor,Ringan
+kasuspelanggaranperlengkapanmotor,Pelanggaran Perlengkapan Motor,Ringan
+tindakpelanggaranperlengkapanmotor,Pelanggaran Perlengkapan Motor,Ringan
+pelanggaranperlengkapanmobil,Pelanggaran Perlengkapan Mobil,Ringan
+pelanggaranpelanggaranperlengkapanmobil,Pelanggaran Perlengkapan Mobil,Ringan
+kasuspelanggaranperlengkapanmobil,Pelanggaran Perlengkapan Mobil,Ringan
+tindakpelanggaranperlengkapanmobil,Pelanggaran Perlengkapan Mobil,Ringan
+pelanggarandokumenkendaraan,Pelanggaran Dokumen Kendaraan,Ringan
+pelanggaranpelanggarandokumenkendaraan,Pelanggaran Dokumen Kendaraan,Ringan
+kasuspelanggarandokumenkendaraan,Pelanggaran Dokumen Kendaraan,Ringan
+tindakpelanggarandokumenkendaraan,Pelanggaran Dokumen Kendaraan,Ringan
+pelanggaranujikendaraan,Pelanggaran Uji Kendaraan,Ringan
+pelanggaranpelanggaranujikendaraan,Pelanggaran Uji Kendaraan,Ringan
+kasuspelanggaranujikendaraan,Pelanggaran Uji Kendaraan,Ringan
+tindakpelanggaranujikendaraan,Pelanggaran Uji Kendaraan,Ringan
+gangguanketertibanperumahan,Gangguan Ketertiban Perumahan,Ringan
+pelanggarangangguanketertibanperumahan,Gangguan Ketertiban Perumahan,Ringan
+kasusgangguanketertibanperumahan,Gangguan Ketertiban Perumahan,Ringan
+tindakgangguanketertibanperumahan,Gangguan Ketertiban Perumahan,Ringan
+gangguanketertibanpermukiman,Gangguan Ketertiban Permukiman,Ringan
+pelanggarangangguanketertibanpermukiman,Gangguan Ketertiban Permukiman,Ringan
+kasusgangguanketertibanpermukiman,Gangguan Ketertiban Permukiman,Ringan
+tindakgangguanketertibanpermukiman,Gangguan Ketertiban Permukiman,Ringan
+gangguanketertibandesa,Gangguan Ketertiban Desa,Ringan
+pelanggarangangguanketertibandesa,Gangguan Ketertiban Desa,Ringan
+kasusgangguanketertibandesa,Gangguan Ketertiban Desa,Ringan
+tindakgangguanketertibandesa,Gangguan Ketertiban Desa,Ringan
+gangguanketertibannagari,Gangguan Ketertiban Nagari,Ringan
+pelanggarangangguanketertibannagari,Gangguan Ketertiban Nagari,Ringan
+kasusgangguanketertibannagari,Gangguan Ketertiban Nagari,Ringan
+tindakgangguanketertibannagari,Gangguan Ketertiban Nagari,Ringan
+perselisihanantarwarga,Perselisihan Antarwarga,Ringan
+pelanggaranperselisihanantarwarga,Perselisihan Antarwarga,Ringan
+kasusperselisihanantarwarga,Perselisihan Antarwarga,Ringan
+tindakperselisihanantarwarga,Perselisihan Antarwarga,Ringan
+perselisihanantartetangga,Perselisihan Antar Tetangga,Ringan
+pelanggaranperselisihanantartetangga,Perselisihan Antar Tetangga,Ringan
+kasusperselisihanantartetangga,Perselisihan Antar Tetangga,Ringan
+tindakperselisihanantartetangga,Perselisihan Antar Tetangga,Ringan
+perselisihanteman,Perselisihan Teman,Ringan
+pelanggaranperselisihanteman,Perselisihan Teman,Ringan
+kasusperselisihanteman,Perselisihan Teman,Ringan
+tindakperselisihanteman,Perselisihan Teman,Ringan
+pelanggaranperselisihanpelajar,Perselisihan Pelajar,Ringan
+kasusperselisihanpelajar,Perselisihan Pelajar,Ringan
+tindakperselisihanpelajar,Perselisihan Pelajar,Ringan
+perselisihanpedagang,Perselisihan Pedagang,Ringan
+pelanggaranperselisihanpedagang,Perselisihan Pedagang,Ringan
+kasusperselisihanpedagang,Perselisihan Pedagang,Ringan
+tindakperselisihanpedagang,Perselisihan Pedagang,Ringan
+perselisihanpekerja,Perselisihan Pekerja,Ringan
+pelanggaranperselisihanpekerja,Perselisihan Pekerja,Ringan
+kasusperselisihanpekerja,Perselisihan Pekerja,Ringan
+tindakperselisihanpekerja,Perselisihan Pekerja,Ringan
+gangguansuaralingkungan,Gangguan Suara Lingkungan,Ringan
+pelanggarangangguansuaralingkungan,Gangguan Suara Lingkungan,Ringan
+kasusgangguansuaralingkungan,Gangguan Suara Lingkungan,Ringan
+tindakgangguansuaralingkungan,Gangguan Suara Lingkungan,Ringan
+gangguanwaktuistirahat,Gangguan Waktu Istirahat,Ringan
+pelanggarangangguanwaktuistirahat,Gangguan Waktu Istirahat,Ringan
+kasusgangguanwaktuistirahat,Gangguan Waktu Istirahat,Ringan
+tindakgangguanwaktuistirahat,Gangguan Waktu Istirahat,Ringan
+gangguanketertibanpagi,Gangguan Ketertiban Pagi,Ringan
+pelanggarangangguanketertibanpagi,Gangguan Ketertiban Pagi,Ringan
+kasusgangguanketertibanpagi,Gangguan Ketertiban Pagi,Ringan
+tindakgangguanketertibanpagi,Gangguan Ketertiban Pagi,Ringan
+gangguanketertibansiang,Gangguan Ketertiban Siang,Ringan
+pelanggarangangguanketertibansiang,Gangguan Ketertiban Siang,Ringan
+kasusgangguanketertibansiang,Gangguan Ketertiban Siang,Ringan
+tindakgangguanketertibansiang,Gangguan Ketertiban Siang,Ringan
+gangguanketertibansore,Gangguan Ketertiban Sore,Ringan
+pelanggarangangguanketertibansore,Gangguan Ketertiban Sore,Ringan
+kasusgangguanketertibansore,Gangguan Ketertiban Sore,Ringan
+tindakgangguanketertibansore,Gangguan Ketertiban Sore,Ringan
+gangguanketertibanmalam,Gangguan Ketertiban Malam,Ringan
+pelanggarangangguanketertibanmalam,Gangguan Ketertiban Malam,Ringan
+kasusgangguanketertibanmalam,Gangguan Ketertiban Malam,Ringan
+tindakgangguanketertibanmalam,Gangguan Ketertiban Malam,Ringan
+kebisinganmalam,Kebisingan Malam,Ringan
+pelanggarankebisinganmalam,Kebisingan Malam,Ringan
+kasuskebisinganmalam,Kebisingan Malam,Ringan
+tindakkebisinganmalam,Kebisingan Malam,Ringan
+keributanmalam,Keributan Malam,Ringan
+pelanggarankeributanmalam,Keributan Malam,Ringan
+kasuskeributanmalam,Keributan Malam,Ringan
+tindakkeributanmalam,Keributan Malam,Ringan
+gangguanacaramasyarakat,Gangguan Acara Masyarakat,Ringan
+pelanggarangangguanacaramasyarakat,Gangguan Acara Masyarakat,Ringan
+kasusgangguanacaramasyarakat,Gangguan Acara Masyarakat,Ringan
+tindakgangguanacaramasyarakat,Gangguan Acara Masyarakat,Ringan
+gangguankegiatanwarga,Gangguan Kegiatan Warga,Ringan
+pelanggarangangguankegiatanwarga,Gangguan Kegiatan Warga,Ringan
+kasusgangguankegiatanwarga,Gangguan Kegiatan Warga,Ringan
+tindakgangguankegiatanwarga,Gangguan Kegiatan Warga,Ringan
+gangguankegiatanolahraga,Gangguan Kegiatan Olahraga,Ringan
+pelanggarangangguankegiatanolahraga,Gangguan Kegiatan Olahraga,Ringan
+kasusgangguankegiatanolahraga,Gangguan Kegiatan Olahraga,Ringan
+tindakgangguankegiatanolahraga,Gangguan Kegiatan Olahraga,Ringan
+gangguankegiatansekolah,Gangguan Kegiatan Sekolah,Ringan
+pelanggarangangguankegiatansekolah,Gangguan Kegiatan Sekolah,Ringan
+kasusgangguankegiatansekolah,Gangguan Kegiatan Sekolah,Ringan
+tindakgangguankegiatansekolah,Gangguan Kegiatan Sekolah,Ringan
+gangguankegiatankeagamaan,Gangguan Kegiatan Keagamaan,Ringan
+pelanggarangangguankegiatankeagamaan,Gangguan Kegiatan Keagamaan,Ringan
+kasusgangguankegiatankeagamaan,Gangguan Kegiatan Keagamaan,Ringan
+tindakgangguankegiatankeagamaan,Gangguan Kegiatan Keagamaan,Ringan
+gangguankegiatanadat,Gangguan Kegiatan Adat,Ringan
+pelanggarangangguankegiatanadat,Gangguan Kegiatan Adat,Ringan
+kasusgangguankegiatanadat,Gangguan Kegiatan Adat,Ringan
+tindakgangguankegiatanadat,Gangguan Kegiatan Adat,Ringan
+gangguantempatwisata,Gangguan Tempat Wisata,Ringan
+pelanggarangangguantempatwisata,Gangguan Tempat Wisata,Ringan
+kasusgangguantempatwisata,Gangguan Tempat Wisata,Ringan
+tindakgangguantempatwisata,Gangguan Tempat Wisata,Ringan
+gangguankawasanpantai,Gangguan Kawasan Pantai,Ringan
+pelanggarangangguankawasanpantai,Gangguan Kawasan Pantai,Ringan
+kasusgangguankawasanpantai,Gangguan Kawasan Pantai,Ringan
+tindakgangguankawasanpantai,Gangguan Kawasan Pantai,Ringan
+gangguantamanumum,Gangguan Taman Umum,Ringan
+pelanggarangangguantamanumum,Gangguan Taman Umum,Ringan
+kasusgangguantamanumum,Gangguan Taman Umum,Ringan
+tindakgangguantamanumum,Gangguan Taman Umum,Ringan
+gangguanruangpublik,Gangguan Ruang Publik,Ringan
+pelanggarangangguanruangpublik,Gangguan Ruang Publik,Ringan
+kasusgangguanruangpublik,Gangguan Ruang Publik,Ringan
+tindakgangguanruangpublik,Gangguan Ruang Publik,Ringan
+pelanggarankebersihanjalan,Pelanggaran Kebersihan Jalan,Ringan
+pelanggaranpelanggarankebersihanjalan,Pelanggaran Kebersihan Jalan,Ringan
+kasuspelanggarankebersihanjalan,Pelanggaran Kebersihan Jalan,Ringan
+tindakpelanggarankebersihanjalan,Pelanggaran Kebersihan Jalan,Ringan
+pelanggarankebersihanpasar,Pelanggaran Kebersihan Pasar,Ringan
+pelanggaranpelanggarankebersihanpasar,Pelanggaran Kebersihan Pasar,Ringan
+kasuspelanggarankebersihanpasar,Pelanggaran Kebersihan Pasar,Ringan
+tindakpelanggarankebersihanpasar,Pelanggaran Kebersihan Pasar,Ringan
+pelanggarankebersihantempatumum,Pelanggaran Kebersihan Tempat Umum,Ringan
+pelanggaranpelanggarankebersihantempatumum,Pelanggaran Kebersihan Tempat Umum,Ringan
+kasuspelanggarankebersihantempatumum,Pelanggaran Kebersihan Tempat Umum,Ringan
+tindakpelanggarankebersihantempatumum,Pelanggaran Kebersihan Tempat Umum,Ringan
+pelanggaranpembuangansampah,Pelanggaran Pembuangan Sampah,Ringan
+pelanggaranpelanggaranpembuangansampah,Pelanggaran Pembuangan Sampah,Ringan
+kasuspelanggaranpembuangansampah,Pelanggaran Pembuangan Sampah,Ringan
+tindakpelanggaranpembuangansampah,Pelanggaran Pembuangan Sampah,Ringan
+gangguanbaulingkungan,Gangguan Bau Lingkungan,Ringan
+pelanggarangangguanbaulingkungan,Gangguan Bau Lingkungan,Ringan
+kasusgangguanbaulingkungan,Gangguan Bau Lingkungan,Ringan
+tindakgangguanbaulingkungan,Gangguan Bau Lingkungan,Ringan
+gangguanasaplingkungan,Gangguan Asap Lingkungan,Ringan
+pelanggarangangguanasaplingkungan,Gangguan Asap Lingkungan,Ringan
+kasusgangguanasaplingkungan,Gangguan Asap Lingkungan,Ringan
+tindakgangguanasaplingkungan,Gangguan Asap Lingkungan,Ringan
+gangguansaluranair,Gangguan Saluran Air,Ringan
+pelanggarangangguansaluranair,Gangguan Saluran Air,Ringan
+kasusgangguansaluranair,Gangguan Saluran Air,Ringan
+tindakgangguansaluranair,Gangguan Saluran Air,Ringan
+pelanggarandrainase,Pelanggaran Drainase,Ringan
+pelanggaranpelanggarandrainase,Pelanggaran Drainase,Ringan
+kasuspelanggarandrainase,Pelanggaran Drainase,Ringan
+tindakpelanggarandrainase,Pelanggaran Drainase,Ringan
+gangguanhewanternak,Gangguan Hewan Ternak,Ringan
+pelanggarangangguanhewanternak,Gangguan Hewan Ternak,Ringan
+kasusgangguanhewanternak,Gangguan Hewan Ternak,Ringan
+tindakgangguanhewanternak,Gangguan Hewan Ternak,Ringan
+gangguanhewanpeliharaan,Gangguan Hewan Peliharaan,Ringan
+pelanggarangangguanhewanpeliharaan,Gangguan Hewan Peliharaan,Ringan
+kasusgangguanhewanpeliharaan,Gangguan Hewan Peliharaan,Ringan
+tindakgangguanhewanpeliharaan,Gangguan Hewan Peliharaan,Ringan
+gangguankebunwarga,Gangguan Kebun Warga,Ringan
+pelanggarangangguankebunwarga,Gangguan Kebun Warga,Ringan
+kasusgangguankebunwarga,Gangguan Kebun Warga,Ringan
+tindakgangguankebunwarga,Gangguan Kebun Warga,Ringan
+gangguansawahwarga,Gangguan Sawah Warga,Ringan
+pelanggarangangguansawahwarga,Gangguan Sawah Warga,Ringan
+kasusgangguansawahwarga,Gangguan Sawah Warga,Ringan
+tindakgangguansawahwarga,Gangguan Sawah Warga,Ringan
+pelanggaranbataslahan,Pelanggaran Batas Lahan,Ringan
+pelanggaranpelanggaranbataslahan,Pelanggaran Batas Lahan,Ringan
+kasuspelanggaranbataslahan,Pelanggaran Batas Lahan,Ringan
+tindakpelanggaranbataslahan,Pelanggaran Batas Lahan,Ringan
+perselisihanbatastanah,Perselisihan Batas Tanah,Ringan
+pelanggaranperselisihanbatastanah,Perselisihan Batas Tanah,Ringan
+kasusperselisihanbatastanah,Perselisihan Batas Tanah,Ringan
+tindakperselisihanbatastanah,Perselisihan Batas Tanah,Ringan
+sengketabarangringan,Sengketa Barang Ringan,Ringan
+pelanggaransengketabarangringan,Sengketa Barang Ringan,Ringan
+kasussengketabarangringan,Sengketa Barang Ringan,Ringan
+tindaksengketabarangringan,Sengketa Barang Ringan,Ringan
+sengketabarangpinjaman,Sengketa Barang Pinjaman,Ringan
+pelanggaransengketabarangpinjaman,Sengketa Barang Pinjaman,Ringan
+kasussengketabarangpinjaman,Sengketa Barang Pinjaman,Ringan
+tindaksengketabarangpinjaman,Sengketa Barang Pinjaman,Ringan
+sengketautangpiutangringan,Sengketa Utang Piutang Ringan,Ringan
+pelanggaransengketautangpiutangringan,Sengketa Utang Piutang Ringan,Ringan
+kasussengketautangpiutangringan,Sengketa Utang Piutang Ringan,Ringan
+tindaksengketautangpiutangringan,Sengketa Utang Piutang Ringan,Ringan
+sengketajasa,Sengketa Jasa,Ringan
+pelanggaransengketajasa,Sengketa Jasa,Ringan
+kasussengketajasa,Sengketa Jasa,Ringan
+tindaksengketajasa,Sengketa Jasa,Ringan
+sengketasewa,Sengketa Sewa,Ringan
+pelanggaransengketasewa,Sengketa Sewa,Ringan
+kasussengketasewa,Sengketa Sewa,Ringan
+tindaksengketasewa,Sengketa Sewa,Ringan
+sengketakonsumen,Sengketa Konsumen,Ringan
+pelanggaransengketakonsumen,Sengketa Konsumen,Ringan
+kasussengketakonsumen,Sengketa Konsumen,Ringan
+tindaksengketakonsumen,Sengketa Konsumen,Ringan
+keluhanpelayanan,Keluhan Pelayanan,Ringan
+pelanggarankeluhanpelayanan,Keluhan Pelayanan,Ringan
+kasuskeluhanpelayanan,Keluhan Pelayanan,Ringan
+tindakkeluhanpelayanan,Keluhan Pelayanan,Ringan
+barangtidaksesuaipesanan,Barang Tidak Sesuai Pesanan,Ringan
+pelanggaranbarangtidaksesuaipesanan,Barang Tidak Sesuai Pesanan,Ringan
+kasusbarangtidaksesuaipesanan,Barang Tidak Sesuai Pesanan,Ringan
+tindakbarangtidaksesuaipesanan,Barang Tidak Sesuai Pesanan,Ringan
+gangguankomunikasi,Gangguan Komunikasi,Ringan
+pelanggarangangguankomunikasi,Gangguan Komunikasi,Ringan
+kasusgangguankomunikasi,Gangguan Komunikasi,Ringan
+tindakgangguankomunikasi,Gangguan Komunikasi,Ringan
+gangguanpesanelektronik,Gangguan Pesan Elektronik,Ringan
+pelanggarangangguanpesanelektronik,Gangguan Pesan Elektronik,Ringan
+kasusgangguanpesanelektronik,Gangguan Pesan Elektronik,Ringan
+tindakgangguanpesanelektronik,Gangguan Pesan Elektronik,Ringan
+perundunganmediasosial,Perundungan Media Sosial,Ringan
+pelanggaranperundunganmediasosial,Perundungan Media Sosial,Ringan
+kasusperundunganmediasosial,Perundungan Media Sosial,Ringan
+tindakperundunganmediasosial,Perundungan Media Sosial,Ringan
+penghinaanmediasosial,Penghinaan Media Sosial,Ringan
+pelanggaranpenghinaanmediasosial,Penghinaan Media Sosial,Ringan
+kasuspenghinaanmediasosial,Penghinaan Media Sosial,Ringan
+tindakpenghinaanmediasosial,Penghinaan Media Sosial,Ringan
+pelanggaranprivasidigitalringan,Pelanggaran Privasi Digital Ringan,Ringan
+pelanggaranpelanggaranprivasidigitalringan,Pelanggaran Privasi Digital Ringan,Ringan
+kasuspelanggaranprivasidigitalringan,Pelanggaran Privasi Digital Ringan,Ringan
+tindakpelanggaranprivasidigitalringan,Pelanggaran Privasi Digital Ringan,Ringan
+penyebarankontenmengganggu,Penyebaran Konten Mengganggu,Ringan
+pelanggaranpenyebarankontenmengganggu,Penyebaran Konten Mengganggu,Ringan
+kasuspenyebarankontenmengganggu,Penyebaran Konten Mengganggu,Ringan
+tindakpenyebarankontenmengganggu,Penyebaran Konten Mengganggu,Ringan
+pelanggaranperizinanusaha,Pelanggaran Perizinan Usaha,Berat
+pelanggaranpelanggaranperizinanusaha,Pelanggaran Perizinan Usaha,Berat
+kasuspelanggaranperizinanusaha,Pelanggaran Perizinan Usaha,Berat
+tindakpelanggaranperizinanusaha,Pelanggaran Perizinan Usaha,Berat
+usahatanpaizin,Usaha Tanpa Izin,Berat
+pelanggaranusahatanpaizin,Usaha Tanpa Izin,Berat
+kasususahatanpaizin,Usaha Tanpa Izin,Berat
+tindakusahatanpaizin,Usaha Tanpa Izin,Berat
+perdagangantanpaizin,Perdagangan Tanpa Izin,Berat
+pelanggaranperdagangantanpaizin,Perdagangan Tanpa Izin,Berat
+kasusperdagangantanpaizin,Perdagangan Tanpa Izin,Berat
+tindakperdagangantanpaizin,Perdagangan Tanpa Izin,Berat
+distribusibarangilegal,Distribusi Barang Ilegal,Berat
+pelanggarandistribusibarangilegal,Distribusi Barang Ilegal,Berat
+kasusdistribusibarangilegal,Distribusi Barang Ilegal,Berat
+tindakdistribusibarangilegal,Distribusi Barang Ilegal,Berat
+pencuriantoko,Pencurian Toko,Berat
+pelanggaranpencuriantoko,Pencurian Toko,Berat
+kasuspencuriantoko,Pencurian Toko,Berat
+tindakpencuriantoko,Pencurian Toko,Berat
+pencuriangudang,Pencurian Gudang,Berat
+pelanggaranpencuriangudang,Pencurian Gudang,Berat
+kasuspencuriangudang,Pencurian Gudang,Berat
+tindakpencuriangudang,Pencurian Gudang,Berat
+pencuriankabel,Pencurian Kabel,Berat
+pelanggaranpencuriankabel,Pencurian Kabel,Berat
+kasuspencuriankabel,Pencurian Kabel,Berat
+tindakpencuriankabel,Pencurian Kabel,Berat
+pencurianelektronik,Pencurian Elektronik,Berat
+pelanggaranpencurianelektronik,Pencurian Elektronik,Berat
+kasuspencurianelektronik,Pencurian Elektronik,Berat
+tindakpencurianelektronik,Pencurian Elektronik,Berat
+pencurianhasilperkebunan,Pencurian Hasil Perkebunan,Berat
+pelanggaranpencurianhasilperkebunan,Pencurian Hasil Perkebunan,Berat
+kasuspencurianhasilperkebunan,Pencurian Hasil Perkebunan,Berat
+tindakpencurianhasilperkebunan,Pencurian Hasil Perkebunan,Berat
+pencurianhewanternak,Pencurian Hewan Ternak,Berat
+pelanggaranpencurianhewanternak,Pencurian Hewan Ternak,Berat
+kasuspencurianhewanternak,Pencurian Hewan Ternak,Berat
+tindakpencurianhewanternak,Pencurian Hewan Ternak,Berat
+penggelapanuang,Penggelapan Uang,Berat
+pelanggaranpenggelapanuang,Penggelapan Uang,Berat
+kasuspenggelapanuang,Penggelapan Uang,Berat
+tindakpenggelapanuang,Penggelapan Uang,Berat
+penggelapanbarang,Penggelapan Barang,Berat
+pelanggaranpenggelapanbarang,Penggelapan Barang,Berat
+kasuspenggelapanbarang,Penggelapan Barang,Berat
+tindakpenggelapanbarang,Penggelapan Barang,Berat
+penggelapankendaraan,Penggelapan Kendaraan,Berat
+pelanggaranpenggelapankendaraan,Penggelapan Kendaraan,Berat
+kasuspenggelapankendaraan,Penggelapan Kendaraan,Berat
+tindakpenggelapankendaraan,Penggelapan Kendaraan,Berat
+penggelapanaset,Penggelapan Aset,Berat
+pelanggaranpenggelapanaset,Penggelapan Aset,Berat
+kasuspenggelapanaset,Penggelapan Aset,Berat
+tindakpenggelapanaset,Penggelapan Aset,Berat
+penyalahgunaanrekening,Penyalahgunaan Rekening,Berat
+pelanggaranpenyalahgunaanrekening,Penyalahgunaan Rekening,Berat
+kasuspenyalahgunaanrekening,Penyalahgunaan Rekening,Berat
+tindakpenyalahgunaanrekening,Penyalahgunaan Rekening,Berat
+penyalahgunaankartu,Penyalahgunaan Kartu,Berat
+pelanggaranpenyalahgunaankartu,Penyalahgunaan Kartu,Berat
+kasuspenyalahgunaankartu,Penyalahgunaan Kartu,Berat
+tindakpenyalahgunaankartu,Penyalahgunaan Kartu,Berat
+penyalahgunaanidentitasdigital,Penyalahgunaan Identitas Digital,Berat
+pelanggaranpenyalahgunaanidentitasdigital,Penyalahgunaan Identitas Digital,Berat
+kasuspenyalahgunaanidentitasdigital,Penyalahgunaan Identitas Digital,Berat
+tindakpenyalahgunaanidentitasdigital,Penyalahgunaan Identitas Digital,Berat
+pencuriandata,Pencurian Data,Berat
+pelanggaranpencuriandata,Pencurian Data,Berat
+kasuspencuriandata,Pencurian Data,Berat
+tindakpencuriandata,Pencurian Data,Berat
+perusakaninfrastruktur,Perusakan Infrastruktur,Berat
+pelanggaranperusakaninfrastruktur,Perusakan Infrastruktur,Berat
+kasusperusakaninfrastruktur,Perusakan Infrastruktur,Berat
+tindakperusakaninfrastruktur,Perusakan Infrastruktur,Berat
+perusakanproperti,Perusakan Properti,Berat
+pelanggaranperusakanproperti,Perusakan Properti,Berat
+kasusperusakanproperti,Perusakan Properti,Berat
+tindakperusakanproperti,Perusakan Properti,Berat
+penipuanjualbeli,Penipuan Jual Beli,Berat
+pelanggaranpenipuanjualbeli,Penipuan Jual Beli,Berat
+kasuspenipuanjualbeli,Penipuan Jual Beli,Berat
+tindakpenipuanjualbeli,Penipuan Jual Beli,Berat
+penipuanmarketplace,Penipuan Marketplace,Berat
+pelanggaranpenipuanmarketplace,Penipuan Marketplace,Berat
+kasuspenipuanmarketplace,Penipuan Marketplace,Berat
+tindakpenipuanmarketplace,Penipuan Marketplace,Berat
+penipuaninvestasi,Penipuan Investasi,Berat
+pelanggaranpenipuaninvestasi,Penipuan Investasi,Berat
+kasuspenipuaninvestasi,Penipuan Investasi,Berat
+tindakpenipuaninvestasi,Penipuan Investasi,Berat
+penipuanpinjaman,Penipuan Pinjaman,Berat
+pelanggaranpenipuanpinjaman,Penipuan Pinjaman,Berat
+kasuspenipuanpinjaman,Penipuan Pinjaman,Berat
+tindakpenipuanpinjaman,Penipuan Pinjaman,Berat
+penipuanpembayaran,Penipuan Pembayaran,Berat
+pelanggaranpenipuanpembayaran,Penipuan Pembayaran,Berat
+kasuspenipuanpembayaran,Penipuan Pembayaran,Berat
+tindakpenipuanpembayaran,Penipuan Pembayaran,Berat
+penipuantelepon,Penipuan Telepon,Berat
+pelanggaranpenipuantelepon,Penipuan Telepon,Berat
+kasuspenipuantelepon,Penipuan Telepon,Berat
+tindakpenipuantelepon,Penipuan Telepon,Berat
+markajalanilegal,Pelanggaran Marka Jalan,Ringan
+pelanggaranmarkaputus,Pelanggaran Marka Putus,Ringan
+kasuspelanggaranmarkaputus,Pelanggaran Marka Putus,Ringan
+tindakpelanggaranmarkaputus,Pelanggaran Marka Putus,Ringan
+pelanggaranmarkaberhenti,Pelanggaran Marka Berhenti,Ringan
+kasuspelanggaranmarkaberhenti,Pelanggaran Marka Berhenti,Ringan
+tindakpelanggaranmarkaberhenti,Pelanggaran Marka Berhenti,Ringan
+pelanggaranrambudilarangmasuk,Pelanggaran Rambu Dilarang Masuk,Ringan
+kasuspelanggaranrambudilarangmasuk,Pelanggaran Rambu Dilarang Masuk,Ringan
+tindakpelanggaranrambudilarangmasuk,Pelanggaran Rambu Dilarang Masuk,Ringan
+pelanggaranrambuberhenti,Pelanggaran Rambu Berhenti,Ringan
+kasuspelanggaranrambuberhenti,Pelanggaran Rambu Berhenti,Ringan
+tindakpelanggaranrambuberhenti,Pelanggaran Rambu Berhenti,Ringan
+pelanggaranrambukecepatan,Pelanggaran Rambu Kecepatan,Ringan
+kasuspelanggaranrambukecepatan,Pelanggaran Rambu Kecepatan,Ringan
+tindakpelanggaranrambukecepatan,Pelanggaran Rambu Kecepatan,Ringan
+pelanggaranlampusein,Pelanggaran Lampu Sein,Ringan
+kasuspelanggaranlampusein,Pelanggaran Lampu Sein,Ringan
+tindakpelanggaranlampusein,Pelanggaran Lampu Sein,Ringan
+pelanggaranlampurem,Pelanggaran Lampu Rem,Ringan
+kasuspelanggaranlampurem,Pelanggaran Lampu Rem,Ringan
+tindakpelanggaranlampurem,Pelanggaran Lampu Rem,Ringan
+pelanggaranspionkendaraan,Pelanggaran Spion Kendaraan,Ringan
+kasuspelanggaranspionkendaraan,Pelanggaran Spion Kendaraan,Ringan
+tindakpelanggaranspionkendaraan,Pelanggaran Spion Kendaraan,Ringan
+pelanggaranklaksonkendaraan,Pelanggaran Klakson Kendaraan,Ringan
+kasuspelanggaranklaksonkendaraan,Pelanggaran Klakson Kendaraan,Ringan
+tindakpelanggaranklaksonkendaraan,Pelanggaran Klakson Kendaraan,Ringan
+pelanggaranatributkendaraan,Pelanggaran Atribut Kendaraan,Ringan
+kasuspelanggaranatributkendaraan,Pelanggaran Atribut Kendaraan,Ringan
+tindakpelanggaranatributkendaraan,Pelanggaran Atribut Kendaraan,Ringan
+pelanggaranjalurbus,Pelanggaran Jalur Bus,Ringan
+kasuspelanggaranjalurbus,Pelanggaran Jalur Bus,Ringan
+tindakpelanggaranjalurbus,Pelanggaran Jalur Bus,Ringan
+pelanggaranjalurangkutan,Pelanggaran Jalur Angkutan,Ringan
+kasuspelanggaranjalurangkutan,Pelanggaran Jalur Angkutan,Ringan
+tindakpelanggaranjalurangkutan,Pelanggaran Jalur Angkutan,Ringan
+pelanggaranbahujalan,Pelanggaran Bahu Jalan,Ringan
+kasuspelanggaranbahujalan,Pelanggaran Bahu Jalan,Ringan
+tindakpelanggaranbahujalan,Pelanggaran Bahu Jalan,Ringan
+pelanggaranmedianjalan,Pelanggaran Median Jalan,Ringan
+kasuspelanggaranmedianjalan,Pelanggaran Median Jalan,Ringan
+tindakpelanggaranmedianjalan,Pelanggaran Median Jalan,Ringan
+pelanggaransimpangjalan,Pelanggaran Simpang Jalan,Ringan
+kasuspelanggaransimpangjalan,Pelanggaran Simpang Jalan,Ringan
+tindakpelanggaransimpangjalan,Pelanggaran Simpang Jalan,Ringan
+pelanggaranputarbalikjalan,Pelanggaran Putar Balik Jalan,Ringan
+kasuspelanggaranputarbalikjalan,Pelanggaran Putar Balik Jalan,Ringan
+tindakpelanggaranputarbalikjalan,Pelanggaran Putar Balik Jalan,Ringan
+pelanggaranpenyeberanganjalan,Pelanggaran Penyeberangan Jalan,Ringan
+kasuspelanggaranpenyeberanganjalan,Pelanggaran Penyeberangan Jalan,Ringan
+tindakpelanggaranpenyeberanganjalan,Pelanggaran Penyeberangan Jalan,Ringan
+pelanggaranzonasekolah,Pelanggaran Zona Sekolah,Ringan
+kasuspelanggaranzonasekolah,Pelanggaran Zona Sekolah,Ringan
+tindakpelanggaranzonasekolah,Pelanggaran Zona Sekolah,Ringan
+pelanggaranzonarumahsakit,Pelanggaran Zona Rumah Sakit,Ringan
+kasuspelanggaranzonarumahsakit,Pelanggaran Zona Rumah Sakit,Ringan
+tindakpelanggaranzonarumahsakit,Pelanggaran Zona Rumah Sakit,Ringan
+pelanggaranzonapejalankaki,Pelanggaran Zona Pejalan Kaki,Ringan
+kasuspelanggaranzonapejalankaki,Pelanggaran Zona Pejalan Kaki,Ringan
+tindakpelanggaranzonapejalankaki,Pelanggaran Zona Pejalan Kaki,Ringan
+gangguanketertibankompleks,Gangguan Ketertiban Kompleks,Ringan
+kasusgangguanketertibankompleks,Gangguan Ketertiban Kompleks,Ringan
+tindakgangguanketertibankompleks,Gangguan Ketertiban Kompleks,Ringan
+gangguanketertibanperkampungan,Gangguan Ketertiban Perkampungan,Ringan
+kasusgangguanketertibanperkampungan,Gangguan Ketertiban Perkampungan,Ringan
+tindakgangguanketertibanperkampungan,Gangguan Ketertiban Perkampungan,Ringan
+gangguanketertibanperkantoran,Gangguan Ketertiban Perkantoran,Ringan
+kasusgangguanketertibanperkantoran,Gangguan Ketertiban Perkantoran,Ringan
+tindakgangguanketertibanperkantoran,Gangguan Ketertiban Perkantoran,Ringan
+gangguanketertibanpertokoan,Gangguan Ketertiban Pertokoan,Ringan
+kasusgangguanketertibanpertokoan,Gangguan Ketertiban Pertokoan,Ringan
+tindakgangguanketertibanpertokoan,Gangguan Ketertiban Pertokoan,Ringan
+gangguanketertibanminimarket,Gangguan Ketertiban Minimarket,Ringan
+kasusgangguanketertibanminimarket,Gangguan Ketertiban Minimarket,Ringan
+tindakgangguanketertibanminimarket,Gangguan Ketertiban Minimarket,Ringan
+gangguanketertibanrestoran,Gangguan Ketertiban Restoran,Ringan
+kasusgangguanketertibanrestoran,Gangguan Ketertiban Restoran,Ringan
+tindakgangguanketertibanrestoran,Gangguan Ketertiban Restoran,Ringan
+gangguanketertibanwarung,Gangguan Ketertiban Warung,Ringan
+kasusgangguanketertibanwarung,Gangguan Ketertiban Warung,Ringan
+tindakgangguanketertibanwarung,Gangguan Ketertiban Warung,Ringan
+gangguanketertibankafe,Gangguan Ketertiban Kafe,Ringan
+kasusgangguanketertibankafe,Gangguan Ketertiban Kafe,Ringan
+tindakgangguanketertibankafe,Gangguan Ketertiban Kafe,Ringan
+gangguanketertibanlapak,Gangguan Ketertiban Lapak,Ringan
+kasusgangguanketertibanlapak,Gangguan Ketertiban Lapak,Ringan
+tindakgangguanketertibanlapak,Gangguan Ketertiban Lapak,Ringan
+gangguanketertibanpedagang,Gangguan Ketertiban Pedagang,Ringan
+kasusgangguanketertibanpedagang,Gangguan Ketertiban Pedagang,Ringan
+tindakgangguanketertibanpedagang,Gangguan Ketertiban Pedagang,Ringan
+gangguanketertibanparkir,Gangguan Ketertiban Parkir,Ringan
+kasusgangguanketertibanparkir,Gangguan Ketertiban Parkir,Ringan
+tindakgangguanketertibanparkir,Gangguan Ketertiban Parkir,Ringan
+gangguanketertibanjalandesa,Gangguan Ketertiban Jalan Desa,Ringan
+kasusgangguanketertibanjalandesa,Gangguan Ketertiban Jalan Desa,Ringan
+tindakgangguanketertibanjalandesa,Gangguan Ketertiban Jalan Desa,Ringan
+gangguanketertibanjalannagari,Gangguan Ketertiban Jalan Nagari,Ringan
+kasusgangguanketertibanjalannagari,Gangguan Ketertiban Jalan Nagari,Ringan
+tindakgangguanketertibanjalannagari,Gangguan Ketertiban Jalan Nagari,Ringan
+gangguanketertibanfasilitasdesa,Gangguan Ketertiban Fasilitas Desa,Ringan
+kasusgangguanketertibanfasilitasdesa,Gangguan Ketertiban Fasilitas Desa,Ringan
+tindakgangguanketertibanfasilitasdesa,Gangguan Ketertiban Fasilitas Desa,Ringan
+gangguanketertibanfasilitasnagari,Gangguan Ketertiban Fasilitas Nagari,Ringan
+kasusgangguanketertibanfasilitasnagari,Gangguan Ketertiban Fasilitas Nagari,Ringan
+tindakgangguanketertibanfasilitasnagari,Gangguan Ketertiban Fasilitas Nagari,Ringan
+gangguanketertibanfasilitasolahraga,Gangguan Ketertiban Fasilitas Olahraga,Ringan
+kasusgangguanketertibanfasilitasolahraga,Gangguan Ketertiban Fasilitas Olahraga,Ringan
+tindakgangguanketertibanfasilitasolahraga,Gangguan Ketertiban Fasilitas Olahraga,Ringan
+gangguanketertibanfasilitaspendidikan,Gangguan Ketertiban Fasilitas Pendidikan,Ringan
+kasusgangguanketertibanfasilitaspendidikan,Gangguan Ketertiban Fasilitas Pendidikan,Ringan
+tindakgangguanketertibanfasilitaspendidikan,Gangguan Ketertiban Fasilitas Pendidikan,Ringan
+gangguanketertibanfasilitaskesehatan,Gangguan Ketertiban Fasilitas Kesehatan,Ringan
+kasusgangguanketertibanfasilitaskesehatan,Gangguan Ketertiban Fasilitas Kesehatan,Ringan
+tindakgangguanketertibanfasilitaskesehatan,Gangguan Ketertiban Fasilitas Kesehatan,Ringan
+gangguanketertibantempatusaha,Gangguan Ketertiban Tempat Usaha,Ringan
+kasusgangguanketertibantempatusaha,Gangguan Ketertiban Tempat Usaha,Ringan
+tindakgangguanketertibantempatusaha,Gangguan Ketertiban Tempat Usaha,Ringan
+gangguanketertibantempathiburan,Gangguan Ketertiban Tempat Hiburan,Ringan
+kasusgangguanketertibantempathiburan,Gangguan Ketertiban Tempat Hiburan,Ringan
+tindakgangguanketertibantempathiburan,Gangguan Ketertiban Tempat Hiburan,Ringan
+gangguankebisingankendaraan,Gangguan Kebisingan Kendaraan,Ringan
+kasusgangguankebisingankendaraan,Gangguan Kebisingan Kendaraan,Ringan
+tindakgangguankebisingankendaraan,Gangguan Kebisingan Kendaraan,Ringan
+gangguankebisinganrumah,Gangguan Kebisingan Rumah,Ringan
+kasusgangguankebisinganrumah,Gangguan Kebisingan Rumah,Ringan
+tindakgangguankebisinganrumah,Gangguan Kebisingan Rumah,Ringan
+gangguankebisinganusaha,Gangguan Kebisingan Usaha,Ringan
+kasusgangguankebisinganusaha,Gangguan Kebisingan Usaha,Ringan
+tindakgangguankebisinganusaha,Gangguan Kebisingan Usaha,Ringan
+gangguankebisinganacara,Gangguan Kebisingan Acara,Ringan
+kasusgangguankebisinganacara,Gangguan Kebisingan Acara,Ringan
+tindakgangguankebisinganacara,Gangguan Kebisingan Acara,Ringan
+gangguankebisinganmusik,Gangguan Kebisingan Musik,Ringan
+kasusgangguankebisinganmusik,Gangguan Kebisingan Musik,Ringan
+tindakgangguankebisinganmusik,Gangguan Kebisingan Musik,Ringan
+gangguankebisinganmesin,Gangguan Kebisingan Mesin,Ringan
+kasusgangguankebisinganmesin,Gangguan Kebisingan Mesin,Ringan
+tindakgangguankebisinganmesin,Gangguan Kebisingan Mesin,Ringan
+gangguankebisinganpesta,Gangguan Kebisingan Pesta,Ringan
+kasusgangguankebisinganpesta,Gangguan Kebisingan Pesta,Ringan
+tindakgangguankebisinganpesta,Gangguan Kebisingan Pesta,Ringan
+gangguankebisinganlapangan,Gangguan Kebisingan Lapangan,Ringan
+kasusgangguankebisinganlapangan,Gangguan Kebisingan Lapangan,Ringan
+tindakgangguankebisinganlapangan,Gangguan Kebisingan Lapangan,Ringan
+gangguankebisinganjalan,Gangguan Kebisingan Jalan,Ringan
+kasusgangguankebisinganjalan,Gangguan Kebisingan Jalan,Ringan
+tindakgangguankebisinganjalan,Gangguan Kebisingan Jalan,Ringan
+gangguankebisinganlingkungan,Gangguan Kebisingan Lingkungan,Ringan
+kasusgangguankebisinganlingkungan,Gangguan Kebisingan Lingkungan,Ringan
+tindakgangguankebisinganlingkungan,Gangguan Kebisingan Lingkungan,Ringan
+pelanggarankebersihanrumah,Pelanggaran Kebersihan Rumah,Ringan
+kasuspelanggarankebersihanrumah,Pelanggaran Kebersihan Rumah,Ringan
+tindakpelanggarankebersihanrumah,Pelanggaran Kebersihan Rumah,Ringan
+pelanggarankebersihanwarung,Pelanggaran Kebersihan Warung,Ringan
+kasuspelanggarankebersihanwarung,Pelanggaran Kebersihan Warung,Ringan
+tindakpelanggarankebersihanwarung,Pelanggaran Kebersihan Warung,Ringan
+pelanggarankebersihantoko,Pelanggaran Kebersihan Toko,Ringan
+kasuspelanggarankebersihantoko,Pelanggaran Kebersihan Toko,Ringan
+tindakpelanggarankebersihantoko,Pelanggaran Kebersihan Toko,Ringan
+pelanggarankebersihansekolah,Pelanggaran Kebersihan Sekolah,Ringan
+kasuspelanggarankebersihansekolah,Pelanggaran Kebersihan Sekolah,Ringan
+tindakpelanggarankebersihansekolah,Pelanggaran Kebersihan Sekolah,Ringan
+pelanggarankebersihankantor,Pelanggaran Kebersihan Kantor,Ringan
+kasuspelanggarankebersihankantor,Pelanggaran Kebersihan Kantor,Ringan
+tindakpelanggarankebersihankantor,Pelanggaran Kebersihan Kantor,Ringan
+pelanggarankebersihanterminal,Pelanggaran Kebersihan Terminal,Ringan
+kasuspelanggarankebersihanterminal,Pelanggaran Kebersihan Terminal,Ringan
+tindakpelanggarankebersihanterminal,Pelanggaran Kebersihan Terminal,Ringan
+pelanggarankebersihansungai,Pelanggaran Kebersihan Sungai,Ringan
+kasuspelanggarankebersihansungai,Pelanggaran Kebersihan Sungai,Ringan
+tindakpelanggarankebersihansungai,Pelanggaran Kebersihan Sungai,Ringan
+pelanggarankebersihantaman,Pelanggaran Kebersihan Taman,Ringan
+kasuspelanggarankebersihantaman,Pelanggaran Kebersihan Taman,Ringan
+tindakpelanggarankebersihantaman,Pelanggaran Kebersihan Taman,Ringan
+pelanggarankebersihanpantai,Pelanggaran Kebersihan Pantai,Ringan
+kasuspelanggarankebersihanpantai,Pelanggaran Kebersihan Pantai,Ringan
+tindakpelanggarankebersihanpantai,Pelanggaran Kebersihan Pantai,Ringan
+gangguansalurandrainase,Gangguan Saluran Drainase,Ringan
+kasusgangguansalurandrainase,Gangguan Saluran Drainase,Ringan
+tindakgangguansalurandrainase,Gangguan Saluran Drainase,Ringan
+gangguansaluranirigasi,Gangguan Saluran Irigasi,Ringan
+kasusgangguansaluranirigasi,Gangguan Saluran Irigasi,Ringan
+tindakgangguansaluranirigasi,Gangguan Saluran Irigasi,Ringan
+pelanggaranirigasi,Pelanggaran Irigasi,Ringan
+kasuspelanggaranirigasi,Pelanggaran Irigasi,Ringan
+tindakpelanggaranirigasi,Pelanggaran Irigasi,Ringan
+gangguanaliransungai,Gangguan Aliran Sungai,Ringan
+kasusgangguanaliransungai,Gangguan Aliran Sungai,Ringan
+tindakgangguanaliransungai,Gangguan Aliran Sungai,Ringan
+gangguanmataair,Gangguan Mata Air,Ringan
+kasusgangguanmataair,Gangguan Mata Air,Ringan
+tindakgangguanmataair,Gangguan Mata Air,Ringan
+gangguansumberairwarga,Gangguan Sumber Air Warga,Ringan
+kasusgangguansumberairwarga,Gangguan Sumber Air Warga,Ringan
+tindakgangguansumberairwarga,Gangguan Sumber Air Warga,Ringan
+pelanggaranpenggunaansungai,Pelanggaran Penggunaan Sungai,Ringan
+kasuspelanggaranpenggunaansungai,Pelanggaran Penggunaan Sungai,Ringan
+tindakpelanggaranpenggunaansungai,Pelanggaran Penggunaan Sungai,Ringan
+pelanggaranpenggunaantaman,Pelanggaran Penggunaan Taman,Ringan
+kasuspelanggaranpenggunaantaman,Pelanggaran Penggunaan Taman,Ringan
+tindakpelanggaranpenggunaantaman,Pelanggaran Penggunaan Taman,Ringan
+pelanggaranpenggunaanlapangan,Pelanggaran Penggunaan Lapangan,Ringan
+kasuspelanggaranpenggunaanlapangan,Pelanggaran Penggunaan Lapangan,Ringan
+tindakpelanggaranpenggunaanlapangan,Pelanggaran Penggunaan Lapangan,Ringan
+pelanggaranpenggunaanfasilitasdesa,Pelanggaran Penggunaan Fasilitas Desa,Ringan
+kasuspelanggaranpenggunaanfasilitasdesa,Pelanggaran Penggunaan Fasilitas Desa,Ringan
+tindakpelanggaranpenggunaanfasilitasdesa,Pelanggaran Penggunaan Fasilitas Desa,Ringan
+perselisihanpemilikrumah,Perselisihan Pemilik Rumah,Ringan
+kasusperselisihanpemilikrumah,Perselisihan Pemilik Rumah,Ringan
+tindakperselisihanpemilikrumah,Perselisihan Pemilik Rumah,Ringan
+perselisihanpenyewarumah,Perselisihan Penyewa Rumah,Ringan
+kasusperselisihanpenyewarumah,Perselisihan Penyewa Rumah,Ringan
+tindakperselisihanpenyewarumah,Perselisihan Penyewa Rumah,Ringan
+perselisihanpemiliklahan,Perselisihan Pemilik Lahan,Ringan
+kasusperselisihanpemiliklahan,Perselisihan Pemilik Lahan,Ringan
+tindakperselisihanpemiliklahan,Perselisihan Pemilik Lahan,Ringan
+perselisihanpemiliktoko,Perselisihan Pemilik Toko,Ringan
+kasusperselisihanpemiliktoko,Perselisihan Pemilik Toko,Ringan
+tindakperselisihanpemiliktoko,Perselisihan Pemilik Toko,Ringan
+perselisihanantarpedagang,Perselisihan Antar Pedagang,Ringan
+kasusperselisihanantarpedagang,Perselisihan Antar Pedagang,Ringan
+tindakperselisihanantarpedagang,Perselisihan Antar Pedagang,Ringan
+perselisihanantarpengemudi,Perselisihan Antar Pengemudi,Ringan
+kasusperselisihanantarpengemudi,Perselisihan Antar Pengemudi,Ringan
+tindakperselisihanantarpengemudi,Perselisihan Antar Pengemudi,Ringan
+perselisihanantarpelajar,Perselisihan Antar Pelajar,Ringan
+kasusperselisihanantarpelajar,Perselisihan Antar Pelajar,Ringan
+tindakperselisihanantarpelajar,Perselisihan Antar Pelajar,Ringan
+perselisihanantarpemuda,Perselisihan Antar Pemuda,Ringan
+kasusperselisihanantarpemuda,Perselisihan Antar Pemuda,Ringan
+tindakperselisihanantarpemuda,Perselisihan Antar Pemuda,Ringan
+perselisihanantarkeluarga,Perselisihan Antar Keluarga,Ringan
+kasusperselisihanantarkeluarga,Perselisihan Antar Keluarga,Ringan
+tindakperselisihanantarkeluarga,Perselisihan Antar Keluarga,Ringan
+perselisihanantarkelompok,Perselisihan Antar Kelompok,Ringan
+kasusperselisihanantarkelompok,Perselisihan Antar Kelompok,Ringan
+tindakperselisihanantarkelompok,Perselisihan Antar Kelompok,Ringan
+sengketarumahtinggal,Sengketa Rumah Tinggal,Ringan
+kasussengketarumahtinggal,Sengketa Rumah Tinggal,Ringan
+tindaksengketarumahtinggal,Sengketa Rumah Tinggal,Ringan
+sengketapekarangan,Sengketa Pekarangan,Ringan
+kasussengketapekarangan,Sengketa Pekarangan,Ringan
+tindaksengketapekarangan,Sengketa Pekarangan,Ringan
+sengketabatasrumah,Sengketa Batas Rumah,Ringan
+kasussengketabatasrumah,Sengketa Batas Rumah,Ringan
+tindaksengketabatasrumah,Sengketa Batas Rumah,Ringan
+sengketatempatusaha,Sengketa Tempat Usaha,Ringan
+kasussengketatempatusaha,Sengketa Tempat Usaha,Ringan
+tindaksengketatempatusaha,Sengketa Tempat Usaha,Ringan
+sengketalapak,Sengketa Lapak,Ringan
+kasussengketalapak,Sengketa Lapak,Ringan
+tindaksengketalapak,Sengketa Lapak,Ringan
+sengketakendaraan,Sengketa Kendaraan,Ringan
+kasussengketakendaraan,Sengketa Kendaraan,Ringan
+tindaksengketakendaraan,Sengketa Kendaraan,Ringan
+sengketabarangdagangan,Sengketa Barang Dagangan,Ringan
+kasussengketabarangdagangan,Sengketa Barang Dagangan,Ringan
+tindaksengketabarangdagangan,Sengketa Barang Dagangan,Ringan
+sengketapembayaran,Sengketa Pembayaran,Ringan
+kasussengketapembayaran,Sengketa Pembayaran,Ringan
+tindaksengketapembayaran,Sengketa Pembayaran,Ringan
+sengketajasatransportasi,Sengketa Jasa Transportasi,Ringan
+kasussengketajasatransportasi,Sengketa Jasa Transportasi,Ringan
+tindaksengketajasatransportasi,Sengketa Jasa Transportasi,Ringan
+sengketajasaperbaikan,Sengketa Jasa Perbaikan,Ringan
+kasussengketajasaperbaikan,Sengketa Jasa Perbaikan,Ringan
+tindaksengketajasaperbaikan,Sengketa Jasa Perbaikan,Ringan
+pelanggaranketertibanpemuda,Pelanggaran Ketertiban Pemuda,Ringan
+kasuspelanggaranketertibanpemuda,Pelanggaran Ketertiban Pemuda,Ringan
+tindakpelanggaranketertibanpemuda,Pelanggaran Ketertiban Pemuda,Ringan
+pelanggaranketertibanpelajar,Pelanggaran Ketertiban Pelajar,Ringan
+kasuspelanggaranketertibanpelajar,Pelanggaran Ketertiban Pelajar,Ringan
+tindakpelanggaranketertibanpelajar,Pelanggaran Ketertiban Pelajar,Ringan
+pelanggaranketertibanpedagang,Pelanggaran Ketertiban Pedagang,Ringan
+kasuspelanggaranketertibanpedagang,Pelanggaran Ketertiban Pedagang,Ringan
+tindakpelanggaranketertibanpedagang,Pelanggaran Ketertiban Pedagang,Ringan
+pelanggaranketertibanpengemudi,Pelanggaran Ketertiban Pengemudi,Ringan
+kasuspelanggaranketertibanpengemudi,Pelanggaran Ketertiban Pengemudi,Ringan
+tindakpelanggaranketertibanpengemudi,Pelanggaran Ketertiban Pengemudi,Ringan
+pelanggaranketertibanpengunjung,Pelanggaran Ketertiban Pengunjung,Ringan
+kasuspelanggaranketertibanpengunjung,Pelanggaran Ketertiban Pengunjung,Ringan
+tindakpelanggaranketertibanpengunjung,Pelanggaran Ketertiban Pengunjung,Ringan
+pelanggaranketertibanwisatawan,Pelanggaran Ketertiban Wisatawan,Ringan
+kasuspelanggaranketertibanwisatawan,Pelanggaran Ketertiban Wisatawan,Ringan
+tindakpelanggaranketertibanwisatawan,Pelanggaran Ketertiban Wisatawan,Ringan
+pelanggaranketertibanpenonton,Pelanggaran Ketertiban Penonton,Ringan
+kasuspelanggaranketertibanpenonton,Pelanggaran Ketertiban Penonton,Ringan
+tindakpelanggaranketertibanpenonton,Pelanggaran Ketertiban Penonton,Ringan
+pelanggaranketertibanpesertaacara,Pelanggaran Ketertiban Peserta Acara,Ringan
+kasuspelanggaranketertibanpesertaacara,Pelanggaran Ketertiban Peserta Acara,Ringan
+tindakpelanggaranketertibanpesertaacara,Pelanggaran Ketertiban Peserta Acara,Ringan
+pelanggaranketertibanpenggunafasilitas,Pelanggaran Ketertiban Pengguna Fasilitas,Ringan
+kasuspelanggaranketertibanpenggunafasilitas,Pelanggaran Ketertiban Pengguna Fasilitas,Ringan
+tindakpelanggaranketertibanpenggunafasilitas,Pelanggaran Ketertiban Pengguna Fasilitas,Ringan
+pelanggaranketertibanmasyarakat,Pelanggaran Ketertiban Masyarakat,Ringan
+kasuspelanggaranketertibanmasyarakat,Pelanggaran Ketertiban Masyarakat,Ringan
+tindakpelanggaranketertibanmasyarakat,Pelanggaran Ketertiban Masyarakat,Ringan
+pelanggarandistribusiobat,Pelanggaran Distribusi Obat,Berat
+kasuspelanggarandistribusiobat,Pelanggaran Distribusi Obat,Berat
+tindakpelanggarandistribusiobat,Pelanggaran Distribusi Obat,Berat
