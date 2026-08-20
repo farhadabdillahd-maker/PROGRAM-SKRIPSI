@@ -496,21 +496,21 @@ def show():
         precision = precision_score(
             y_test,
             y_pred,
-            average="weighted",
+            average="macro",
             zero_division=0,
         )
 
         recall = recall_score(
             y_test,
             y_pred,
-            average="weighted",
+            average="macro",
             zero_division=0,
         )
 
         f1 = f1_score(
             y_test,
             y_pred,
-            average="weighted",
+            average="macro",
             zero_division=0,
         )
 
@@ -606,7 +606,20 @@ def show():
                 zero_division=0,
             )
 
-            report_df = pd.DataFrame(report).transpose()
+            # Tampilkan hanya metrik untuk 3 kelas penelitian.
+            # Baris "macro avg" dan "weighted avg" sengaja dihapus.
+            report_df = (
+                pd.DataFrame(report).transpose()
+                .loc[LABELS, ["precision", "recall", "f1-score", "support"]]
+            )
+
+            # Tambahkan accuracy sebagai baris terpisah tanpa macro/weighted avg.
+            report_df.loc["accuracy"] = [
+                accuracy,
+                accuracy,
+                accuracy,
+                len(y_test),
+            ]
 
         with st.expander("📋 4️⃣ Classification Report", expanded=False):
             st.subheader("Classification Report")
