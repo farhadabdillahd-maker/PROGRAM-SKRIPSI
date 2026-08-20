@@ -69,21 +69,9 @@ def show():
     # =======================================
     # MEMBACA KAMUS KEJAHATAN DAN PELABELAN
     # =======================================
-    # Kamus yang digunakan sudah diperbaiki dan memiliki:
-    # kata_kunci, jenis_perkara, label, klasifikasi
-    kamus_path = "kamus_klasifikasi_kejahatan_1500_diperbaiki.csv"
+    if os.path.exists("kamus_klasifikasi_kejahatan.csv"):
 
-    if not os.path.exists(kamus_path):
-        # Fallback agar aplikasi tetap bisa menggunakan nama file lama
-        kamus_path = "kamus_klasifikasi_kejahatan.csv"
-
-    if os.path.exists(kamus_path):
-
-        kamus = pd.read_csv(kamus_path)
-
-        # Pastikan kolom kamus tersedia.
-        if "label" in kamus.columns and "klasifikasi" not in kamus.columns:
-            kamus["klasifikasi"] = kamus["label"]
+        kamus = pd.read_csv("kamus_klasifikasi_kejahatan.csv")
 
         if (
             "Jenis Perkara" in df.columns
@@ -91,110 +79,27 @@ def show():
             and "klasifikasi" in kamus.columns
         ):
 
-            # ==========================================================
-            # PILIHAN A:
-            # Label ditentukan berdasarkan JENIS PERKARA.
-            #
-            # Satu jenis perkara pada kamus dapat memiliki beberapa
-            # keyword dengan label berbeda. Karena itu tidak boleh
-            # menggunakan dict(zip(...)) yang mengambil baris terakhir.
-            #
-            # Di sini digunakan mayoritas jumlah keyword per label.
-            # Jika jumlah sama, prioritas: Sangat Berat > Berat > Ringan.
-            # ==========================================================
-            kamus["jenis_perkara"] = (
-                kamus["jenis_perkara"]
-                .fillna("")
-                .astype(str)
-                .str.strip()
-                .str.lower()
-            )
-            kamus["klasifikasi"] = (
-                kamus["klasifikasi"]
-                .fillna("")
-                .astype(str)
-                .str.strip()
-            )
-
-            jumlah_label = (
-                kamus[
-                    kamus["jenis_perkara"].ne("")
-                    & kamus["klasifikasi"].ne("")
-                ]
-                .groupby(["jenis_perkara", "klasifikasi"])
-                .size()
-                .reset_index(name="jumlah_keyword")
-            )
-
-            prioritas_label = {
-                "Sangat Berat": 3,
-                "Berat": 2,
-                "Ringan": 1
-            }
-
-            jumlah_label["prioritas"] = (
-                jumlah_label["klasifikasi"].map(prioritas_label).fillna(0)
-            )
-
-            mapping_df = (
-                jumlah_label
-                .sort_values(
-                    ["jenis_perkara", "jumlah_keyword", "prioritas"],
-                    ascending=[True, False, False]
-                )
-                .drop_duplicates(subset=["jenis_perkara"])
-            )
-
             mapping = dict(
                 zip(
-                    mapping_df["jenis_perkara"],
-                    mapping_df["klasifikasi"]
+                    kamus["jenis_perkara"].astype(str).str.strip().str.lower(),
+                    kamus["klasifikasi"].astype(str).str.strip()
                 )
             )
 
             df["Pelabelan"] = (
                 df["Jenis Perkara"]
-                .fillna("")
                 .astype(str)
                 .str.strip()
                 .str.lower()
                 .map(mapping)
             )
 
-            # Tampilkan hasil pemetaan sebelum training.
-            distribusi_label_awal = (
-                df["Pelabelan"]
-                .value_counts(dropna=False)
-                .rename_axis("Label")
-                .reset_index(name="Jumlah")
-            )
-
-            st.subheader("🏷️ Hasil Pelabelan")
-            st.dataframe(
-                distribusi_label_awal,
-                use_container_width=True
-            )
-
             if df["Pelabelan"].isna().sum() > 0:
                 st.warning(
-                    f"{df['Pelabelan'].isna().sum()} data tidak ditemukan "
-                    "pada pemetaan jenis perkara."
+                    f"{df['Pelabelan'].isna().sum()} data tidak ditemukan pada kamus kejahatan."
                 )
 
-            st.caption(
-                "Pelabelan menggunakan Pilihan A: Jenis Perkara → "
-                "mayoritas label pada kamus."
-            )
-
             st.session_state["preprocessed"] = df
-
-    else:
-        st.error(
-            "File kamus klasifikasi tidak ditemukan. "
-            "Letakkan kamus_klasifikasi_kejahatan_1500_diperbaiki.csv "
-            "di folder aplikasi."
-        )
-        return
 
 
     # ===============================
