@@ -5,6 +5,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 import os
+import re
 from modules.pdf_report import generate_pdf
 import matplotlib.pyplot as plt
 import numpy as np
