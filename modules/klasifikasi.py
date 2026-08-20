@@ -69,37 +69,145 @@ def show():
     # =======================================
     # MEMBACA KAMUS KEJAHATAN DAN PELABELAN
     # =======================================
+    # Label ditentukan berdasarkan KATA KUNCI pada judul,
+    # bukan berdasarkan jenis_perkara sebagai dictionary key.
+    # Jika beberapa tingkat ditemukan sekaligus, digunakan prioritas:
+    # Sangat Berat > Berat > Ringan.
     if os.path.exists("kamus_klasifikasi_kejahatan.csv"):
 
         kamus = pd.read_csv("kamus_klasifikasi_kejahatan.csv")
 
         if (
-            "Jenis Perkara" in df.columns
-            and "jenis_perkara" in kamus.columns
+            "kata_kunci" in kamus.columns
             and "klasifikasi" in kamus.columns
         ):
 
-            mapping = dict(
-                zip(
-                    kamus["jenis_perkara"].astype(str).str.strip().str.lower(),
-                    kamus["klasifikasi"].astype(str).str.strip()
-                )
-            )
+            LABEL_PRIORITAS = {
+                "Ringan": 1,
+                "Berat": 2,
+                "Sangat Berat": 3
+            }
 
-            df["Pelabelan"] = (
-                df["Jenis Perkara"]
+            # Bersihkan kamus dan buang hanya baris yang benar-benar identik.
+            kamus = kamus.drop_duplicates().copy()
+            kamus["kata_kunci"] = (
+                kamus["kata_kunci"]
                 .astype(str)
                 .str.strip()
                 .str.lower()
-                .map(mapping)
+            )
+            kamus["klasifikasi"] = (
+                kamus["klasifikasi"]
+                .astype(str)
+                .str.strip()
             )
 
-            if df["Pelabelan"].isna().sum() > 0:
-                st.warning(
-                    f"{df['Pelabelan'].isna().sum()} data tidak ditemukan pada kamus kejahatan."
+            # Hanya gunakan 3 kelas penelitian.
+            kamus = kamus[
+                kamus["klasifikasi"].isin(LABEL_PRIORITAS.keys())
+            ].copy()
+
+            # Urutkan kata kunci terpanjang terlebih dahulu agar
+            # frasa yang lebih spesifik diperiksa lebih dahulu.
+            daftar_kata_kunci = (
+                kamus[["kata_kunci", "klasifikasi"]]
+                .dropna()
+                .drop_duplicates()
+                .sort_values(
+                    "kata_kunci",
+                    key=lambda s: s.str.len(),
+                    ascending=False
+                )
+                .values
+                .tolist()
+            )
+
+            def normalisasi_teks(teks):
+                teks = str(teks).lower()
+                teks = re.sub(r"[^a-z0-9\\s]", " ", teks)
+                teks = re.sub(r"\\s+", " ", teks).strip()
+                return teks
+
+            def cari_label_judul(judul):
+                teks = normalisasi_teks(judul)
+                label_ditemukan = []
+
+                for kata_kunci, klasifikasi in daftar_kata_kunci:
+                    kata_kunci = normalisasi_teks(kata_kunci)
+
+                    if not kata_kunci:
+                        continue
+
+                    # Pencocokan frasa/kata kunci.
+                    pola = r"(?<![a-z0-9])" + re.escape(kata_kunci) + r"(?![a-z0-9])"
+
+                    if re.search(pola, teks):
+                        label_ditemukan.append(klasifikasi)
+
+                if not label_ditemukan:
+                    return None
+
+                # Prioritas: Sangat Berat > Berat > Ringan.
+                return max(
+                    label_ditemukan,
+                    key=lambda x: LABEL_PRIORITAS.get(x, 0)
                 )
 
+            if "Judul Media Nasional" not in df.columns:
+                st.error("Kolom 'Judul Media Nasional' tidak ditemukan pada dataset.")
+                return
+
+            # Label utama berasal dari kata kunci pada judul.
+            df["Pelabelan"] = df["Judul Media Nasional"].apply(cari_label_judul)
+
+            # Fallback hanya untuk data yang tidak menemukan kata kunci:
+            # gunakan klasifikasi yang paling sering muncul untuk jenis perkara
+            # tersebut di kamus.
+            if "Jenis Perkara" in df.columns and "jenis_perkara" in kamus.columns:
+                kamus["jenis_perkara_norm"] = (
+                    kamus["jenis_perkara"]
+                    .astype(str)
+                    .str.strip()
+                    .str.lower()
+                )
+
+                fallback_mapping = (
+                    kamus.groupby("jenis_perkara_norm")["klasifikasi"]
+                    .agg(lambda s: s.value_counts().index[0])
+                    .to_dict()
+                )
+
+                mask_belum_berlabel = df["Pelabelan"].isna()
+
+                df.loc[mask_belum_berlabel, "Pelabelan"] = (
+                    df.loc[mask_belum_berlabel, "Jenis Perkara"]
+                    .astype(str)
+                    .str.strip()
+                    .str.lower()
+                    .map(fallback_mapping)
+                )
+
+            jumlah_belum_berlabel = df["Pelabelan"].isna().sum()
+
+            if jumlah_belum_berlabel > 0:
+                st.warning(
+                    f"{jumlah_belum_berlabel} data belum dapat diberi label "
+                    "dari kata kunci maupun fallback jenis perkara."
+                )
+
+            # Normalisasi label dan simpan.
+            df["Pelabelan"] = df["Pelabelan"].astype("string").str.strip()
+
             st.session_state["preprocessed"] = df
+
+        else:
+            st.error(
+                "Kamus harus memiliki kolom 'kata_kunci' dan 'klasifikasi'."
+            )
+            return
+    else:
+        st.error("File kamus_klasifikasi_kejahatan.csv tidak ditemukan.")
+        return
 
 
     # ===============================
@@ -115,6 +223,21 @@ def show():
     X = st.session_state["tfidf_matrix"]
 
     y = df["Pelabelan"]
+
+    # Buang hanya baris yang benar-benar belum memiliki label.
+    mask_valid = y.notna() & y.isin(["Ringan", "Berat", "Sangat Berat"])
+
+    if not mask_valid.all():
+        jumlah_dibuang = int((~mask_valid).sum())
+        st.warning(
+            f"{jumlah_dibuang} data tanpa label valid tidak digunakan dalam training."
+        )
+        df = df.loc[mask_valid].copy()
+        X = X[mask_valid.to_numpy()]
+        y = df["Pelabelan"]
+
+    # Urutan kelas penelitian dibuat tetap.
+    LABELS = ["Ringan", "Berat", "Sangat Berat"]
 
     st.success("Dataset siap digunakan.")
 
@@ -167,9 +290,27 @@ def show():
         f"Pembagian data: {100 - test_size}% training dan {test_size}% testing."
     )
 
-    # Validasi minimal data tiap kelas
-    if y.value_counts().min() < 2:
-        st.error("Minimal setiap kelas harus memiliki 2 data agar stratified split dapat dilakukan.")
+    # Validasi tiga kelas penelitian.
+    distribusi_tiga_kelas = y.value_counts().reindex(LABELS, fill_value=0)
+
+    st.write("### Distribusi Label Sebelum Training")
+    st.dataframe(
+        distribusi_tiga_kelas.rename("Jumlah").reset_index().rename(
+            columns={"index": "Label"}
+        ),
+        use_container_width=True
+    )
+
+    kelas_tanpa_data = distribusi_tiga_kelas[
+        distribusi_tiga_kelas < 2
+    ].index.tolist()
+
+    if kelas_tanpa_data:
+        st.error(
+            "Kelas berikut memiliki kurang dari 2 data: "
+            + ", ".join(kelas_tanpa_data)
+            + ". Tambahkan data sebelum melakukan stratified split."
+        )
         return
 
     if st.button("Training Naïve Bayes"):
@@ -458,6 +599,8 @@ def show():
             report = classification_report(
                 y_test,
                 y_pred,
+                labels=LABELS,
+                target_names=LABELS,
                 output_dict=True,
                 zero_division=0,
             )
@@ -481,7 +624,11 @@ def show():
         with st.expander("🧩 5️⃣ Confusion Matrix", expanded=False):
             st.subheader("Confusion Matrix")
 
-            cm = confusion_matrix(y_test, y_pred)
+            cm = confusion_matrix(
+                y_test,
+                y_pred,
+                labels=LABELS
+            )
 
             st.session_state["confusion_matrix"] = cm
 
@@ -489,7 +636,7 @@ def show():
 
             disp = ConfusionMatrixDisplay(
                 confusion_matrix=cm,
-                display_labels=model.classes_
+                display_labels=LABELS
             )
 
             disp.plot(
@@ -523,8 +670,8 @@ def show():
 
             cm_df = pd.DataFrame(
                 cm,
-                index=[f"Aktual {c}" for c in model.classes_],
-                columns=[f"Prediksi {c}" for c in model.classes_]
+                index=[f"Aktual {c}" for c in LABELS],
+                columns=[f"Prediksi {c}" for c in LABELS]
             )
 
             st.dataframe(
